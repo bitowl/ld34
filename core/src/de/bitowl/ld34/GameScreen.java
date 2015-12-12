@@ -47,7 +47,6 @@ public class GameScreen extends AbstractScreen {
 
     private Stage stage;
     private Body body;
-    private Player player;
 
 
     private final float GRAVITY = 100;
@@ -79,7 +78,7 @@ public class GameScreen extends AbstractScreen {
         fixtureDef.restitution = 0.6f; // Make it bounce a little bit
 
 
-        player = new Player();
+        Player player = new Player();
 
         // Entity obj = new Entity(new Texture("ball.png"));
         // obj.setOrigin(obj.getWidth()/2, obj.getHeight()/2);
@@ -126,9 +125,6 @@ public class GameScreen extends AbstractScreen {
         Vector2 newGravity = new Vector2(MathUtils.cos(MathUtils.degRad * angle), MathUtils.sin(MathUtils.degRad * angle));
         // apply personal gravity
         body.applyForceToCenter(newGravity.scl(GRAVITY * body.getMass()), true);
-        for (Drop drop:player.connectedDrops) {
-            drop.getPhysicalObject().getBody().applyForceToCenter(newGravity.scl(GRAVITY * body.getMass()), true);
-        }
 
 
         doPhysicsStep(delta);
