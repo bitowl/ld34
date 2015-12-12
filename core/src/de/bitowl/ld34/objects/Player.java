@@ -11,7 +11,7 @@ public class Player extends Entity {
 
     public Player() {
         super(Utils.getDrawable("ball"));
-        size = 20;
+        size = 20 * Utils.W2B;
     }
 
 

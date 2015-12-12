@@ -1,5 +1,6 @@
 package de.bitowl.ld34.physics;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
@@ -10,6 +11,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import java.util.HashMap;
 
+import de.bitowl.ld34.Utils;
 import de.bitowl.ld34.objects.Entity;
 import de.bitowl.ld34.GameScreen;
 
@@ -28,14 +30,18 @@ public class PhysicalObject {
 
         // Create our body definition
         def = new BodyDef();
+        fixtureDef = new FixtureDef();
+
         if (attrs.containsKey("dyn")) {
             def.type = BodyDef.BodyType.DynamicBody;
+            fixtureDef.density = 1f; // default density
         } else {
             def.type = BodyDef.BodyType.StaticBody;
         }
 
-        fixtureDef = new FixtureDef();
-        fixtureDef.density = 1/1000f; // default density
+
+        fixtureDef.friction = 1;
+        fixtureDef.restitution = 0;
     }
 
 
@@ -56,6 +62,7 @@ public class PhysicalObject {
     public void setUserData(Entity userData) {
         this.userData = userData;
     }
+
 
     /**
      * attaches this object to a real world
@@ -121,6 +128,10 @@ public class PhysicalObject {
 
     public void setPosition(Vector2 position) {
         def.position.set(position);
+    }
+
+    public void setRotation(float degrees) {
+        def.angle = MathUtils.degRad * degrees;
     }
 
     public Body getBody() {

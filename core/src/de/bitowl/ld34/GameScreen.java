@@ -23,6 +23,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 
 import java.util.HashMap;
 
@@ -39,6 +40,7 @@ public class GameScreen extends AbstractScreen {
 
     private World world;
     private Box2DDebugRenderer debugRenderer;
+    private Viewport debugViewport;
     private ShapeRenderer shapeRenderer; // custom debug shapes
 
     private OrthographicCamera camera;
@@ -51,7 +53,7 @@ public class GameScreen extends AbstractScreen {
     private Body body;
 
 
-    private final float GRAVITY = 100;
+    private final float GRAVITY = 10;
     public GameScreen() {
         physicRunnables = new Array<Runnable>();
 
@@ -63,7 +65,9 @@ public class GameScreen extends AbstractScreen {
         shapeRenderer = new ShapeRenderer();
 
 
-        stage = new Stage(new FitViewport(600, 900));
+        stage = new Stage(new FitViewport(600 , 900));
+        debugViewport = new FitViewport(600 * Utils.W2B, 900 * Utils.W2B);
+
         camera = (OrthographicCamera) stage.getCamera();
 
 
@@ -72,12 +76,12 @@ public class GameScreen extends AbstractScreen {
         attrs.put("mass", "20");
         PhysicalObject obj = new PhysicalObject(attrs);
         CircleShape circle = new CircleShape();
-        circle.setRadius(20f);
-        obj.setPosition(new Vector2(200, 200));
+        circle.setRadius(20f * Utils.W2B);
+        obj.setPosition(new Vector2(200*Utils.W2B, 200*Utils.W2B));
 
         obj.setShape(circle);
         FixtureDef fixtureDef = obj.getFixtureDef();
-        fixtureDef.density = .001f;
+        fixtureDef.density = 1f;
         fixtureDef.friction = 0.6f;
         fixtureDef.restitution = 0.6f; // Make it bounce a little bit
 
@@ -118,7 +122,7 @@ public class GameScreen extends AbstractScreen {
 
     private float angle = -90;
 
-    private final float ROTATE_SPEED = 50;
+    private final float ROTATE_SPEED = 180;
 
     @Override
     public void render(float delta) {
@@ -136,15 +140,21 @@ public class GameScreen extends AbstractScreen {
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             angle += ROTATE_SPEED*delta;
             camera.rotate(ROTATE_SPEED*delta, 0, 0, 1);
+            debugViewport.getCamera().rotate(ROTATE_SPEED * delta, 0, 0, 1);
         }
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             angle -= ROTATE_SPEED*delta;
             camera.rotate(-ROTATE_SPEED * delta, 0, 0, 1);
+            debugViewport.getCamera().rotate(-ROTATE_SPEED * delta, 0, 0, 1);
         }
 
-        camera.position.set(body.getPosition(), 0);
+
+        System.out.println("->" + body.getPosition());
+        camera.position.set(body.getPosition().scl(Utils.B2W), 0);
+        debugViewport.getCamera().position.set(body.getPosition(), 0);
 
         camera.update();
+        debugViewport.getCamera().update();
 
         if (Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
             body.applyForceToCenter(7000, 0, true);
@@ -167,7 +177,7 @@ public class GameScreen extends AbstractScreen {
 
             if (e != null) {
                 // Update the entities/sprites position and angle
-                e.setPosition(b.getPosition().x - e.getOriginX(), b.getPosition().y - e.getOriginY());
+                e.setPosition(b.getPosition().x * Utils.B2W - e.getOriginX(), b.getPosition().y* Utils.B2W - e.getOriginY());
                 // We need to convert our angle from radians to degrees
                 e.setRotation(MathUtils.radiansToDegrees * b.getAngle());
             }
@@ -197,9 +207,9 @@ public class GameScreen extends AbstractScreen {
         stage.act(delta);
         stage.draw();
 
-        debugRenderer.render(world, camera.combined);
+        debugRenderer.render(world, debugViewport.getCamera().combined);
 
-        shapeRenderer.setProjectionMatrix(camera.combined);
+        shapeRenderer.setProjectionMatrix(debugViewport.getCamera().combined);
         shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
         shapeRenderer.setColor(Color.RED);
         // shapeRenderer.line(0, 100, 300, 100);
@@ -212,7 +222,7 @@ public class GameScreen extends AbstractScreen {
 
         shapeRenderer.line(cenVec, aimVec);
         // shapeRenderer.line(new Vector2(100, 306), new Vector2(100, 356));
-        shapeRenderer.line(400,400,500,500);
+        // shapeRenderer.line(400,400,500,500);
 
         shapeRenderer.end();
 
@@ -223,6 +233,7 @@ public class GameScreen extends AbstractScreen {
     @Override
     public void resize(int width, int height) {
         stage.getViewport().update(width, height);
+        debugViewport.update(width, height);
         // camera.setToOrtho(false, width, height);
     }
 

@@ -10,4 +10,11 @@ public class Utils {
     }
 
     public static BitmapFont font = new BitmapFont();
+
+
+    public static float B2W = 50f;
+    public static float W2B = 1/B2W;
+
+    static {
+    }
 }

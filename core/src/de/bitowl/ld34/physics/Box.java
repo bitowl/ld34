@@ -5,6 +5,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 
 import java.util.HashMap;
 
+import de.bitowl.ld34.Utils;
 import de.bitowl.ld34.objects.Entity;
 
 public class Box extends PhysicalObject {
@@ -13,7 +14,7 @@ public class Box extends PhysicalObject {
         super(attrs);
         this.width = width; this.height = height;
         PolygonShape shape = new PolygonShape();
-        shape.setAsBox(width/2, height/2);
+        shape.setAsBox(this.width/2, this.height/2);
         setShape(shape);
     }
 
@@ -29,7 +30,8 @@ public class Box extends PhysicalObject {
     @Override
     public void setUserData(Entity userData) {
         super.setUserData(userData);
-        userData.setWidth(width);
-        userData.setHeight(height);
+        userData.setWidth(width * Utils.B2W);
+        userData.setHeight(height * Utils.B2W);
+        userData.setOrigin(width*Utils.B2W/2,height*Utils.B2W/2);
     }
 }

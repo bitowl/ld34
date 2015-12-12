@@ -14,8 +14,17 @@ public class Entity extends Image {
 
     public Entity(Texture texture) {
         super(texture);
-        setOrigin(getWidth()/2, getHeight()/2);
     }
+
+    /*@Override
+    public void setWidth(float width) {
+        super.setWidth(width*Utils.B2W);
+    }
+
+    @Override
+    public void setHeight(float height) {
+        super.setHeight(height*Utils.B2W);
+    }*/
 
     public void setToBeRemoved() {
         this.toBeRemoved = true;
@@ -36,7 +45,10 @@ public class Entity extends Image {
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-        Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+"\ndensity: " + physicalObject.getBody().getFixtureList().get(0).getDensity(),getX(), getY());
+        Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+
+                "\ndensity: " + physicalObject.getBody().getFixtureList().get(0).getDensity()
+                +"\nspeed: " + physicalObject.getBody().getLinearVelocity().y
+                ,getX(), getY());
     }
 
     public PhysicalObject getPhysicalObject() {
