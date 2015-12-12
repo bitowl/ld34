@@ -54,13 +54,16 @@ public class SVGLoader extends MaSVG2 {
         System.out.println(el.getFloat("cy"));
 
 
+        float r = el.getFloat("r");
 
-        StaticCircle circle = new StaticCircle(el.getFloat("r"));
+        StaticCircle circle = new StaticCircle(r);
         circle.setPosition(new Vector2(xxx+el.getFloat("cx"),yyy- el.getFloat("cy")));
         circle.getFixtureDef().isSensor = true;
 
         if (desc.contains("drop")) {
             Drop drop = new Drop();
+            drop.setWidth(r*2);drop.setHeight(r * 2);
+            drop.setOrigin(r, r);
             stage.addActor(drop);
             circle.setUserData(drop);
         }

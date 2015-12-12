@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.64"
-     inkscape:cx="551.99771"
-     inkscape:cy="299.25701"
+     inkscape:zoom="0.90509668"
+     inkscape:cx="309.20209"
+     inkscape:cy="156.57132"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -278,6 +278,46 @@ asdfasdf</desc>
        id="image6624"
        x="-114.43899"
        y="584.73944" />
+    <circle
+       r="47.665775"
+       cy="676.15924"
+       cx="91.150482"
+       id="circle5826-15-3"
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
+      <desc
+         id="desc5828-4-2">drop
+</desc>
+    </circle>
+    <circle
+       r="32.197815"
+       cy="633.62238"
+       cx="387.80386"
+       id="circle5826-15-3-6"
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
+      <desc
+         id="desc5828-4-2-8">drop
+</desc>
+    </circle>
+    <circle
+       cy="555.73016"
+       cx="567.34271"
+       id="circle5826-15-3-6-0"
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none"
+       r="82.468689">
+      <desc
+         id="desc5828-4-2-8-7">drop
+</desc>
+    </circle>
+    <circle
+       cy="540.81464"
+       cx="506.02328"
+       id="circle5826-15-3-6-0-0"
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none"
+       r="0">
+      <desc
+         id="desc5828-4-2-8-7-9">drop
+</desc>
+    </circle>
   </g>
   <g
      inkscape:groupmode="layer"

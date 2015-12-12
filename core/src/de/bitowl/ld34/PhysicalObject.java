@@ -16,6 +16,7 @@ public class PhysicalObject {
     private Entity userData;
 
 
+
     public PhysicalObject(BodyDef.BodyType type) {
         // Create our body definition
         def = new BodyDef();
@@ -27,6 +28,8 @@ public class PhysicalObject {
 
 
     /**
+     * set the shape before calling attachTo()
+     *
      * shape will be disposed in attachTo()
      * @param shape
      */
@@ -51,7 +54,7 @@ public class PhysicalObject {
         body = world.createBody(def);
 
         if (userData != null) {
-            userData.attachBody(body);
+            userData.attachPhysicalObject(this);
         }
 
         fixture = body.createFixture(fixtureDef);
@@ -60,8 +63,37 @@ public class PhysicalObject {
         body.setUserData(userData);
     }
 
+    /**
+     * to change the shape after attachTo was called
+     * shape will be disposed in here
+     */
+    public void changeShape(final Shape shape) {
+
+        GameScreen.physicRunnables.add(new Runnable() {
+
+            @Override
+            public void run() {
+                // dispose all old fixtures
+                for (Fixture fixture : body.getFixtureList()) {
+                    body.destroyFixture(fixture);
+                }
+
+
+                fixtureDef.shape = shape;
+                fixture = body.createFixture(fixtureDef);
+
+                shape.dispose();
+
+            }
+        });
+    }
+
 
     public void setPosition(Vector2 position) {
         def.position.set(position);
+    }
+
+    public Body getBody() {
+        return body;
     }
 }

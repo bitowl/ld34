@@ -7,10 +7,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 public class Entity extends Image {
 
     private boolean toBeRemoved;
-    private Body body;
+    private PhysicalObject physicalObject;
 
     public Entity(Texture texture) {
         super(texture);
+        setOrigin(getWidth()/2, getHeight()/2);
     }
 
     public void setToBeRemoved() {
@@ -21,15 +22,15 @@ public class Entity extends Image {
         return toBeRemoved;
     }
 
-    public void attachBody(Body body) {
-        this.body = body;
+    public void attachPhysicalObject(PhysicalObject physicalObject){
+        this.physicalObject = physicalObject;
     }
 
     public void collide(Entity userData) {
 System.out.println(getClass().getName());
     }
 
-    public Body getBody() {
-        return body;
+    public PhysicalObject getPhysicalObject() {
+        return physicalObject;
     }
 }
