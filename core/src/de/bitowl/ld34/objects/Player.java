@@ -1,11 +1,13 @@
-package de.bitowl.ld34;
+package de.bitowl.ld34.objects;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.physics.box2d.CircleShape;
+
+import de.bitowl.ld34.GameScreen;
+import de.bitowl.ld34.Utils;
 
 public class Player extends Entity {
 
-    int size;
+    float size;
 
     public Player() {
         super(Utils.getDrawable("ball"));
@@ -18,8 +20,14 @@ public class Player extends Entity {
         CircleShape circle = new CircleShape();
         circle.setRadius(size);
         getPhysicalObject().changeShape(circle);
-        setWidth(size*2);setHeight(size*2);
+        setWidth(size*2);setHeight(size * 2);
         setOrigin(size, size);
+        GameScreen.physicRunnables.add(new Runnable() {
+            @Override
+            public void run() {
+                getPhysicalObject().changeMass(size);
+            }
+        });
 
 
     }

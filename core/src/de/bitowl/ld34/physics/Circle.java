@@ -1,6 +1,5 @@
-package de.bitowl.ld34;
+package de.bitowl.ld34.physics;
 
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 
 import java.util.HashMap;

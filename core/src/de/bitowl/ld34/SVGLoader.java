@@ -1,7 +1,6 @@
 package de.bitowl.ld34;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -10,6 +9,11 @@ import com.badlogic.gdx.utils.XmlReader;
 
 import java.util.HashMap;
 
+import de.bitowl.ld34.objects.Drop;
+import de.bitowl.ld34.objects.Entity;
+import de.bitowl.ld34.physics.Box;
+import de.bitowl.ld34.physics.Circle;
+import de.bitowl.ld34.physics.Polygon;
 import magory.lib.MaSVG2;
 
 public class SVGLoader extends MaSVG2 {
@@ -33,15 +37,16 @@ public class SVGLoader extends MaSVG2 {
 
         HashMap<String, String> attrs = parseAttributes(desc);
 
-        Box ground = new Box(width, height, attrs);
-        ground.setPosition(new Vector2(x, y));
-        ground.getFixtureDef().density = 1;
+        Box box = new Box(width, height, attrs);
+        box.setPosition(new Vector2(x, y));
 
-        Entity obj = new Entity(new Texture("crate.png"));
-        obj.setOrigin(width / 2, height / 2);
-        stage.addActor(obj);
-        ground.setUserData(obj);
-        ground.attachTo(world);
+        if (attrs.containsKey("image")) {
+            Entity obj = new Entity(Utils.getDrawable(attrs.get("image")));
+            obj.setOrigin(width / 2, height / 2);
+            stage.addActor(obj);
+            box.setUserData(obj);
+        }
+        box.attachTo(world);
     }
 
     @Override

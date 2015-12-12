@@ -11,17 +11,13 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
-import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.Manifold;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
-import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -29,6 +25,10 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 import java.util.HashMap;
+
+import de.bitowl.ld34.objects.Entity;
+import de.bitowl.ld34.objects.Player;
+import de.bitowl.ld34.physics.PhysicalObject;
 
 public class GameScreen extends AbstractScreen {
 
@@ -69,6 +69,7 @@ public class GameScreen extends AbstractScreen {
 
         HashMap<String, String> attrs = new HashMap<String, String>();
         attrs.put("dyn", "");
+        attrs.put("mass", "20");
         PhysicalObject obj = new PhysicalObject(attrs);
         CircleShape circle = new CircleShape();
         circle.setRadius(20f);
@@ -242,9 +243,7 @@ public class GameScreen extends AbstractScreen {
         @Override
         public void beginContact(Contact contact) {
 
-            System.out.println((contact.getFixtureA().getBody().getUserData() != null) +" | "+(contact.getFixtureB().getBody().getUserData() != null));
             if (contact.getFixtureA().getBody().getUserData() != null && contact.getFixtureB().getBody().getUserData() != null) {
-                System.out.println("CONTACT");
                 ((Entity)contact.getFixtureA().getBody().getUserData()).collide((Entity) contact.getFixtureB().getBody().getUserData());
                 ((Entity)contact.getFixtureB().getBody().getUserData()).collide((Entity) contact.getFixtureA().getBody().getUserData());
             }

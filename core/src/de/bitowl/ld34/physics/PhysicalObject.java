@@ -1,4 +1,4 @@
-package de.bitowl.ld34;
+package de.bitowl.ld34.physics;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -9,6 +9,9 @@ import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
 import java.util.HashMap;
+
+import de.bitowl.ld34.objects.Entity;
+import de.bitowl.ld34.GameScreen;
 
 public class PhysicalObject {
     private BodyDef def;
@@ -32,6 +35,7 @@ public class PhysicalObject {
         }
 
         fixtureDef = new FixtureDef();
+        fixtureDef.density = 1/1000f; // default density
     }
 
 
@@ -73,11 +77,20 @@ public class PhysicalObject {
 
         if (attrs.containsKey("mass")) {
             System.out.println("------------ " + body.getMass());
-            fixture.setDensity(Float.parseFloat(attrs.get("mass")) / body.getMass());
-            body.resetMassData();
+            changeMass(Float.parseFloat(attrs.get("mass")));
+
             System.out.println(fixture.getDensity() + "->" + body.getMass());
         }
 
+    }
+
+    /**
+     * adjust the density so that the mass has the given value
+     * @param mass
+     */
+    public void changeMass(float mass) {
+        fixture.setDensity(mass / body.getMass() * fixture.getDensity());
+        body.resetMassData();
     }
 
     /**

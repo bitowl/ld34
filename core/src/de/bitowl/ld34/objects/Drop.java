@@ -1,6 +1,6 @@
-package de.bitowl.ld34;
+package de.bitowl.ld34.objects;
 
-import com.badlogic.gdx.graphics.Texture;
+import de.bitowl.ld34.Utils;
 
 public class Drop extends Entity {
     private float size;
@@ -11,8 +11,9 @@ public class Drop extends Entity {
 
     @Override
     public void collide(Entity userData) {
-        System.out.println("DRRRROP");
-        setToBeRemoved();
+        if (userData instanceof Player) {
+            setToBeRemoved();
+        }
     }
 
     public float getSize() {

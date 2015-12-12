@@ -1,8 +1,11 @@
-package de.bitowl.ld34;
+package de.bitowl.ld34.objects;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+
+import de.bitowl.ld34.Utils;
+import de.bitowl.ld34.physics.PhysicalObject;
 
 public class Entity extends Image {
 
@@ -27,7 +30,13 @@ public class Entity extends Image {
     }
 
     public void collide(Entity userData) {
-System.out.println(getClass().getName());
+
+    }
+
+    @Override
+    public void draw(Batch batch, float parentAlpha) {
+        super.draw(batch, parentAlpha);
+        Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+"\ndensity: " + physicalObject.getBody().getFixtureList().get(0).getDensity(),getX(), getY());
     }
 
     public PhysicalObject getPhysicalObject() {

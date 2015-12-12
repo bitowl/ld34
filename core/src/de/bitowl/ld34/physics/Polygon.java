@@ -1,7 +1,6 @@
-package de.bitowl.ld34;
+package de.bitowl.ld34.physics;
 
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 
 import java.util.HashMap;
