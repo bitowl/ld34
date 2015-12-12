@@ -79,11 +79,6 @@ public class GameScreen extends AbstractScreen {
 
         body.setGravityScale(0);
 
-        StaticBox ground = new StaticBox(3000, 10);
-        ground.setPosition(new Vector2(0, 10));
-        ground.attachTo(world);
-
-
         DynamicBox box = new DynamicBox(40, 40);
         box.setPosition(new Vector2(30, 100));
         box.attachTo(world);
@@ -91,6 +86,11 @@ public class GameScreen extends AbstractScreen {
 
         tmp = new Texture("badlogic.jpg");
 
+
+
+        // load level
+        SVGLoader loader = new SVGLoader(world);
+        loader.load("drawing.svg");
 
     }
 
@@ -140,16 +140,17 @@ public class GameScreen extends AbstractScreen {
         shapeRenderer.setProjectionMatrix(camera.combined);
         shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
         shapeRenderer.setColor(Color.RED);
-        shapeRenderer.line(0, 100, 300, 100);
+        // shapeRenderer.line(0, 100, 300, 100);
         /*System.out.println(body.getPosition());
         System.out.println(body.getPosition().add(newGravity.scl(50 / body.getMass())));
         System.out.println(body.getPosition().add(newGravity.scl(50 / body.getMass())));*/
 
         Vector2 cenVec = body.getPosition();
-        Vector2 aimVec = newGravity.scl(50 / body.getMass()).add(cenVec);
+        Vector2 aimVec = newGravity.scl(50 / body.getMass() / GRAVITY).add(cenVec);
 
         shapeRenderer.line(cenVec, aimVec);
         // shapeRenderer.line(new Vector2(100, 306), new Vector2(100, 356));
+        shapeRenderer.line(400,400,500,500);
 
         shapeRenderer.end();
 
@@ -170,7 +171,6 @@ public class GameScreen extends AbstractScreen {
         // max frame time to avoid spiral of death (on slow devices)
         float frameTime = Math.min(deltaTime, 0.25f);
         accumulator += frameTime;
-        System.out.println("acc: " + accumulator);
         while (accumulator >= TIME_STEP) {
             world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
             accumulator -= TIME_STEP;
