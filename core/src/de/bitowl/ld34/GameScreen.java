@@ -14,11 +14,19 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.CircleShape;
+import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 
 public class GameScreen extends AbstractScreen {
 
@@ -36,6 +44,8 @@ public class GameScreen extends AbstractScreen {
 
     private Texture tmp;
     private Body body;
+
+    private Stage stage;
 
 
     private final float GRAVITY = 100;
@@ -79,30 +89,48 @@ public class GameScreen extends AbstractScreen {
 
         body.setGravityScale(0);
 
-        DynamicBox box = new DynamicBox(40, 40);
-        box.setPosition(new Vector2(30, 100));
-        box.attachTo(world);
 
 
         tmp = new Texture("badlogic.jpg");
 
 
+        stage = new Stage(new FitViewport(600, 900));
+        camera = (OrthographicCamera) stage.getCamera();
+
+
+
+        Entity obj = new Entity(new Texture("ball.png"));
+        obj.setOrigin(obj.getWidth()/2, obj.getHeight()/2);
+        stage.addActor(obj);
+        body.setUserData(obj);
+
 
         // load level
-        SVGLoader loader = new SVGLoader(world);
+        SVGLoader loader = new SVGLoader(world, stage);
         loader.load("drawing.svg");
+
+        world.setContactListener(new ExtremeContactListener());
+
 
     }
 
 
     private float angle = -90;
 
-    private final float ROTATE_SPEED = 30;
+    private final float ROTATE_SPEED = 50;
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+        //// MOVE & INPUT ////
+
+
+
+        Vector2 newGravity = new Vector2(MathUtils.cos(MathUtils.degRad * angle), MathUtils.sin(MathUtils.degRad * angle));
+        // apply personal gravity
+        body.applyForceToCenter(newGravity.scl(GRAVITY * body.getMass()), true);
+
+
+        doPhysicsStep(delta);
 
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             angle += ROTATE_SPEED*delta;
@@ -122,18 +150,45 @@ public class GameScreen extends AbstractScreen {
         }
 
 
-        Vector2 newGravity = new Vector2(MathUtils.cos(MathUtils.degRad * angle), MathUtils.sin(MathUtils.degRad * angle));
-        // apply personal gravity
-        body.applyForceToCenter(newGravity.scl(GRAVITY * body.getMass()), true);
+        //// RENDER ////
+
+        Gdx.gl.glClearColor(0, 0, 0, 1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+
+        // TODO don't create a new one every time
+        Array<Body> bodies = new Array<Body>();
+        world.getBodies(bodies);
+
+        for (Body b : bodies) {
+            // Get the body's user data - in this example, our user
+            // data is an instance of the Entity class
+            Entity e = (Entity) b.getUserData();
+
+            if (e != null) {
+                // Update the entities/sprites position and angle
+                e.setPosition(b.getPosition().x - e.getOriginX(), b.getPosition().y - e.getOriginY());
+                // We need to convert our angle from radians to degrees
+                e.setRotation(MathUtils.radiansToDegrees * b.getAngle());
+            }
+        }
 
 
         // System.out.println(new Vector2(MathUtils.cos(angle), MathUtils.sin(angle)));
 
 
-        batch.setProjectionMatrix(camera.combined);
-        batch.begin();
-        batch.draw(tmp, 0, 0);
-        batch.end();
+        // remove dead people
+        for (Actor actor:stage.getActors()) {
+            if (actor instanceof Entity) {
+                Entity entity = (Entity) actor;
+                if (entity.isToBeRemoved()) {
+                    entity.remove();
+                    world.destroyBody(entity.getBody());
+                }
+            }
+        }
+
+        stage.act(delta);
+        stage.draw();
 
         debugRenderer.render(world, camera.combined);
 
@@ -154,14 +209,14 @@ public class GameScreen extends AbstractScreen {
 
         shapeRenderer.end();
 
-        doPhysicsStep(delta);
 
     }
 
 
     @Override
     public void resize(int width, int height) {
-        camera.setToOrtho(false, width, height);
+        stage.getViewport().update(width, height);
+        // camera.setToOrtho(false, width, height);
     }
 
     private float accumulator = 0;
@@ -176,4 +231,33 @@ public class GameScreen extends AbstractScreen {
             accumulator -= TIME_STEP;
         }
     }
+
+    class ExtremeContactListener implements ContactListener {
+        @Override
+        public void beginContact(Contact contact) {
+
+            System.out.println((contact.getFixtureA().getBody().getUserData() != null) +" | "+(contact.getFixtureB().getBody().getUserData() != null));
+            if (contact.getFixtureA().getBody().getUserData() != null && contact.getFixtureB().getBody().getUserData() != null) {
+                System.out.println("CONTACT");
+                ((Entity)contact.getFixtureA().getBody().getUserData()).collide((Entity) contact.getFixtureB().getBody().getUserData());
+                ((Entity)contact.getFixtureB().getBody().getUserData()).collide((Entity) contact.getFixtureA().getBody().getUserData());
+            }
+        }
+
+        @Override
+        public void endContact(Contact contact) {
+
+        }
+
+        @Override
+        public void preSolve(Contact contact, Manifold oldManifold) {
+
+        }
+
+        @Override
+        public void postSolve(Contact contact, ContactImpulse impulse) {
+
+        }
+    }
+
 }

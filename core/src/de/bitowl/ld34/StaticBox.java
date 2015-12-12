@@ -1,13 +1,15 @@
 package de.bitowl.ld34;
 
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
-public class StaticBox extends StaticObject {
+public class StaticBox extends PhysicalObject {
     float width, height;
     public StaticBox(float width, float height) {
+        super(BodyDef.BodyType.StaticBody);
         this.width = width; this.height = height;
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(width/2, height/2);

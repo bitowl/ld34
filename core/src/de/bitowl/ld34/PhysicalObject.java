@@ -8,17 +8,19 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
-public class DynamicObject {
+public class PhysicalObject {
     private BodyDef def;
     private FixtureDef fixtureDef;
     private Fixture fixture;
+    private Body body;
+    private Entity userData;
 
 
-    public DynamicObject() {
+    public PhysicalObject(BodyDef.BodyType type) {
         // Create our body definition
         def = new BodyDef();
 
-        def.type = BodyDef.BodyType.DynamicBody;
+        def.type = type;
 
         fixtureDef = new FixtureDef();
     }
@@ -32,17 +34,30 @@ public class DynamicObject {
         fixtureDef.shape = shape;
     }
 
+    public FixtureDef getFixtureDef() {
+        return fixtureDef;
+    }
+
+    public void setUserData(Entity userData) {
+        this.userData = userData;
+    }
+
     /**
      * attaches this object to a real world
      * @param world
      */
     public void attachTo(World world) {
         // Create a body from the defintion and add it to the world
-        Body groundBody = world.createBody(def);
+        body = world.createBody(def);
 
+        if (userData != null) {
+            userData.attachBody(body);
+        }
 
-        fixture = groundBody.createFixture(fixtureDef);
+        fixture = body.createFixture(fixtureDef);
         //fixtureDef.shape.dispose();
+
+        body.setUserData(userData);
     }
 
 

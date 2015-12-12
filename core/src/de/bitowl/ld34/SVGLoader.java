@@ -1,8 +1,10 @@
 package de.bitowl.ld34;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
 
@@ -10,14 +12,16 @@ import magory.lib.MaSVG2;
 
 public class SVGLoader extends MaSVG2 {
     World world;
+    Stage stage;
 
-    public SVGLoader(World world) {
+    public SVGLoader(World world, Stage stage) {
         this.world = world;
+        this.stage = stage;
     }
 
     @Override
     public void newImage(String name, XmlReader.Element el, float xxx, float yyy, float width, float height, float rr) {
-
+        System.out.println("image: "+ name);
     }
 
     @Override
@@ -25,9 +29,15 @@ public class SVGLoader extends MaSVG2 {
         System.out.println("NEW RECT" + name + " " + x+","+y+" "+width+"x"+height);
         System.out.println(desc);
 
-        if (desc.contains("dyxn")) {
+        if (desc.contains("dyn")) {
             DynamicBox ground = new DynamicBox(width, height);
             ground.setPosition(new Vector2(x, y));
+            ground.getFixtureDef().density = 1;
+
+            Entity obj = new Entity(new Texture("crate.png"));
+            obj.setOrigin(width/2,height/2);
+            stage.addActor(obj);
+            ground.setUserData(obj);
             ground.attachTo(world);
         } else {
             StaticBox ground = new StaticBox(width, height);
@@ -39,7 +49,24 @@ public class SVGLoader extends MaSVG2 {
 
     @Override
     public void newCircle(String name, XmlReader.Element el, float xxx, float yyy, float width, float height, float rr, String desc) {
-        System.out.println("NEW CIRCLE:" + xxx +"," + yyy);
+        System.out.println("NEW CIRCLE:" + xxx + "," + yyy + " XXX " + rr);
+
+        System.out.println(el.getFloat("cy"));
+
+
+
+        StaticCircle circle = new StaticCircle(el.getFloat("r"));
+        circle.setPosition(new Vector2(xxx+el.getFloat("cx"),yyy- el.getFloat("cy")));
+        circle.getFixtureDef().isSensor = true;
+
+        if (desc.contains("drop")) {
+            Drop drop = new Drop();
+            stage.addActor(drop);
+            circle.setUserData(drop);
+        }
+        circle.attachTo(world);
+
+
     }
 
     @Override
