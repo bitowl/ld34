@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="939.27562"
-     inkscape:cy="363.54404"
+     inkscape:cx="810.1832"
+     inkscape:cy="-174.18651"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,7 +62,7 @@
        id="image8011"
        xlink:href="file:///home/bitowl/git/ld34/android/assets/lvl1bg.png"
        preserveAspectRatio="none"
-       height="1519.2948"
+       height="3531.2949"
        width="3980.9497" />
   </g>
   <g
@@ -73,21 +73,11 @@
      style="display:inline">
     <rect
        style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       id="rect4196-7"
-       width="100"
-       height="100"
-       x="168.75"
-       y="920.33093">
-      <desc
-         id="desc4266-9">dyn</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
        id="rect4196-7-7"
        width="100"
        height="100"
-       x="-229.84189"
-       y="814.48334"
+       x="-534.17065"
+       y="973.8822"
        transform="matrix(0.76468834,-0.64440029,0.64440029,0.76468834,0,0)">
       <desc
          id="desc4266-9-3">dyn
@@ -95,21 +85,11 @@ image=crate</desc>
     </rect>
     <rect
        style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       id="rect4196-7-2"
-       width="100"
-       height="100"
-       x="213.37628"
-       y="1210.9535">
-      <desc
-         id="desc4266-9-35">dyn</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
        id="rect4196-7-4"
        width="130.125"
        height="138.625"
-       x="614.61102"
-       y="1020.0925">
+       x="591.58453"
+       y="1017.6001">
       <desc
          id="desc4266-9-1">dyn
 mass=30
@@ -156,9 +136,9 @@ image=crate</desc>
 </desc>
     </circle>
     <circle
-       r="15.625"
-       cy="888.29968"
-       cx="926.5625"
+       r="50.625"
+       cy="1183.2997"
+       cx="989.5625"
        id="circle5826-8"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
@@ -167,8 +147,8 @@ image=crate</desc>
     </circle>
     <circle
        r="15.625"
-       cy="935.17468"
-       cx="664.0625"
+       cy="1249.1747"
+       cx="682.0625"
        id="circle5826-7"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
@@ -257,11 +237,11 @@ size=5
 </desc>
     </circle>
     <circle
-       cy="540.81464"
-       cx="506.02328"
+       cy="850.81464"
+       cx="386.02328"
        id="circle5826-15-3-6-0-0"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none"
-       r="0">
+       r="32.197815">
       <desc
          id="desc5828-4-2-8-7-9">drop
 </desc>
@@ -318,5 +298,90 @@ size=5
        transform="translate(0,332.36216)"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccccc" />
+    <circle
+       style="fill:#ff00ff;fill-opacity:1;stroke:none"
+       id="path8249"
+       cx="847"
+       cy="1137.3622"
+       r="40">
+      <desc
+         id="desc8347">player-spawn</desc>
+    </circle>
+    <rect
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4196-7-4-7"
+       width="28.301624"
+       height="30.150337"
+       x="1470.3038"
+       y="937.15253"
+       transform="matrix(0.96574837,0.25948042,-0.25948042,0.96574837,0,0)"
+       inkscape:transform-center-x="-5.6568543"
+       inkscape:transform-center-y="-10.606602">
+      <desc
+         id="desc4266-9-1-4">image=spike
+enemy</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4196-7-4-7-8"
+       width="20.523449"
+       height="37.221405"
+       x="1628.4744"
+       y="837.12341"
+       transform="matrix(0.9447002,0.32793526,-0.32793526,0.9447002,0,0)">
+      <desc
+         id="desc4266-9-1-4-6">image=spike
+enemy</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4196-7-4-7-1"
+       width="28.301624"
+       height="30.150337"
+       x="1659.1356"
+       y="957.95746"
+       transform="matrix(0.96637833,0.25712432,-0.25712432,0.96637833,0,0)">
+      <desc
+         id="desc4266-9-1-4-5">image=spike
+enemy</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4196-7-4-7-2"
+       width="28.301624"
+       height="30.150337"
+       x="-1570.4301"
+       y="-942.50446"
+       transform="matrix(-0.93646078,-0.3507723,0.3507723,-0.93646078,0,0)">
+      <desc
+         id="desc4266-9-1-4-2">image=spike
+enemy</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4196-7-4-7-2-3"
+       width="28.301624"
+       height="30.150337"
+       x="-1658.6544"
+       y="-938.15125"
+       transform="matrix(-0.93646078,-0.3507723,0.3507723,-0.93646078,0,0)">
+      <desc
+         id="desc4266-9-1-4-2-1">image=spike
+enemy</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4196-7-4-7-2-2"
+       width="28.301624"
+       height="30.150337"
+       x="-1777.9944"
+       y="-940.26501"
+       transform="matrix(-0.93646078,-0.3507723,0.3507723,-0.93646078,0,0)"
+       inkscape:transform-center-x="83.438601"
+       inkscape:transform-center-y="-17.67767">
+      <desc
+         id="desc4266-9-1-4-2-7">image=spike
+enemy</desc>
+    </rect>
   </g>
 </svg>

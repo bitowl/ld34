@@ -15,7 +15,10 @@
    id="svg4372"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="ball.svg">
+   sodipodi:docname="ball.svg"
+   inkscape:export-filename="/home/bitowl/git/ld34/android/assets/ball.png"
+   inkscape:export-xdpi="178.09"
+   inkscape:export-ydpi="178.09">
   <defs
      id="defs4374" />
   <sodipodi:namedview
@@ -26,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="7.1820127"
+     inkscape:cx="4.6820127"
      inkscape:cy="1037.3438"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -53,7 +56,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="fill:#00ae0a;fill-opacity:1;stroke:none"
+       style="fill:#10c81b;fill-opacity:1;stroke:none"
        id="path4920"
        cx="40.625"
        cy="40.130058"
@@ -116,8 +119,8 @@
          style="fill:#ffffff;fill-opacity:1;stroke:none" />
     </g>
     <path
-       style="fill:#00000a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 50.625,49.951488 c 0.068,-0.750776 -8.8524,-0.570185 -18.035714,-0.267857 -7.810614,0.257137 17.338869,7.962152 18.035714,0.267857 z"
+       style="fill:#084e00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50.446429,47.987202 c 0.121237,-0.744036 -8.957286,-1.684476 -18.035714,-0.267857 -8.023811,1.252054 15.014503,18.809192 18.035714,0.267857 z"
        id="path4978"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="sss" />

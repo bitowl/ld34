@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
@@ -51,6 +52,10 @@ public class GameScreen extends AbstractScreen {
 
 
     private final float GRAVITY = 10;
+
+    private ParticleEffect bubblesEffect;
+
+
     public GameScreen() {
         physicRunnables = new Array<Runnable>();
 
@@ -78,7 +83,7 @@ public class GameScreen extends AbstractScreen {
         obj.setShape(circle);
         FixtureDef fixtureDef = obj.getFixtureDef();
         fixtureDef.density = 1f;
-        fixtureDef.friction = 0.2f;
+        fixtureDef.friction = 0.6f;
         fixtureDef.restitution = 0.6f; // Make it bounce a little bit
 
 
@@ -114,8 +119,14 @@ public class GameScreen extends AbstractScreen {
         body.setGravityScale(0);
         body.setAngularDamping(2);
         body.setLinearDamping(.5f);
-        player.updateSize();
+        player.updateSize(player.getSize());
         player.toFront();
+
+
+
+
+        // PARTICLES
+
     }
 
 
@@ -162,7 +173,7 @@ public class GameScreen extends AbstractScreen {
 
         //// RENDER ////
 
-        Gdx.gl.glClearColor(0.9f, 0.9f, 0.9f, 1);
+        Gdx.gl.glClearColor(0.87f, 0.86f, 0.9f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
         // TODO don't create a new one every time
@@ -198,7 +209,7 @@ public class GameScreen extends AbstractScreen {
         }
 
         // execute everything that might interfere with the physics
-        for (Runnable runnable: physicRunnables) {
+        for (Runnable runnable : physicRunnables) {
             runnable.run();
         }
         physicRunnables.clear();
@@ -206,7 +217,7 @@ public class GameScreen extends AbstractScreen {
         stage.act(delta);
         stage.draw();
 
-        debugRenderer.render(world, debugViewport.getCamera().combined);
+       // debugRenderer.render(world, debugViewport.getCamera().combined);
 
         shapeRenderer.setProjectionMatrix(debugViewport.getCamera().combined);
         shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
@@ -252,6 +263,14 @@ public class GameScreen extends AbstractScreen {
     class ExtremeContactListener implements ContactListener {
         @Override
         public void beginContact(Contact contact) {
+
+            if (contact.getFixtureA().getBody().getUserData() instanceof Player) {
+                ((Player) contact.getFixtureA().getBody().getUserData()).simpleContact(contact);
+            }
+            if (contact.getFixtureB().getBody().getUserData() instanceof Player) {
+                ((Player) contact.getFixtureB().getBody().getUserData()).simpleContact(contact);
+            }
+
 
             if (contact.getFixtureA().getBody().getUserData() != null && contact.getFixtureB().getBody().getUserData() != null) {
                 ((Entity)contact.getFixtureA().getBody().getUserData()).collide((Entity) contact.getFixtureB().getBody().getUserData());

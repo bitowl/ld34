@@ -1,7 +1,9 @@
 package de.bitowl.ld34;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -45,4 +47,11 @@ public class Utils {
         return polygons;
     }
 
+
+    public static ParticleEffect getParticleEffect(String name) {
+        ParticleEffect effect = new ParticleEffect();
+        effect.load(Gdx.files.internal("particles/"+name+".p"), Gdx.files.internal("."));
+        return effect;
+
+    }
 }

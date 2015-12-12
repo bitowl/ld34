@@ -15,6 +15,7 @@ import com.badlogic.gdx.utils.XmlReader;
 import java.util.HashMap;
 
 import de.bitowl.ld34.objects.Drop;
+import de.bitowl.ld34.objects.Enemy;
 import de.bitowl.ld34.objects.Entity;
 import de.bitowl.ld34.objects.Player;
 import de.bitowl.ld34.physics.Box;
@@ -61,12 +62,18 @@ public class SVGLoader extends MaSVG2 {
         box.setPosition(new Vector2(x, y));
         box.setRotation(rr);
 
-        if (attrs.containsKey("image")) {
+        if (attrs.containsKey("enemy")) {
+            Enemy obj = new Enemy(Utils.getDrawable(attrs.get("image")));
+            obj.setOrigin(width/2, height/2);
+            stage.addActor(obj);
+            box.setUserData(obj);
+        } else if (attrs.containsKey("image")) {
             Entity obj = new Entity(Utils.getDrawable(attrs.get("image")));
             obj.setOrigin(width/2, height/2);
             stage.addActor(obj);
             box.setUserData(obj);
         }
+
         box.attachTo(world);
     }
 
