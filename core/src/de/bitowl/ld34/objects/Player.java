@@ -1,5 +1,6 @@
 package de.bitowl.ld34.objects;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 
 import de.bitowl.ld34.GameScreen;
@@ -20,8 +21,8 @@ public class Player extends Entity {
         CircleShape circle = new CircleShape();
         circle.setRadius(size);
         getPhysicalObject().changeShape(circle);
-        setWidth(size*2);setHeight(size * 2);
-        setOrigin(size, size);
+        setWidth(size*2 * Utils.B2W);setHeight(size * 2* Utils.B2W);
+        setOrigin(size* Utils.B2W, size* Utils.B2W);
         GameScreen.physicRunnables.add(new Runnable() {
             @Override
             public void run() {
@@ -40,7 +41,8 @@ public class Player extends Entity {
     public void collide(Entity userData) {
         if (userData instanceof Drop) {
             Drop drop = (Drop) userData;
-            size += drop.getSize()/2;
+
+            size = (float)Math.sqrt(size * size + drop.getSize() *drop.getSize());
             updateSize();
         }
     }

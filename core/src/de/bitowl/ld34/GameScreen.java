@@ -45,9 +45,6 @@ public class GameScreen extends AbstractScreen {
 
     private OrthographicCamera camera;
 
-    private SpriteBatch batch;
-
-    private Texture tmp;
 
     private Stage stage;
     private Body body;
@@ -61,7 +58,6 @@ public class GameScreen extends AbstractScreen {
         debugRenderer = new Box2DDebugRenderer();
         camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
-        batch = new SpriteBatch();
         shapeRenderer = new ShapeRenderer();
 
 
@@ -77,12 +73,12 @@ public class GameScreen extends AbstractScreen {
         PhysicalObject obj = new PhysicalObject(attrs);
         CircleShape circle = new CircleShape();
         circle.setRadius(20f * Utils.W2B);
-        obj.setPosition(new Vector2(200*Utils.W2B, 200*Utils.W2B));
+        obj.setPosition(new Vector2(200 * Utils.W2B, 200 * Utils.W2B));
 
         obj.setShape(circle);
         FixtureDef fixtureDef = obj.getFixtureDef();
         fixtureDef.density = 1f;
-        fixtureDef.friction = 0.6f;
+        fixtureDef.friction = 0.2f;
         fixtureDef.restitution = 0.6f; // Make it bounce a little bit
 
 
@@ -93,16 +89,11 @@ public class GameScreen extends AbstractScreen {
         stage.addActor(player);
         obj.setUserData(player);
 
-        obj.attachTo(world);
-
-        obj.getBody().setGravityScale(0);
-
-        body = obj.getBody();
-        player.updateSize();
+        player.attachPhysicalObject(obj);
 
 
 
-        tmp = new Texture("badlogic.jpg");
+
 
 
 
@@ -111,12 +102,20 @@ public class GameScreen extends AbstractScreen {
 
 
         // load level
-        SVGLoader loader = new SVGLoader(world, stage);
-        loader.load("drawing.svg");
+        SVGLoader loader = new SVGLoader(world, stage, player);
+        loader.load("level/lvl1.svg");
 
         world.setContactListener(new ExtremeContactListener());
 
 
+        // finish player initialisation
+        obj.attachTo(world);
+        body = obj.getBody();
+        body.setGravityScale(0);
+        body.setAngularDamping(2);
+        body.setLinearDamping(.5f);
+        player.updateSize();
+        player.toFront();
     }
 
 
@@ -163,7 +162,7 @@ public class GameScreen extends AbstractScreen {
 
         //// RENDER ////
 
-        Gdx.gl.glClearColor(0, 0, 0, 1);
+        Gdx.gl.glClearColor(0.9f, 0.9f, 0.9f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
         // TODO don't create a new one every time
@@ -217,10 +216,10 @@ public class GameScreen extends AbstractScreen {
         System.out.println(body.getPosition().add(newGravity.scl(50 / body.getMass())));
         System.out.println(body.getPosition().add(newGravity.scl(50 / body.getMass())));*/
 
-        Vector2 cenVec = body.getPosition();
+       /* Vector2 cenVec = body.getPosition();
         Vector2 aimVec = newGravity.scl(50 / body.getMass() / GRAVITY).add(cenVec);
 
-        shapeRenderer.line(cenVec, aimVec);
+        shapeRenderer.line(cenVec, aimVec);*/
         // shapeRenderer.line(new Vector2(100, 306), new Vector2(100, 356));
         // shapeRenderer.line(400,400,500,500);
 

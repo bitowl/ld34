@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="drawing.svg">
+   sodipodi:docname="lvl1.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.64"
-     inkscape:cx="65.083107"
-     inkscape:cy="61.942956"
+     inkscape:zoom="1"
+     inkscape:cx="939.27562"
+     inkscape:cy="363.54404"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,35 +52,25 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="solid"
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="background">
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lvl1bg.png"
+       y="13.658879"
+       x="17.429371"
+       id="image8011"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lvl1bg.png"
+       preserveAspectRatio="none"
+       height="1519.2948"
+       width="3980.9497" />
+  </g>
+  <g
+     inkscape:label="objects"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-332.36216)"
      style="display:inline">
-    <rect
-       style="fill:#000000;fill-opacity:0.47560975;stroke:none"
-       id="rect4138"
-       width="1280.3409"
-       height="31.60919"
-       x="0.1163939"
-       y="333.85358">
-      <desc
-         id="desc4192">asdf
-
-asdfasdf</desc>
-      <title
-         id="title4190">TOP</title>
-    </rect>
-    <rect
-       style="fill:#808080;fill-opacity:1;stroke:none"
-       id="rect4138-3"
-       width="1280.3409"
-       height="31.60919"
-       x="-0.32672158"
-       y="1020.9326">
-      <desc
-         id="desc4194">bottom</desc>
-    </rect>
     <rect
        style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
        id="rect4196-7"
@@ -96,8 +86,8 @@ asdfasdf</desc>
        id="rect4196-7-7"
        width="100"
        height="100"
-       x="-156.86356"
-       y="513.29333"
+       x="-229.84189"
+       y="814.48334"
        transform="matrix(0.76468834,-0.64440029,0.64440029,0.76468834,0,0)">
       <desc
          id="desc4266-9-3">dyn
@@ -108,46 +98,23 @@ image=crate</desc>
        id="rect4196-7-2"
        width="100"
        height="100"
-       x="1021.0638"
-       y="896.51593">
+       x="213.37628"
+       y="1210.9535">
       <desc
          id="desc4266-9-35">dyn</desc>
     </rect>
     <rect
        style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
        id="rect4196-7-4"
-       width="378.125"
-       height="190.625"
-       x="606.61102"
-       y="672.09247">
+       width="130.125"
+       height="138.625"
+       x="614.61102"
+       y="1020.0925">
       <desc
          id="desc4266-9-1">dyn
 mass=30
 image=crate</desc>
     </rect>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:0.47560975;stroke:none"
-       id="rect4138-0"
-       width="30.340939"
-       height="655.09814"
-       x="0.12685871"
-       y="365.76166">
-      <desc
-         id="desc4192-7">asdf
-
-asdfasdf</desc>
-      <title
-         id="title4190-3">TOP</title>
-    </rect>
-    <circle
-       style="fill:#008000;fill-opacity:1;stroke:none"
-       id="path5792"
-       cx="130.6002"
-       cy="449.6012"
-       r="55.46875">
-      <desc
-         id="desc5794">player-spawn</desc>
-    </circle>
     <circle
        style="fill:#00ff00;fill-opacity:1;stroke:none"
        id="path5796"
@@ -240,8 +207,8 @@ asdfasdf</desc>
     </circle>
     <circle
        r="15.625"
-       cy="532.04968"
-       cx="1192.1875"
+       cy="855.04968"
+       cx="1067.1875"
        id="circle5826-73"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
@@ -250,34 +217,20 @@ asdfasdf</desc>
     </circle>
     <circle
        r="15.625"
-       cy="771.11218"
-       cx="1198.4375"
+       cy="786.11218"
+       cx="990.4375"
        id="circle5826-9"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
          id="desc5828-85">drop
 </desc>
     </circle>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:0.47560975;stroke:none"
-       id="rect4138-0-5"
-       width="30.340939"
-       height="231.93893"
-       x="1251.3717"
-       y="364.76462">
-      <desc
-         id="desc4192-7-5">asdf
-
-asdfasdf</desc>
-      <title
-         id="title4190-3-9">TOP</title>
-    </rect>
     <circle
-       r="14.46265"
-       cy="642.95612"
-       cx="57.947357"
+       cy="1202.9561"
+       cx="497.94736"
        id="circle5826-15-3"
-       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none"
+       r="14.46265">
       <desc
          id="desc5828-4-2">drop
 </desc>
@@ -313,49 +266,10 @@ size=5
          id="desc5828-4-2-8-7-9">drop
 </desc>
     </circle>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 603.12501,365.64341 19.14062,45.3125 20.70313,-45.70313 z"
-       id="path6751"
-       inkscape:connector-curvature="0">
-      <desc
-         id="desc6757">spike
-</desc>
-    </path>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 687.10938,365.6434 11.32812,56.25 23.82813,-55.46875 z"
-       id="path6753"
-       inkscape:connector-curvature="0">
-      <desc
-         id="desc6759">spike</desc>
-    </path>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 760.54688,365.6434 15.625,59.375 16.40625,-60.15625 z"
-       id="path6755"
-       inkscape:connector-curvature="0">
-      <desc
-         id="desc6761">spike</desc>
-    </path>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:0.47560975;stroke:none"
-       id="rect4138-0-5-6"
-       width="30.340939"
-       height="231.93893"
-       x="1251.3717"
-       y="788.34222">
-      <desc
-         id="desc4192-7-5-7">asdf
-
-asdfasdf</desc>
-      <title
-         id="title4190-3-9-8">TOP</title>
-    </rect>
     <circle
        r="5.1288838"
-       cy="525.89905"
-       cx="1359.5232"
+       cy="958.89905"
+       cx="1053.5232"
        id="circle5826-4-2"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
@@ -364,96 +278,45 @@ asdfasdf</desc>
     </circle>
     <circle
        r="2.5898213"
-       cy="545.91687"
-       cx="1304.1016"
+       cy="965.91687"
+       cx="978.10156"
        id="circle5826-4-2-2"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
          id="desc5828-3-2-7">drop
 </desc>
     </circle>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       id="rect4196-7-2-8"
-       width="100"
-       height="100"
-       x="1439.181"
-       y="649.69159">
-      <desc
-         id="desc4266-9-35-6">dyn
-image=crate</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#808080;fill-opacity:1;stroke:none"
-       id="rect4138-3-5"
-       width="370.96594"
-       height="31.60919"
-       x="1392.6421"
-       y="1491.2451">
-      <desc
-         id="desc4194-6">bottom</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#808080;fill-opacity:1;stroke:none"
-       id="rect4138-3-5-9"
-       width="370.96594"
-       height="31.60919"
-       x="2045.7671"
-       y="1383.4326">
-      <desc
-         id="desc4194-6-6">bottom</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#808080;fill-opacity:1;stroke:none"
-       id="rect4138-3-5-7"
-       width="370.96594"
-       height="31.60919"
-       x="2520.7671"
-       y="1214.6826">
-      <desc
-         id="desc4194-6-9">bottom</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       id="rect4196-7-2-8-9"
-       width="100"
-       height="100"
-       x="2181.25"
-       y="458.61218">
-      <desc
-         id="desc4266-9-35-6-4">dyn
-image=crate</desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       id="rect4196-7-2-8-6"
-       width="100"
-       height="100"
-       x="2678.125"
-       y="339.86215">
-      <desc
-         id="desc4266-9-35-6-48">dyn
-image=crate</desc>
-    </rect>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 1303.7281,745.21265 976.6913,207.71262 6.6291,130.37283 -899.3514,13.2582 z"
-       id="path6934"
-       inkscape:connector-curvature="0" />
-    <image
-       sodipodi:absref="/home/bitowl/git/ld34/android/assets/background.png"
-       xlink:href="background.png"
-       transform="matrix(0.82493123,0.56523311,-0.56523311,0.82493123,0,0)"
-       width="141.91966"
-       height="206.25658"
-       preserveAspectRatio="none"
-       id="image7012"
-       x="755.01947"
-       y="410.54599" />
+       d="m 994.88738,1376.7419 -7.21078,3.9432 -198.18685,108.378 -264.73446,23.0405 -0.90959,247.3066 2919.5894,146.369 -38.37,-37.6378 -211.7356,-36.1215 -145.587,-86.2922 -103.4582,-112.8216 -251.7128,-39.6336 -383.0449,-32.0173 -198.7489,13.3386 -62.8354,22.2633 -60.467,46.1567 -165.9262,-1.0295 -320.9263,-77.4783 -496.8217,-184.4547 z"
+       id="path8014"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccc" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1286.3999,1334.7407 225.3741,79.6083 221.0633,55.6252 176.6408,5.7901 135.2839,-53.5691 90.4195,-17.4246 183.3104,-19.0381 264.0646,4.4131 230.625,24.625 -36.25,-153.25 -1667.4875,-32.0216 -13.0885,24.2262 z"
+       id="path8014-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2842.2157,1419.7042 -15.0061,-175.6126 53.5434,-207.9929 86.247,-140.73654 159.8262,-125.84271 223.4457,-63.63961 244.659,21.2132 206.4752,123.03658 132.936,166.87718 65.0539,224.86 -35.3554,240.4163 -103.2376,182.4336 -188.0904,137.1787 -224.8599,62.2254 -43.8407,1.4142 43.8407,42.4264 681.6509,-9.8995 -28.2843,-1371.78718 -1411.3851,107.48023 122.4471,781.73535 z"
+       id="path8190"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 532,28.755859 573.46289,17.84375 830,54 l 240,204 90,184 4,322 -56,138 198,-2 -30,-1014 -744,27.109375 z"
+       id="path8197"
+       transform="translate(0,332.36216)"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 532,28.755859 532,-86.890625 -250,-76 l -12,1488 782,12 4.32031,-242.9668 L 295,1114 151,981 48.083984,795.66016 17.677734,589.89258 53.033203,389.78125 168.29102,210.17578 358.50391,74.412109 Z"
+       id="path8192"
+       transform="translate(0,332.36216)"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccc" />
   </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="dynamic"
-     style="display:inline" />
 </svg>
