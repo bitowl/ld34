@@ -25,9 +25,14 @@ public class Player extends Entity {
     }
 
     @Override
+    public void act(float delta) {
+    }
+
+    @Override
     public void collide(Entity userData) {
         if (userData instanceof Drop) {
-            size++;
+            Drop drop = (Drop) userData;
+            size += drop.getSize()/2;
             updateSize();
         }
     }

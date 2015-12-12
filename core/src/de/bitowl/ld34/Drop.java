@@ -3,9 +3,10 @@ package de.bitowl.ld34;
 import com.badlogic.gdx.graphics.Texture;
 
 public class Drop extends Entity {
-    private boolean attachedToPlayer;
-    public Drop() {
+    private float size;
+    public Drop(float size) {
         super(Utils.getDrawable("drop"));
+        this.size = size;
     }
 
     @Override
@@ -14,11 +15,7 @@ public class Drop extends Entity {
         setToBeRemoved();
     }
 
-    public boolean isAttachedToPlayer() {
-        return attachedToPlayer;
-    }
-
-    public void setAttachedToPlayer(boolean attachedToPlayer) {
-        this.attachedToPlayer = attachedToPlayer;
+    public float getSize() {
+        return size;
     }
 }

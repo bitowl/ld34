@@ -8,6 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
 
+import java.util.HashMap;
+
 import magory.lib.MaSVG2;
 
 public class SVGLoader extends MaSVG2 {
@@ -21,30 +23,25 @@ public class SVGLoader extends MaSVG2 {
 
     @Override
     public void newImage(String name, XmlReader.Element el, float xxx, float yyy, float width, float height, float rr) {
-        System.out.println("image: "+ name);
+        System.out.println("image: " + name);
     }
 
     @Override
     public void newRect(String name, XmlReader.Element el, float x, float y, float width, float height, float rr, String desc) {
-        System.out.println("NEW RECT" + name + " " + x+","+y+" "+width+"x"+height);
+        System.out.println("NEW RECT" + name + " " + x + "," + y + " " + width + "x" + height);
         System.out.println(desc);
 
-        if (desc.contains("dyn")) {
-            DynamicBox ground = new DynamicBox(width, height);
-            ground.setPosition(new Vector2(x, y));
-            ground.getFixtureDef().density = 1;
+        HashMap<String, String> attrs = parseAttributes(desc);
 
-            Entity obj = new Entity(new Texture("crate.png"));
-            obj.setOrigin(width/2,height/2);
-            stage.addActor(obj);
-            ground.setUserData(obj);
-            ground.attachTo(world);
-        } else {
-            StaticBox ground = new StaticBox(width, height);
-            ground.setPosition(new Vector2(x, y));
-            ground.attachTo(world);
-        }
+        Box ground = new Box(width, height, attrs);
+        ground.setPosition(new Vector2(x, y));
+        ground.getFixtureDef().density = 1;
 
+        Entity obj = new Entity(new Texture("crate.png"));
+        obj.setOrigin(width / 2, height / 2);
+        stage.addActor(obj);
+        ground.setUserData(obj);
+        ground.attachTo(world);
     }
 
     @Override
@@ -56,13 +53,15 @@ public class SVGLoader extends MaSVG2 {
 
         float r = el.getFloat("r");
 
-        StaticCircle circle = new StaticCircle(r);
-        circle.setPosition(new Vector2(xxx+el.getFloat("cx"),yyy- el.getFloat("cy")));
+        HashMap<String, String> attrs = parseAttributes(desc);
+        Circle circle = new Circle(r, attrs);
+        circle.setPosition(new Vector2(xxx + el.getFloat("cx"), yyy - el.getFloat("cy")));
         circle.getFixtureDef().isSensor = true;
 
         if (desc.contains("drop")) {
-            Drop drop = new Drop();
-            drop.setWidth(r*2);drop.setHeight(r * 2);
+            Drop drop = new Drop(r);
+            drop.setWidth(r * 2);
+            drop.setHeight(r * 2);
             drop.setOrigin(r, r);
             stage.addActor(drop);
             circle.setUserData(drop);
@@ -79,6 +78,9 @@ public class SVGLoader extends MaSVG2 {
 
     @Override
     public void newPath(Array<Vector2> path, XmlReader.Element el, String title) {
+
+        HashMap<String, String> attrs = parseAttributes(el.get("desc")==null?"":el.get("desc"));
+
         System.out.println("PAAATH");
 
         System.out.println(path);
@@ -91,9 +93,22 @@ public class SVGLoader extends MaSVG2 {
 
         System.out.println(vertices.length);
 
-        StaticPolygon ground = new StaticPolygon(vertices);
+        Polygon ground = new Polygon(vertices, attrs);
         ground.attachTo(world);
     }
 
-
+    public HashMap<String, String> parseAttributes(String desc) {
+        HashMap<String, String> attrs = new HashMap<String, String>();
+        String[] lines = desc.split("\n");
+        for (String line : lines) {
+            String[] parts = line.split("=");
+            if (parts.length == 1) {
+                attrs.put(parts[0], "");
+            } else {
+                attrs.put(parts[0], parts[1]);
+            }
+        }
+        return attrs;
     }
+
+}

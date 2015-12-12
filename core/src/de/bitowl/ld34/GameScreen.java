@@ -28,6 +28,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
+import java.util.HashMap;
+
 public class GameScreen extends AbstractScreen {
 
     public static Array<Runnable> physicRunnables;
@@ -65,15 +67,16 @@ public class GameScreen extends AbstractScreen {
         camera = (OrthographicCamera) stage.getCamera();
 
 
-
-        PhysicalObject obj = new PhysicalObject(BodyDef.BodyType.DynamicBody);
+        HashMap<String, String> attrs = new HashMap<String, String>();
+        attrs.put("dyn", "");
+        PhysicalObject obj = new PhysicalObject(attrs);
         CircleShape circle = new CircleShape();
         circle.setRadius(20f);
         obj.setPosition(new Vector2(200, 200));
 
         obj.setShape(circle);
         FixtureDef fixtureDef = obj.getFixtureDef();
-        fixtureDef.density = .3f;
+        fixtureDef.density = .001f;
         fixtureDef.friction = 0.6f;
         fixtureDef.restitution = 0.6f; // Make it bounce a little bit
 

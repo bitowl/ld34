@@ -8,20 +8,28 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
+import java.util.HashMap;
+
 public class PhysicalObject {
     private BodyDef def;
     private FixtureDef fixtureDef;
     private Fixture fixture;
     private Body body;
     private Entity userData;
+    private HashMap<String, String> attrs;
 
 
+    public PhysicalObject(HashMap<String, String> attrs) {
+        this.attrs = attrs;
 
-    public PhysicalObject(BodyDef.BodyType type) {
+
         // Create our body definition
         def = new BodyDef();
-
-        def.type = type;
+        if (attrs.containsKey("dyn")) {
+            def.type = BodyDef.BodyType.DynamicBody;
+        } else {
+            def.type = BodyDef.BodyType.StaticBody;
+        }
 
         fixtureDef = new FixtureDef();
     }
@@ -61,6 +69,15 @@ public class PhysicalObject {
         //fixtureDef.shape.dispose();
 
         body.setUserData(userData);
+
+
+        if (attrs.containsKey("mass")) {
+            System.out.println("------------ " + body.getMass());
+            fixture.setDensity(Float.parseFloat(attrs.get("mass")) / body.getMass());
+            body.resetMassData();
+            System.out.println(fixture.getDensity() + "->" + body.getMass());
+        }
+
     }
 
     /**
