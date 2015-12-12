@@ -8,6 +8,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.XmlReader;
 
+import java.util.HashMap;
+
 import magory.lib.MaSVG2;
 
 public class SVGLoader extends MaSVG2 {
@@ -57,16 +59,19 @@ public class SVGLoader extends MaSVG2 {
         float r = el.getFloat("r");
 
         StaticCircle circle = new StaticCircle(r);
-        circle.setPosition(new Vector2(xxx+el.getFloat("cx"),yyy- el.getFloat("cy")));
+        circle.setPosition(new Vector2(xxx + el.getFloat("cx"), yyy - el.getFloat("cy")));
       //  circle.getFixtureDef().isSensor = true;
 
-        if (desc.contains("drop")) {
-            Drop drop = new Drop();
+        HashMap<String, String> attrs = parseAttributes(desc);
+
+        if (attrs.containsKey("drop")) {
+            Drop drop = new Drop(r);
             drop.setWidth(r*2);drop.setHeight(r * 2);
             drop.setOrigin(r, r);
             stage.addActor(drop);
             circle.setUserData(drop);
         }
+
         circle.attachTo(world);
 
 
@@ -96,4 +101,18 @@ public class SVGLoader extends MaSVG2 {
     }
 
 
+    public HashMap<String, String> parseAttributes(String desc) {
+        HashMap<String, String> attrs = new HashMap<String, String>();
+        String[] lines = desc.split("\n");
+        for (String line:lines) {
+            String[] parts = line.split("=");
+            if (parts.length == 1) {
+                attrs.put(parts[0], "");
+            } else {
+                attrs.put(parts[0], parts[1]);
+            }
+        }
+        return attrs;
     }
+
+}
