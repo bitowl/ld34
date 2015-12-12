@@ -11,7 +11,7 @@ public class Drop extends Entity {
     @Override
     public void collide(Entity userData) {
         System.out.println("DRRRROP");
-        setToBeRemoved();
+    //    setToBeRemoved();
     }
 
     public boolean isAttachedToPlayer() {
