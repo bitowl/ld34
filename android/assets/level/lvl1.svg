@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="3067.1638"
-     inkscape:cy="-60.199059"
+     inkscape:zoom="0.25"
+     inkscape:cx="3569.6899"
+     inkscape:cy="-1416.4078"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1916"
      inkscape:window-height="1058"
@@ -158,8 +158,8 @@ image=crate</desc>
     </circle>
     <circle
        r="50.625"
-       cy="1183.2997"
-       cx="989.5625"
+       cy="1347.2997"
+       cx="3373.5625"
        id="circle5826-8"
        style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
@@ -289,22 +289,22 @@ size=5
     </circle>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 994.88738,1376.7419 -7.21078,3.9432 -198.18685,108.378 -264.73446,23.0405 -0.90959,247.3066 2919.5894,146.369 -38.37,-37.6378 -211.7356,-36.1215 -145.587,-86.2922 -103.4582,-112.8216 -251.7128,-39.6336 -383.0449,-32.0173 -198.7489,13.3386 -62.8354,22.2633 -60.467,46.1567 -165.9262,-1.0295 -320.9263,-77.4783 -496.8217,-184.4547 z"
+       d="m 994.88738,1376.7419 -7.21078,3.9432 -198.18685,108.378 -264.73446,23.0405 -0.90959,247.3066 2919.5894,146.369 -38.37,-37.6378 -193.3508,-42.4855 -154.0723,-89.1206 -109.8222,-111.4074 -255.2483,-37.5123 -254.0532,-26.52 -229.9917,-3.3404 -116.1337,16.8386 -84.0486,45.5978 -73.902,20.7009 -112.8932,1.0918 -320.9263,-77.4783 -496.8217,-184.4547 z"
        id="path8014"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccc" />
+       sodipodi:nodetypes="cccccccccccccccccccc" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 1286.3999,1334.7407 225.3741,79.6083 221.0633,55.6252 176.6408,5.7901 135.2839,-53.5691 90.4195,-17.4246 183.3104,-19.0381 264.0646,4.4131 230.625,24.625 -36.25,-153.25 -1667.4875,-32.0216 -13.0885,24.2262 z"
+       d="m 1286.3999,1334.7407 225.3741,79.6083 259.2471,55.2716 132.4466,0.8404 141.2943,-48.2658 90.4195,-17.4246 183.3104,-19.0381 264.0646,4.4131 230.625,24.625 -36.25,-153.25 -1667.4875,-32.0216 -13.0885,24.2262 z"
        id="path8014-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2842.2157,1419.7042 -15.0061,-175.6126 53.5434,-207.9929 86.247,-140.73654 159.8262,-125.84271 223.4457,-63.63961 244.659,21.2132 206.4752,123.03658 132.936,166.87718 65.0539,224.86 -35.3554,240.4163 -103.2376,182.4336 -188.0904,137.1787 -224.8599,62.2254 -43.8407,1.4142 43.8407,42.4264 681.6509,-9.8995 -28.2843,-1371.78718 -1411.3851,107.48023 122.4471,781.73535 z"
+       d="m 2842.2157,1419.7042 -15.0061,-175.6126 16.6796,-121.2251 36.8638,-86.7678 37.3458,-76.72148 48.9012,-64.01506 93.6115,-89.45846 119.2477,-68.20406 144.9569,-40.30508 158.3919,-4.94975 156.2838,43.81412 115.6981,64.54415 114.2162,112.82654 81.936,132.37718 40.0539,137.36 3.9302,156.3879 -31.2856,142.5284 -111.7376,175.9336 -179.5904,143.6787 -224.8599,62.2254 -43.8407,1.4142 43.8407,42.4264 681.6509,-9.8995 -28.2843,-1371.78718 -1411.3851,107.48023 122.4471,781.73535 z"
        id="path8190"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccccccccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 532,28.755859 573.46289,17.84375 830,54 l 240,204 90,184 4,322 -56,138 198,-2 -30,-1014 -744,27.109375 z"
@@ -404,5 +404,16 @@ enemy</desc>
          id="desc4266-9-1-4-2-7">image=spike
 enemy</desc>
     </rect>
+    <circle
+       style="fill:#ffff00;fill-opacity:1;stroke:none"
+       id="path4416"
+       cx="3452.1785"
+       cy="1205.8252"
+       r="66.46804">
+      <desc
+         id="desc4418">exit
+weight=2
+level=lvl2</desc>
+    </circle>
   </g>
 </svg>

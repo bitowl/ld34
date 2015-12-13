@@ -38,8 +38,6 @@ public class GameScreen extends AbstractScreen {
     private final float TIME_STEP = 1 / 60f;
     private final int VELOCITY_ITERATIONS = 6;
     private final int POSITION_ITERATIONS = 2;
-
-    private World world;
     private Box2DDebugRenderer debugRenderer;
     private Viewport debugViewport;
     private ShapeRenderer shapeRenderer; // custom debug shapes
@@ -47,84 +45,38 @@ public class GameScreen extends AbstractScreen {
     private OrthographicCamera camera;
 
 
-    private Stage stage;
-    private Body body;
-
-
-    private final float GRAVITY = 10;
+    public static boolean cutScene; // cut scene disables physics
 
     private ParticleEffect bubblesEffect;
+
+    private Level level; // current level
+    private Array<Body> bodies;
 
 
     public GameScreen() {
         physicRunnables = new Array<Runnable>();
 
-        world = new World(new Vector2(0, -GRAVITY), true);
         debugRenderer = new Box2DDebugRenderer();
-        camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
         shapeRenderer = new ShapeRenderer();
 
 
-        stage = new Stage(new FitViewport(600 , 900));
-        debugViewport = new FitViewport(600 * Utils.W2B, 900 * Utils.W2B);
-
-        camera = (OrthographicCamera) stage.getCamera();
-
-
-        HashMap<String, String> attrs = new HashMap<String, String>();
-        attrs.put("dyn", "");
-        attrs.put("mass", "20");
-        PhysicalObject obj = new PhysicalObject(attrs);
-        CircleShape circle = new CircleShape();
-        circle.setRadius(20f * Utils.W2B);
-        obj.setPosition(new Vector2(200 * Utils.W2B, 200 * Utils.W2B));
-
-        obj.setShape(circle);
-        FixtureDef fixtureDef = obj.getFixtureDef();
-        fixtureDef.density = 1f;
-        fixtureDef.friction = 0.6f;
-        fixtureDef.restitution = 0.6f; // Make it bounce a little bit
-
-
-        Player player = new Player();
-
-        // Entity obj = new Entity(new Texture("ball.png"));
-        // obj.setOrigin(obj.getWidth()/2, obj.getHeight()/2);
-        stage.addActor(player);
-        obj.setUserData(player);
-
-        player.attachPhysicalObject(obj);
 
 
 
 
 
+        level = new Level("lvl1");
+        level.init();
+
+        debugViewport = new FitViewport(level.WIDTH * Utils.W2B, level.HEIGHT * Utils.W2B);
+
+        // get a list of bodies
+        bodies = new Array<Body>();
+        level.world.getBodies(bodies);
 
 
-
-
-
-
-        // load level
-        SVGLoader loader = new SVGLoader(world, stage, player);
-        loader.load("level/lvl1.svg");
-
-        world.setContactListener(new ExtremeContactListener());
-
-
-        // finish player initialisation
-        obj.attachTo(world);
-        body = obj.getBody();
-        body.setGravityScale(0);
-        body.setAngularDamping(2);
-        body.setLinearDamping(.5f);
-        player.updateSize(player.getSize());
-        player.toFront();
-
-
-
-
+        camera = (OrthographicCamera) level.stage.getCamera();
         // PARTICLES
 
     }
@@ -142,10 +94,13 @@ public class GameScreen extends AbstractScreen {
 
         Vector2 newGravity = new Vector2(MathUtils.cos(MathUtils.degRad * angle), MathUtils.sin(MathUtils.degRad * angle));
         // apply personal gravity
-        body.applyForceToCenter(newGravity.scl(GRAVITY * body.getMass()), true);
+        Body body = level.player.getPhysicalObject().getBody();
+        body.applyForceToCenter(newGravity.scl(level.GRAVITY * body.getMass()), true);
 
 
-        doPhysicsStep(delta);
+        if (!cutScene) {
+            doPhysicsStep(delta);
+        }
 
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             angle += ROTATE_SPEED*delta;
@@ -160,8 +115,16 @@ public class GameScreen extends AbstractScreen {
 
 
         System.out.println("->" + body.getPosition());
-        camera.position.set(body.getPosition().scl(Utils.B2W), 0);
-        debugViewport.getCamera().position.set(body.getPosition(), 0);
+
+        Vector2 pos = body.getPosition();
+        if (cutScene) {
+            pos.x = (level.player.getX()+level.player.getOriginX()) * Utils.W2B;
+            pos.y = (level.player.getY() + level.player.getOriginY()) * Utils.W2B;
+        }
+        debugViewport.getCamera().position.set(pos, 0);
+        camera.position.set(pos.scl(Utils.B2W), 0);
+
+
 
         camera.update();
         debugViewport.getCamera().update();
@@ -176,48 +139,38 @@ public class GameScreen extends AbstractScreen {
         Gdx.gl.glClearColor(0.87f, 0.86f, 0.9f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
-        // TODO don't create a new one every time
-        Array<Body> bodies = new Array<Body>();
-        world.getBodies(bodies);
-
-        for (Body b : bodies) {
-            // Get the body's user data - in this example, our user
-            // data is an instance of the Entity class
-            Entity e = (Entity) b.getUserData();
-
-            if (e != null) {
-                // Update the entities/sprites position and angle
-                e.setPosition(b.getPosition().x * Utils.B2W - e.getOriginX(), b.getPosition().y* Utils.B2W - e.getOriginY());
-                // We need to convert our angle from radians to degrees
-                e.setRotation(MathUtils.radiansToDegrees * b.getAngle());
-            }
-        }
 
 
-        // System.out.println(new Vector2(MathUtils.cos(angle), MathUtils.sin(angle)));
+        if (!cutScene) {
+            for (Body b : bodies) {
+                // Get the body's user data - in this example, our user
+                // data is an instance of the Entity class
+                Entity e = (Entity) b.getUserData();
 
-
-        // remove dead people
-        for (Actor actor:stage.getActors()) {
-            if (actor instanceof Entity) {
-                Entity entity = (Entity) actor;
-                if (entity.isToBeRemoved()) {
-                    entity.remove();
-                    world.destroyBody(entity.getPhysicalObject().getBody());
+                if (e != null) {
+                    // Update the entities/sprites position and angle
+                    e.setPosition(b.getPosition().x * Utils.B2W - e.getOriginX(), b.getPosition().y * Utils.B2W - e.getOriginY());
+                    // We need to convert our angle from radians to degrees
+                    e.setRotation(MathUtils.radiansToDegrees * b.getAngle());
                 }
             }
+
+
+            // System.out.println(new Vector2(MathUtils.cos(angle), MathUtils.sin(angle)));
+
+
+            // execute everything that might interfere with the physics
+            for (Runnable runnable : physicRunnables) {
+                runnable.run();
+            }
+            physicRunnables.clear();
+
         }
 
-        // execute everything that might interfere with the physics
-        for (Runnable runnable : physicRunnables) {
-            runnable.run();
-        }
-        physicRunnables.clear();
+        level.actNdraw(delta);
 
-        stage.act(delta);
-        stage.draw();
+        debugRenderer.render(level.world, debugViewport.getCamera().combined);
 
-        debugRenderer.render(world, debugViewport.getCamera().combined);
 
         shapeRenderer.setProjectionMatrix(debugViewport.getCamera().combined);
         shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
@@ -242,7 +195,7 @@ public class GameScreen extends AbstractScreen {
 
     @Override
     public void resize(int width, int height) {
-        stage.getViewport().update(width, height);
+        level.stage.getViewport().update(width, height);
         debugViewport.update(width, height);
         // camera.setToOrtho(false, width, height);
     }
@@ -255,43 +208,11 @@ public class GameScreen extends AbstractScreen {
         float frameTime = Math.min(deltaTime, 0.25f);
         accumulator += frameTime;
         while (accumulator >= TIME_STEP) {
-            world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
+            level.world.step(TIME_STEP, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
             accumulator -= TIME_STEP;
         }
     }
 
-    class ExtremeContactListener implements ContactListener {
-        @Override
-        public void beginContact(Contact contact) {
 
-            if (contact.getFixtureA().getBody().getUserData() instanceof Player) {
-                ((Player) contact.getFixtureA().getBody().getUserData()).simpleContact(contact);
-            }
-            if (contact.getFixtureB().getBody().getUserData() instanceof Player) {
-                ((Player) contact.getFixtureB().getBody().getUserData()).simpleContact(contact);
-            }
-
-
-            if (contact.getFixtureA().getBody().getUserData() != null && contact.getFixtureB().getBody().getUserData() != null) {
-                ((Entity)contact.getFixtureA().getBody().getUserData()).collide((Entity) contact.getFixtureB().getBody().getUserData());
-                ((Entity)contact.getFixtureB().getBody().getUserData()).collide((Entity) contact.getFixtureA().getBody().getUserData());
-            }
-        }
-
-        @Override
-        public void endContact(Contact contact) {
-
-        }
-
-        @Override
-        public void preSolve(Contact contact, Manifold oldManifold) {
-
-        }
-
-        @Override
-        public void postSolve(Contact contact, ContactImpulse impulse) {
-
-        }
-    }
 
 }

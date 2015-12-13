@@ -52,7 +52,7 @@ public class Player extends Entity {
         // create animations
         base = Utils.getAnimation(1, "ball_0", 0, Animation.PlayMode.LOOP);
         blink = Utils.getAnimation(.03f, "ball", new int[] {1,2,1,0}, Animation.PlayMode.NORMAL);
-        smile = Utils.getAnimation(.06f, "ball", new int[] {3,4,4,3,0}, Animation.PlayMode.NORMAL);
+        smile = Utils.getAnimation(.3f, "ball", new int[] {4,0}, Animation.PlayMode.NORMAL);
         hurt = Utils.getAnimation(.3f, "ball", new int[] {5,0}, Animation.PlayMode.NORMAL);
 
         drawable.setAnimation(base);
@@ -68,7 +68,7 @@ public class Player extends Entity {
 
     public void updateSize(final float newSize) {
         if (newSize <= .4f) {
-            System.err.println("=============================");
+            System.err.println("============== YOU LOST THE GAME ===============");
             System.exit(1);
         }
 
@@ -148,11 +148,31 @@ public class Player extends Entity {
             Enemy enemy = (Enemy) userData;
 
             hurtEffect.findEmitter("hurt").getSpawnShape().setShape(ParticleEmitter.SpawnShape.square);
-            hurtEffect.findEmitter("hurt").getSpawnWidth().setHigh(size  * Utils.B2W);
+            hurtEffect.findEmitter("hurt").getSpawnWidth().setHigh(size * Utils.B2W);
             hurtEffect.findEmitter("hurt").getSpawnHeight().setHigh(size * Utils.B2W);
             hurtEffect.start();
             updateSize(size - .2f);
             drawable.setAnimation(hurt);
+        } else if (userData instanceof Exit) {
+            final Exit exit = (Exit) userData;
+            if (exit.isOpen()) {
+                GameScreen.cutScene = true;
+                // TODO end level, start next one
+
+                getStage().getRoot().setOrigin(exit.getX() + exit.getOriginX(), exit.getY() + exit.getOriginY());
+                getStage().addAction(Actions.rotateBy(-1200, 3f, Interpolation.pow2In));
+                getStage().addAction(Actions.scaleTo(3f, 3f, 3f));
+                addAction(Actions.delay(3f, Actions.run(new Runnable() {
+                    @Override
+                    public void run() {
+                        GameScreen.get().switchLevel(exit.getNextLevel());
+                    }
+                })));
+                addAction(Actions.moveTo(exit.getX(), exit.getY(), .5f));
+                addAction(Actions.rotateBy(900, 2f));
+                addAction(Actions.scaleTo(0, 0, 2f));
+
+            }
         }
     }
 

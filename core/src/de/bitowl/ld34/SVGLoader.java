@@ -17,6 +17,7 @@ import java.util.HashMap;
 import de.bitowl.ld34.objects.Drop;
 import de.bitowl.ld34.objects.Enemy;
 import de.bitowl.ld34.objects.Entity;
+import de.bitowl.ld34.objects.Exit;
 import de.bitowl.ld34.objects.Player;
 import de.bitowl.ld34.physics.Box;
 import de.bitowl.ld34.physics.Circle;
@@ -119,10 +120,14 @@ public class SVGLoader extends MaSVG2 {
         circle.setRotation(rr);
         circle.getFixtureDef().isSensor = true;
 
-        if (desc.contains("drop")) {
+        if (attrs.containsKey("drop")) {
             Drop drop = new Drop(r);
             stage.addActor(drop);
             circle.setUserData(drop);
+        } else if (attrs.containsKey("exit")) {
+            Exit exit = new Exit(player, attrs.containsKey("weight")?Float.parseFloat(attrs.get("weight")):Exit.DEFAULT_WEIGHT);
+            stage.addActor(exit);
+            circle.setUserData(exit);
         }
         circle.attachTo(world);
 
