@@ -38,12 +38,12 @@ active: false
 - Y Offset - 
 active: false
 - Spawn Shape - 
-shape: point
+shape: square
 - Spawn Width - 
 lowMin: 0.0
 lowMax: 0.0
-highMin: 0.0
-highMax: 0.0
+highMin: 16.0
+highMax: 16.0
 relative: false
 scalingCount: 1
 scaling0: 1.0
@@ -52,8 +52,8 @@ timeline0: 0.0
 - Spawn Height - 
 lowMin: 0.0
 lowMax: 0.0
-highMin: 64.0
-highMax: 64.0
+highMin: 16.0
+highMax: 16.0
 relative: false
 scalingCount: 1
 scaling0: 1.0
@@ -73,15 +73,15 @@ timeline0: 0.0
 active: true
 lowMin: 1000.0
 lowMax: 1000.0
-highMin: 30.0
+highMin: 100.0
 highMax: 300.0
 relative: false
 scalingCount: 2
-scaling0: 0.0
+scaling0: 1.0
 scaling1: 1.0
 timelineCount: 2
 timeline0: 0.0
-timeline1: 0.10958904
+timeline1: 0.1369863
 - Angle - 
 active: true
 lowMin: 90.0
@@ -148,7 +148,7 @@ timeline4: 1.0
 - Options - 
 attached: false
 continuous: false
-aligned: true
+aligned: false
 additive: false
 behind: false
 premultipliedAlpha: false

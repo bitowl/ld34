@@ -2,8 +2,10 @@ package de.bitowl.ld34;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -53,5 +55,27 @@ public class Utils {
         effect.load(Gdx.files.internal("particles/"+name+".p"), Gdx.files.internal("."));
         return effect;
 
+    }
+
+    public static Animation getAnimation(float frameDuration, String name, int count, Animation.PlayMode playMode) {
+        Array<TextureRegion> regions = new Array<TextureRegion>();
+
+        if (count == 0) {
+            regions.add(new TextureRegion(getDrawable(name)));
+        }
+        for (int i = 1; i <= count ; i++) {
+            regions.add(new TextureRegion(getDrawable(name + "_" + i)));
+        }
+        return new Animation(frameDuration, regions, playMode);
+    }
+
+
+    public static Animation getAnimation(float frameDuration, String name, int[] frames, Animation.PlayMode playMode) {
+        Array<TextureRegion> regions = new Array<TextureRegion>();
+
+        for (int i = 0; i < frames.length ; i++) {
+            regions.add(new TextureRegion(getDrawable(name + "_" + frames[i])));
+        }
+        return new Animation(frameDuration, regions, playMode);
     }
 }

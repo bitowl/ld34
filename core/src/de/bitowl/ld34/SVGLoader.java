@@ -28,10 +28,13 @@ public class SVGLoader extends MaSVG2 {
     Stage stage;
     Player player;
 
+    HashMap<String, Array<Vector2>> paths;
+
     public SVGLoader(World world, Stage stage, Player player) {
         this.world = world;
         this.stage = stage;
         this.player = player;
+        paths = new HashMap<String, Array<Vector2>>();
     }
 
     @Override
@@ -125,6 +128,12 @@ public class SVGLoader extends MaSVG2 {
 
 
         HashMap<String, String> attrs = parseAttributes(el.get("desc", ""));
+
+        if (attrs.containsKey("path")) {
+            // this is not a collision object but a path for an enemy
+            paths.put(attrs.get("path"), path);
+            return;
+        }
 
         System.out.println("PAAATH");
 

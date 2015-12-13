@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="810.1832"
-     inkscape:cy="-174.18651"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="2007.0841"
+     inkscape:cy="-894.30087"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="false"
      inkscape:window-width="1916"
      inkscape:window-height="1058"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -64,6 +64,27 @@
        preserveAspectRatio="none"
        height="3531.2949"
        width="3980.9497" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect4408"
+       width="122.22244"
+       height="54.417057"
+       x="3021.145"
+       y="729.71576">
+      <desc
+         id="desc4410">image=monster
+enemy
+path=1</desc>
+    </rect>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2989.6475,954.75945 76.3675,209.30365 311.127,234.7594 336.5828,-101.8234 158.3919,-296.9848 -87.6812,-316.78385 -285.6711,-155.56349 -305.4702,8.48528 -209.3036,138.59293 z"
+       id="path4412"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccc">
+      <desc
+         id="desc4414">path=1</desc>
+    </path>
   </g>
   <g
      inkscape:label="objects"
