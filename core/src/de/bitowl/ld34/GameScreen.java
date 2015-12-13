@@ -85,6 +85,7 @@ public class GameScreen extends AbstractScreen {
         contin.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 pause = false;
                 pauseDialog.remove();
                 darkImage.remove();
@@ -96,6 +97,7 @@ public class GameScreen extends AbstractScreen {
         menu.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 MyGame.switchTo(new MenuScreen());
             }
         });

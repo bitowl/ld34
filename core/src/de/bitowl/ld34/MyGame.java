@@ -19,4 +19,11 @@ public class MyGame extends Game {
 	public static void switchTo(AbstractScreen screen) {
 		inst.setScreen(screen);
 	}
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        Utils.font.dispose();
+        Utils.select.dispose();
+    }
 }

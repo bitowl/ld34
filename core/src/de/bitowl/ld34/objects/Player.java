@@ -1,6 +1,7 @@
 package de.bitowl.ld34.objects;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
@@ -31,6 +32,8 @@ public class Player extends Entity {
     private float BLINK_MIN = 5;
     private float BLINK_MAX = 10;
 
+    private Sound grow, hurtS, jump;
+
 
     public Player() {
         super(Utils.getDrawable("ball_0"));
@@ -56,6 +59,11 @@ public class Player extends Entity {
         hurt = Utils.getAnimation(.3f, "ball", new int[] {5,0}, Animation.PlayMode.NORMAL);
 
         drawable.setAnimation(base);
+
+        // load sounsd
+        grow = Gdx.audio.newSound(Gdx.files.internal("sounds/grow.wav"));
+        hurtS = Gdx.audio.newSound(Gdx.files.internal("sounds/hurt.wav"));
+        jump = Gdx.audio.newSound(Gdx.files.internal("sounds/jump.wav"));
 
 
         setWidth(size * 2 * Utils.B2W);
@@ -164,11 +172,13 @@ public class Player extends Entity {
             Drop drop = (Drop) userData;
 
 
-            updateSize((float)Math.sqrt(size * size + drop.getSize() *drop.getSize()));
+            grow.play();
+            updateSize((float) Math.sqrt(size * size + drop.getSize() * drop.getSize()));
             drawable.setAnimation(smile);
         } else if (userData instanceof Enemy) {
             Enemy enemy = (Enemy) userData;
 
+            hurtS.play();
             hurtEffect.findEmitter("hurt").getSpawnShape().setShape(ParticleEmitter.SpawnShape.square);
             hurtEffect.findEmitter("hurt").getSpawnWidth().setHigh(size * Utils.B2W);
             hurtEffect.findEmitter("hurt").getSpawnHeight().setHigh(size * Utils.B2W);
@@ -203,6 +213,9 @@ public class Player extends Entity {
         bubblesEffect.dispose();
         hurtEffect.dispose();
         collideEffect.dispose();
+        grow.dispose();
+        hurtS.dispose();
+        jump.dispose();
         return super.remove();
     }
 
@@ -215,6 +228,11 @@ public class Player extends Entity {
      * @param contact
      */
     public void simpleContact(Contact contact) {
+        System.out.println(getPhysicalObject().getBody().getLinearVelocity().dot(contact.getWorldManifold().getNormal()));
+        //if (> 6) {
+        if (Math.abs(getPhysicalObject().getBody().getLinearVelocity().dot(contact.getWorldManifold().getNormal())) > 4) {
+            jump.play();
+        }
 
         Vector2 pos = contact.getWorldManifold().getPoints()[0];
         collideEffect.setPosition(pos.x * Utils.B2W, pos.y * Utils.B2W);

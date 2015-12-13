@@ -43,6 +43,7 @@ public class MenuScreen extends AbstractScreen {
         button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 MyGame.switchTo(new GameScreen());
             }
         });
@@ -52,6 +53,7 @@ public class MenuScreen extends AbstractScreen {
         load.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 dialogTable.add(levelDialog);
                 dialogImage.setVisible(true);
                 dialogImage.addListener(new ClickListener() {
@@ -70,6 +72,7 @@ public class MenuScreen extends AbstractScreen {
         credits.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 MyGame.switchTo(new GameScreen("credits"));
             }
         });
@@ -80,6 +83,7 @@ public class MenuScreen extends AbstractScreen {
         exit.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 dialogTable.add(exitDialog);
                 dialogImage.setVisible(true);
                 dialogImage.addListener(new ClickListener() {
@@ -119,6 +123,7 @@ public class MenuScreen extends AbstractScreen {
         yes.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 Gdx.app.exit();
             }
         });
@@ -128,6 +133,7 @@ public class MenuScreen extends AbstractScreen {
         no.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 exitDialog.remove();
                 dialogImage.setVisible(false);
             }
@@ -145,6 +151,7 @@ public class MenuScreen extends AbstractScreen {
             lvl.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
+                    Utils.select.play();
                     MyGame.switchTo(new GameScreen("lvl" + lvlNr));
                 }
             });
@@ -157,6 +164,7 @@ public class MenuScreen extends AbstractScreen {
         cancel.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
                 levelDialog.remove();
                 dialogImage.setVisible(false);
             }

@@ -1,6 +1,7 @@
 package de.bitowl.ld34;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -20,6 +21,8 @@ public class Utils {
 
     public static BitmapFont font = new BitmapFont(Gdx.files.internal("default.fnt"));
 
+
+    public static Sound select = Gdx.audio.newSound(Gdx.files.internal("sounds/select.wav"));
 
     public static float B2W = 20f;
     public static float W2B = 1/B2W;
