@@ -29,12 +29,14 @@ public class SVGLoader extends MaSVG2 {
     Player player;
 
     HashMap<String, Array<Vector2>> paths;
+    Array<Enemy> needsPath; // enemies that still need a path
 
     public SVGLoader(World world, Stage stage, Player player) {
         this.world = world;
         this.stage = stage;
         this.player = player;
         paths = new HashMap<String, Array<Vector2>>();
+        needsPath = new Array<Enemy>();
     }
 
     @Override
@@ -70,6 +72,15 @@ public class SVGLoader extends MaSVG2 {
             obj.setOrigin(width/2, height/2);
             stage.addActor(obj);
             box.setUserData(obj);
+
+            if (attrs.containsKey("path")) { // I'M A MOVIN' ENEMY
+                obj.setPathName(attrs.get("path"));
+                needsPath.add(obj);
+            }
+            if (attrs.containsKey("speed")) {
+                obj.setSpeed(Float.parseFloat(attrs.get("speed")));
+            }
+
         } else if (attrs.containsKey("image")) {
             Entity obj = new Entity(Utils.getDrawable(attrs.get("image")));
             obj.setOrigin(width/2, height/2);
@@ -231,4 +242,13 @@ public class SVGLoader extends MaSVG2 {
         return attrs;
     }
 
+    @Override
+    public void onFinish() {
+        for (Enemy enemy: needsPath) {
+            if (!paths.containsKey(enemy.getPathName())) {
+                throw new RuntimeException("Path " + enemy.getPathName() + " not defined D:");
+            }
+            enemy.setPath(paths.get(enemy.getPathName()));
+        }
+    }
 }

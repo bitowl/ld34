@@ -217,7 +217,7 @@ public class GameScreen extends AbstractScreen {
         stage.act(delta);
         stage.draw();
 
-       // debugRenderer.render(world, debugViewport.getCamera().combined);
+        debugRenderer.render(world, debugViewport.getCamera().combined);
 
         shapeRenderer.setProjectionMatrix(debugViewport.getCamera().combined);
         shapeRenderer.begin(ShapeRenderer.ShapeType.Line);

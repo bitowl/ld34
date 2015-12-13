@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="2007.0841"
-     inkscape:cy="-894.30087"
+     inkscape:zoom="4"
+     inkscape:cx="3067.1638"
+     inkscape:cy="-60.199059"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -67,10 +67,10 @@
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke:none"
        id="rect4408"
-       width="122.22244"
+       width="98.972443"
        height="54.417057"
-       x="3021.145"
-       y="729.71576">
+       x="3064.895"
+       y="733.21576">
       <desc
          id="desc4410">image=monster
 enemy
@@ -322,8 +322,8 @@ size=5
     <circle
        style="fill:#ff00ff;fill-opacity:1;stroke:none"
        id="path8249"
-       cx="847"
-       cy="1137.3622"
+       cx="3237.021"
+       cy="1069.48"
        r="40">
       <desc
          id="desc8347">player-spawn</desc>
