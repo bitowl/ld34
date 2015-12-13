@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="378.42561"
-     inkscape:cy="750.89615"
+     inkscape:zoom="0.79068574"
+     inkscape:cx="687.68946"
+     inkscape:cy="506.98048"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -73,8 +73,8 @@
     <circle
        style="fill:#ff00ff;fill-opacity:1;stroke:none"
        id="path6415"
-       cx="72.5"
-       cy="106.29077"
+       cx="396.75897"
+       cy="111.84661"
        r="24.642857">
       <desc
          id="desc6417">player-spawn</desc>
@@ -114,9 +114,10 @@
        width="500" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 44.285714,49.505061 42.142857,505.21935 714.28572,506.64792 738.57143,75.219347 52.142857,50.933632 57.857143,18.790775 812.14286,40.219347 788.57143,549.50506 -2.1428571,543.07649 4.2857143,31.647918 Z"
+       d="m 44.285714,49.505061 7.142857,562.857149 672.142859,1.42857 15,-538.571433 L 52.142857,50.933632 57.857143,18.790775 812.14286,40.219347 797.85714,656.64792 7.1428572,650.21935 4.2857143,31.647918 Z"
        id="path6563"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc" />
     <g
        id="g6587"
        transform="translate(105.35714,-10.535714)">
@@ -148,14 +149,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="198.00803"
-       y="438.08792"
+       x="156.27209"
+       y="431.76428"
        id="text5084-1-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5086-3-0"
-         x="198.00803"
-         y="438.08792"
+         x="156.27209"
+         y="431.76428"
          style="fill:#000000;fill-opacity:1">Thanks to</tspan></text>
     <text
        xml:space="preserve"
@@ -172,19 +173,48 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="429.42694"
-       y="419.37473"
+       x="454.72144"
+       y="423.80127"
        id="text5084-1-4-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5086-3-0-2"
-         x="429.42694"
-         y="419.37473"
-         style="fill:#000000;fill-opacity:1">Magnesus,</tspan><tspan
-         sodipodi:role="line"
-         x="429.42694"
-         y="469.37473"
+         x="454.72144"
+         y="423.80127"
          style="fill:#000000;fill-opacity:1"
-         id="tspan6647">daniel.weck</tspan></text>
+         id="tspan6647">Magnesus,</tspan></text>
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path6649"
+       cx="686.42859"
+       cy="589.50507"
+       r="24.285715">
+      <desc
+         id="desc6651">exit
+level=menu</desc>
+    </circle>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="434.215"
+       y="463.48547"
+       id="text5084-1-4-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5086-3-0-9"
+         x="434.215"
+         y="463.48547"
+         style="fill:#000000;fill-opacity:1">Danial.weck</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, ';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="488.39734"
+       y="500.79483"
+       id="text5084-1-4-8-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5086-3-0-9-7"
+         x="488.39734"
+         y="500.79483"
+         style="fill:#000000;fill-opacity:1">Kenney</tspan></text>
   </g>
 </svg>

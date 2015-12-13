@@ -11,7 +11,13 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Scaling;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.FillViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.ScalingViewport;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 import java.util.HashMap;
 
@@ -27,8 +33,8 @@ public class Level {
 
     final float GRAVITY = 10;
 
-    final int WIDTH = 600;
-    final int HEIGHT = 900;
+    final int WIDTH = 1000;
+    final int HEIGHT = 1000;
 
     private String name;
     public Level(String name) {
@@ -38,7 +44,7 @@ public class Level {
 
     public void init() {
 
-        stage = new Stage(new FitViewport(WIDTH , HEIGHT));
+        stage = new Stage(new FillViewport(WIDTH, HEIGHT));
 
 
         world = new World(new Vector2(0, -GRAVITY), true);

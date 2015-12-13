@@ -2,6 +2,7 @@ package de.bitowl.ld34;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -21,7 +22,12 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -53,6 +59,9 @@ public class GameScreen extends AbstractScreen {
     private float angle = -90;
     private final float ROTATE_SPEED = 180;
 
+    private Image darkImage;
+    private Table pauseDialog;
+    private boolean pause;
 
     public GameScreen() {
         this("lvl1");
@@ -65,15 +74,79 @@ public class GameScreen extends AbstractScreen {
 
         debugRenderer = new Box2DDebugRenderer();
 
+
+
+
+        pauseDialog = new Table();
+        darkImage = new Image(Utils.getDrawable("dark"));
+
+        TextButton.TextButtonStyle style = new TextButton.TextButtonStyle(Utils.get9Patch("button_up",29), Utils.get9Patch("button_down",29), null, Utils.font);
+        TextButton contin = new TextButton("continue", style);
+        contin.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                pause = false;
+                pauseDialog.remove();
+                darkImage.remove();
+            }
+        });
+        pauseDialog.add(contin).pad(10);
+
+        TextButton menu = new TextButton("menu", style);
+        menu.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                MyGame.switchTo(new MenuScreen());
+            }
+        });
+        pauseDialog.add(menu).pad(10);
+
+
+
         switchLevel(startLevel);
     }
 
+
+    @Override
+    public void show() {
+
+    }
+
+    @Override
+    public void hide() {
+        Gdx.input.setInputProcessor(null);
+    }
 
     @Override
     public void render(float delta) {
         //// MOVE & INPUT ////
 
 
+
+        if (pause) {
+            Gdx.gl.glClearColor(0.87f, 0.86f, 0.9f, 1);
+            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+            level.stage.draw();
+
+            if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE) || Gdx.input.isKeyJustPressed(Input.Keys.BACK)) {
+                pause = false;
+                pauseDialog.remove();
+                darkImage.remove();
+            }
+            return;
+        }
+
+        if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE) || Gdx.input.isKeyJustPressed(Input.Keys.BACK)) {
+            pause = true;
+            level.stage.addActor(darkImage);
+            level.stage.addActor(pauseDialog);
+            pauseDialog.setX(camera.position.x);
+            pauseDialog.setY(camera.position.y);
+            darkImage.setSize(level.stage.getWidth() * 2, level.stage.getHeight() * 2);
+            darkImage.setX(camera.position.x - level.stage.getWidth());
+            darkImage.setY(camera.position.y - level.stage.getHeight());
+            Gdx.input.setInputProcessor(level.stage);
+        }
 
         Vector2 newGravity = new Vector2(MathUtils.cos(MathUtils.degRad * angle), MathUtils.sin(MathUtils.degRad * angle));
         // apply personal gravity
@@ -149,7 +222,7 @@ public class GameScreen extends AbstractScreen {
 
         level.actNdraw(delta);
 
-        System.out.println(Gdx.graphics.getFramesPerSecond());
+        // System.out.println(Gdx.graphics.getFramesPerSecond());
         // debugRenderer.render(level.world, debugViewport.getCamera().combined);
     }
 
@@ -157,8 +230,8 @@ public class GameScreen extends AbstractScreen {
     @Override
     public void resize(int width, int height) {
         level.stage.getViewport().update(width, height);
-        debugViewport.update(width, height);
-        // camera.setToOrtho(false, width, height);
+        level.stage.getViewport().apply();
+        level.stage.getCamera().update();
     }
 
     private float accumulator = 0;
@@ -180,9 +253,15 @@ public class GameScreen extends AbstractScreen {
         switchLevel(currentLevel);
     }
     public void switchLevel(String name) {
+
         currentLevel = name;
         if (level != null) {
             level.dispose();
+        }
+
+        if (name.equals("menu")) {
+            MyGame.switchTo(new MenuScreen());
+            return;
         }
 
         cutScene = false; // we have to synchronize the objects with their physics first
@@ -194,8 +273,6 @@ public class GameScreen extends AbstractScreen {
         // get a list of bodies
         bodies = new Array<Body>();
         level.world.getBodies(bodies);
-
-
         camera = (OrthographicCamera) level.stage.getCamera();
 
         angle = -90;

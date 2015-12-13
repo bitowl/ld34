@@ -13,6 +13,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
+import com.badlogic.gdx.utils.viewport.FillViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 import javax.xml.soap.Text;
@@ -21,7 +23,7 @@ import javax.xml.soap.Text;
 public class MenuScreen extends AbstractScreen {
     private Stage stage;
 
-
+    private Table table;
 
     private Table exitDialog;
     private Table levelDialog;
@@ -30,11 +32,10 @@ public class MenuScreen extends AbstractScreen {
     private Image dialogImage;
 
     public MenuScreen() {
-        stage = new Stage(new FitViewport(1280, 720));
+        stage = new Stage(new FillViewport(1280, 1000));
 
 
-        Table table = new Table();
-        table.setFillParent(true);
+        table = new Table();
 
         TextButton.TextButtonStyle style = new TextButton.TextButtonStyle(Utils.get9Patch("button_up",29), Utils.get9Patch("button_down",29), null, Utils.font);
 
@@ -66,6 +67,12 @@ public class MenuScreen extends AbstractScreen {
         table.add(load).pad(10).width(320).row();
 
         TextButton credits = new TextButton("credits", style);
+        credits.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                MyGame.switchTo(new GameScreen("credits"));
+            }
+        });
         table.add(credits).pad(10).width(320).row();
 
         final TextButton exit = new TextButton("exit", style);
@@ -86,7 +93,11 @@ public class MenuScreen extends AbstractScreen {
                 });
             }
         });
-        stage.addActor(table);
+
+        Table t = new Table();
+        t.setFillParent(true);
+        t.add(table);
+        stage.addActor(t);
 
         dialogTable = new Table();
         dialogTable.setFillParent(true);
@@ -168,8 +179,11 @@ public class MenuScreen extends AbstractScreen {
 
     @Override
     public void resize(int width, int height) {
-        super.resize(width, height);
         stage.getViewport().update(width, height);
+        stage.getViewport().apply();
+        stage.getCamera().update();
+        table.invalidate();
+        table.center();
     }
 
     @Override
