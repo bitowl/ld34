@@ -29,6 +29,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.viewport.FillViewport;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
@@ -91,7 +92,20 @@ public class GameScreen extends AbstractScreen {
                 darkImage.remove();
             }
         });
-        pauseDialog.add(contin).pad(10);
+        pauseDialog.add(contin).pad(10).padBottom(20).colspan(2).row();
+
+        TextButton restart = new TextButton("restart", style);
+        restart.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                Utils.select.play();
+                pause = false;
+                pauseDialog.remove();
+                darkImage.remove();
+                restartLevel();
+            }
+        });
+        pauseDialog.add(restart).pad(10);
 
         TextButton menu = new TextButton("menu", style);
         menu.addListener(new ClickListener() {
@@ -224,8 +238,12 @@ public class GameScreen extends AbstractScreen {
 
         level.actNdraw(delta);
 
+
+
         // System.out.println(Gdx.graphics.getFramesPerSecond());
-        // debugRenderer.render(level.world, debugViewport.getCamera().combined);
+        if (!cutScene) {
+            debugRenderer.render(level.world, debugViewport.getCamera().combined);
+        }
     }
 
 
@@ -234,11 +252,15 @@ public class GameScreen extends AbstractScreen {
         level.stage.getViewport().update(width, height);
         level.stage.getViewport().apply();
         level.stage.getCamera().update();
+
+        debugViewport.update(width,height);
+        debugViewport.apply();
     }
 
     private float accumulator = 0;
 
     private void doPhysicsStep(float deltaTime) {
+        if (level == null) {return;}
         // fixed time step
         // max frame time to avoid spiral of death (on slow devices)
         float frameTime = Math.min(deltaTime, 0.25f);
@@ -262,6 +284,7 @@ public class GameScreen extends AbstractScreen {
         }
 
         if (name.equals("menu")) {
+            System.err.println("MENNNUU");
             MyGame.switchTo(new MenuScreen());
             return;
         }
@@ -270,7 +293,7 @@ public class GameScreen extends AbstractScreen {
         level = new Level(name);
         level.init();
 
-        debugViewport = new FitViewport(level.WIDTH * Utils.W2B, level.HEIGHT * Utils.W2B);
+        debugViewport = new FillViewport(level.WIDTH * Utils.W2B, level.HEIGHT * Utils.W2B);
 
         // get a list of bodies
         bodies = new Array<Body>();

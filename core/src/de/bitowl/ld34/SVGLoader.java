@@ -18,7 +18,9 @@ import de.bitowl.ld34.objects.Drop;
 import de.bitowl.ld34.objects.Enemy;
 import de.bitowl.ld34.objects.Entity;
 import de.bitowl.ld34.objects.Exit;
+import de.bitowl.ld34.objects.Pathable;
 import de.bitowl.ld34.objects.Player;
+import de.bitowl.ld34.objects.Trigger;
 import de.bitowl.ld34.physics.Box;
 import de.bitowl.ld34.physics.Circle;
 import de.bitowl.ld34.physics.Polygon;
@@ -30,14 +32,17 @@ public class SVGLoader extends MaSVG2 {
     Player player;
 
     HashMap<String, Array<Vector2>> paths;
-    Array<Enemy> needsPath; // enemies that still need a path
+    Array<Pathable> needsPath; // enemies that still need a path
+
+    HashMap<String, Array<Pathable>> triggerableObjects;
 
     public SVGLoader(World world, Stage stage, Player player) {
         this.world = world;
         this.stage = stage;
         this.player = player;
         paths = new HashMap<String, Array<Vector2>>();
-        needsPath = new Array<Enemy>();
+        needsPath = new Array<Pathable>();
+        triggerableObjects = new HashMap<String, Array<Pathable>>();
     }
 
     @Override
@@ -82,9 +87,36 @@ public class SVGLoader extends MaSVG2 {
                 obj.setSpeed(Float.parseFloat(attrs.get("speed")));
             }
 
+        } else if (attrs.containsKey("trigger")) {
+            Trigger trigger = new Trigger(attrs.getOrDefault("trigger", "0"), attrs.getOrDefault("image", "switch"), attrs.getOrDefault("image_down", "switch_down"), triggerableObjects);
+            stage.addActor(trigger);
+            box.setUserData(trigger);
+        } else if (attrs.containsKey("path")) {
+            // Pathable object that is not an enemy. Probably a dooor
+
+            Pathable pathable = new Pathable(Utils.getDrawable(attrs.get("image")));
+            pathable.setPathName(attrs.get("path"));
+            stage.addActor(pathable);
+            box.setUserData(pathable);
+            needsPath.add(pathable);
+
+
+            if (attrs.containsKey("speed")) {
+                pathable.setSpeed(Float.parseFloat(attrs.get("speed")));
+            }
+
+            if (attrs.containsKey("receiver")) {
+                pathable.setReceiverGroup(attrs.get("receiver"));
+                // IT'S RECEIVING
+                if (!triggerableObjects.containsKey(attrs.get("receiver"))) {
+                    triggerableObjects.put(attrs.get("receiver"), new Array<Pathable>());
+                }
+                triggerableObjects.get(attrs.get("receiver")).add(pathable);
+            }
+
         } else if (attrs.containsKey("image")) {
             Entity obj = new Entity(Utils.getDrawable(attrs.get("image")));
-            obj.setOrigin(width/2, height/2);
+
             stage.addActor(obj);
             box.setUserData(obj);
         }
@@ -94,10 +126,6 @@ public class SVGLoader extends MaSVG2 {
 
     @Override
     public void newCircle(String name, XmlReader.Element el, float xxx, float yyy, float width, float height, float rr, String desc) {
-        System.out.println("NEW CIRCLE:" + xxx + "," + yyy + " XXX " + rr);
-
-        System.out.println(el.getFloat("cy"));
-
         float x = xxx + el.getFloat("cx");
         float y = yyy - el.getFloat("cy");
 
@@ -121,6 +149,7 @@ public class SVGLoader extends MaSVG2 {
         circle.getFixtureDef().isSensor = true;
 
         if (attrs.containsKey("drop")) {
+            System.err.println("DRRRROPP");
             Drop drop = new Drop(r);
             stage.addActor(drop);
             circle.setUserData(drop);
@@ -136,7 +165,6 @@ public class SVGLoader extends MaSVG2 {
 
     @Override
     public void newText(String text, XmlReader.Element el, float x, float y, float width, float height, float rr, Color color) {
-        System.out.println(color);
         Label label = new Label(text, new Label.LabelStyle(Utils.font, color));
         label.setPosition(x,y);
         label.setRotation(rr);
@@ -253,7 +281,7 @@ public class SVGLoader extends MaSVG2 {
 
     @Override
     public void onFinish() {
-        for (Enemy enemy: needsPath) {
+        for (Pathable enemy: needsPath) {
             if (!paths.containsKey(enemy.getPathName())) {
                 throw new RuntimeException("Path " + enemy.getPathName() + " not defined D:");
             }

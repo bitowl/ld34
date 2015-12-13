@@ -25,5 +25,6 @@ public class MyGame extends Game {
         super.dispose();
         Utils.font.dispose();
         Utils.select.dispose();
+        Utils.debugFont.dispose();
     }
 }

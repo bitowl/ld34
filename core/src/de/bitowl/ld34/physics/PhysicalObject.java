@@ -83,11 +83,9 @@ public class PhysicalObject {
 
 
         if (attrs.containsKey("mass")) {
-            System.out.println("------------ " + body.getMass());
             changeMass(Float.parseFloat(attrs.get("mass")));
-
-            System.out.println(fixture.getDensity() + "->" + body.getMass());
         }
+        body.setAwake(true);
 
     }
 

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg8264"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+   inkscape:export-xdpi="300.13336"
+   inkscape:export-ydpi="300.13336">
+  <defs
+     id="defs8266" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="106.30819"
+     inkscape:cy="804.35518"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1916"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata8269">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#3a92ff;fill-opacity:0.36559143;stroke:none"
+       d="M 127.25 190.86133 C 105.98704 190.86133 85.875253 191.29875 88.25 196.36133 C 88.256349 196.37486 88.276629 196.39073 88.283203 196.4043 C 91.540231 198.5482 94.786031 200.41304 98.019531 201.97461 C 101.3186 203.56785 104.60523 204.86408 107.88086 205.87695 C 111.14273 206.88558 114.39316 207.60942 117.63281 208.06836 C 117.65796 208.07171 117.68187 208.07675 117.70703 208.08008 C 120.94908 208.53528 124.18148 208.72363 127.40234 208.6543 C 130.63423 208.58472 133.8548 208.25721 137.06641 207.68555 C 140.27801 207.11388 143.4795 206.29766 146.67188 205.25 C 149.86425 204.20234 153.04846 202.92335 156.22266 201.42578 C 159.39685 199.92821 162.56168 198.21241 165.71875 196.29102 L 165.9375 196.59766 C 168.28071 193.86981 147.54373 190.86133 127.25 190.86133 z "
+       id="path8946" />
+    <path
+       style="fill:#d8d8d8;fill-opacity:1;stroke:none"
+       d="M 27.679688 284.8125 C 27.694816 284.83585 27.689567 284.87141 27.705078 284.89453 C 28.273934 285.74242 29.101224 286.4377 30.189453 286.98047 C 31.277683 287.52324 32.627075 287.91452 34.244141 288.15625 C 35.861207 288.39798 37.745025 288.48881 39.900391 288.43359 L 214.6582 288.6875 C 216.64471 288.64307 218.82728 288.79636 220.67969 288.62891 C 221.60589 288.54518 222.4499 288.38136 223.14453 288.07227 C 223.53506 287.89849 223.7426 287.54657 224.02734 287.26953 A 98.489876 19.192898 0 0 0 224.50586 285.4043 A 98.489876 19.192898 0 0 0 126.01562 266.21094 A 98.489876 19.192898 0 0 0 27.679688 284.8125 z "
+       id="path8846" />
+    <path
+       style="fill:#3a92ff;fill-opacity:0.5322581;stroke:none"
+       d="m 88.085938,196.29102 -50.205079,64.11132 c -1.886069,2.43477 -3.539114,4.70523 -4.953125,6.81446 -1.41401,2.10922 -2.588996,4.05794 -3.521484,5.8457 -0.932488,1.78776 -1.62295,3.41438 -2.064453,4.88477 -0.441503,1.47038 -0.635117,2.78431 -0.576172,3.9414 0.05895,1.1571 0.370597,2.15797 0.939453,3.00586 0.568856,0.84789 1.396146,1.54317 2.484375,2.08594 1.08823,0.54277 2.437621,0.93405 4.054688,1.17578 1.617066,0.24173 3.500884,0.33256 5.65625,0.27734 L 214.6582,288.6875 c 1.98651,-0.0444 4.16908,0.10886 6.02149,-0.0586 0.9262,-0.0837 1.77021,-0.24755 2.46484,-0.55664 0.69464,-0.30909 1.23928,-0.76355 1.57031,-1.42774 0.33104,-0.66419 0.4478,-1.53848 0.28321,-2.6875 -0.1646,-1.14902 -0.61009,-2.57234 -1.40235,-4.33594 -0.79225,-1.76359 -1.93047,-3.86709 -3.48242,-6.375 -1.55194,-2.5079 -3.51727,-5.42078 -5.96094,-8.80273 l -48.43359,-68.15234 c -25.25655,15.37114 -51.0442,17.59751 -77.632812,0 z"
+       id="rect8939"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsssssssccsscsssccc" />
+    <circle
+       style="display:inline;fill:#10c81b;fill-opacity:1;stroke:none"
+       id="path4920"
+       cx="85.474167"
+       cy="262.92911"
+       r="11.125721" />
+    <path
+       style="display:inline;fill:#51de17;fill-opacity:0.8064516;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 80.060426,255.37334 c 4.83217,-0.94771 8.2059,-0.43222 10.07409,0.22113 5.39594,1.8871 2.12313,-3.41687 -3.85272,-3.65615 -5.97587,-0.23929 -11.05354,4.38273 -6.22137,3.43502 z"
+       id="path4308"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zszz" />
+    <g
+       style="display:inline"
+       id="g4945"
+       transform="matrix(0.44031122,0,0,0.44031122,65.856736,246.36016)">
+      <circle
+         r="6.6964288"
+         cy="29.772917"
+         cx="30.357143"
+         id="path4922"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <circle
+         cy="31.513988"
+         cx="31.25"
+         id="path4924"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         r="2.7678571" />
+      <circle
+         r="1.0101526"
+         cy="32.024647"
+         cx="31.923483"
+         id="path4928"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <circle
+         r="0.37880725"
+         cy="30.698822"
+         cx="30.629223"
+         id="path4928-7"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(0.44031122,0,0,0.44031122,77.719846,246.49486)"
+       id="g4945-8">
+      <circle
+         r="6.6964288"
+         cy="29.772917"
+         cx="30.357143"
+         id="path4922-8"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <circle
+         cy="32.005058"
+         cx="31.205359"
+         id="path4924-4"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         r="2.9464285" />
+      <circle
+         r="1.0101526"
+         cy="32.515717"
+         cx="31.878841"
+         id="path4928-0"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <circle
+         r="0.37880725"
+         cy="31.189894"
+         cx="30.584581"
+         id="path4928-7-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <path
+       style="display:inline;fill:#086300;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 85.610786,265.74733 c -1.27012,0.0315 -3.95029,-0.82907 -3.99369,-0.31492 -0.31087,3.68247 7.60894,7.27241 7.58738,0.0889 -0.002,-0.61474 -2.41846,0.19685 -3.59369,0.22599 z"
+       id="path4978"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss" />
+    <path
+       style="display:inline;fill:#10b81b;fill-opacity:1;stroke:none"
+       d="m 75.198116,258.67464 a 11.125721,11.125721 0 0 0 -0.84966,4.25433 11.125721,11.125721 0 0 0 11.1256,11.1256 11.125721,11.125721 0 0 0 10.98456,-9.44777 11.086408,10.929153 0 0 1 -10.39461,7.16795 11.086408,10.929153 0 0 1 -11.08691,-10.92952 11.086408,10.929153 0 0 1 0.22102,-2.17059 z"
+       id="circle4325"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 143.31539,141.58342 0.12627,23.35977 70.71068,99.50003 c 19.54931,27.05558 8.4511,24.06595 0.50508,24.24366 L 39.901026,288.43434 c -17.242925,0.44171 -17.108862,-8.55356 -2.020306,-28.03173 l 74.75129,-95.45942 1.01015,-23.23351 c 10.67372,4.26245 20.32338,2.89255 29.67323,-0.12626 z"
+       id="path8844"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 151.484,175.48476 c -5.78169,6.08849 -6.44834,5.13885 -12.40193,5.30861"
+       id="path8878"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 163.09704,192.37065 c -2.99326,4.26344 -11.23631,7.46802 -18.44298,6.38568"
+       id="path8878-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 172.38275,205.40636 c -2.3826,4.40111 -10.45992,10.40694 -18.10737,9.40883"
+       id="path8878-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 180.95419,217.37065 c -3.60036,4.03578 -12.00122,7.62312 -16.32166,7.62312"
+       id="path8878-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 206.84706,254.5135 c -3.60036,4.03578 -14.27406,5.09774 -18.5945,5.09774"
+       id="path8878-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 214.16848,265.04922 c -2.78814,4.8338 -15.37243,5.89684 -18.5945,5.35028"
+       id="path8878-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 198.98991,242.37065 c -3.60036,4.03578 -13.51645,6.23416 -17.83689,6.23416"
+       id="path8878-69"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 189.88277,231.29921 c -3.60036,4.03578 -13.26391,5.85535 -17.58435,5.85535"
+       id="path8878-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1.29910016px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220.9542,273.62064 c -3.60036,4.03578 -17.05198,5.60281 -21.37242,5.60281"
+       id="path8878-19"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#414141;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 143.75758,141.33187 c -9.84326,-1.53866 -19.99019,-1.7108 -30.5,-0.25"
+       id="path9010"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/icon.png"
+       inkscape:export-xdpi="300.13336"
+       inkscape:export-ydpi="300.13336" />
+  </g>
+</svg>

@@ -16,7 +16,7 @@
    id="svg6744"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="lvl1.svg">
+   sodipodi:docname="lvl4.svg">
   <defs
      id="defs6746" />
   <sodipodi:namedview
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="524.1949"
-     inkscape:cy="705.92263"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="351.57897"
+     inkscape:cy="576.38992"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -65,8 +65,8 @@
     <circle
        style="fill:#ff00ff;fill-opacity:1;stroke:none"
        id="path7357"
-       cx="443.52365"
-       cy="110.10525"
+       cx="170.16971"
+       cy="132.73894"
        r="37.375645">
       <desc
          id="desc7359">player-spawn</desc>
@@ -77,51 +77,93 @@
        id="path7361"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="45.841331"
-       y="-30.06806"
-       id="text7367"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7369"
-         x="45.841331"
-         y="-30.06806"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '">TURN THE WORLD BY PRESSING</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text7371"
-       y="7.8993258"
-       x="170.43158"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '"
-         y="7.8993258"
-         x="170.43158"
-         id="tspan7373"
-         sodipodi:role="line">THE ARROW KEYS</tspan></text>
     <circle
        style="fill:#ffff00;fill-opacity:1;stroke:none"
        id="path7485"
-       cx="88.571434"
-       cy="303.79077"
-       r="64.285713">
+       cx="395.8819"
+       cy="550.32745"
+       r="41.42857">
       <desc
          id="desc7487">exit
-level=lvl2</desc>
+level=lvl5
+weight=0</desc>
+    </circle>
+    <circle
+       r="9.3723717"
+       cy="121.76388"
+       cx="324.23178"
+       id="circle7531"
+       style="fill:#00ff00;fill-opacity:1;stroke:none">
+      <desc
+         id="desc7533">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7535"
+       cx="124.49545"
+       cy="406.83075"
+       r="3.3508682"
+       inkscape:transform-center-x="-1.0215106"
+       inkscape:transform-center-y="4.8521297">
+      <desc
+         id="desc7537">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543"
+       cx="194.81422"
+       cy="449.97021"
+       r="6.2686763"
+       inkscape:transform-center-x="-1.9110064"
+       inkscape:transform-center-y="9.0771663">
+      <desc
+         id="desc7545">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543-7"
+       cx="500.27328"
+       cy="323.95642"
+       r="10.395083"
+       inkscape:transform-center-x="-3.168941"
+       inkscape:transform-center-y="15.052279">
+      <desc
+         id="desc7545-2">drop</desc>
     </circle>
     <text
        sodipodi:linespacing="125%"
-       id="text7371-5"
-       y="317.71936"
-       x="175.8817"
+       id="text7371-5-4"
+       y="285.52951"
+       x="340.12115"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '"
-         y="317.71936"
-         x="175.8817"
-         id="tspan7373-9"
-         sodipodi:role="line">&lt;-- your goal is to go there</tspan></text>
+         y="285.52951"
+         x="340.12115"
+         id="tspan7373-9-1"
+         sodipodi:role="line">&lt;-- avoid the monster</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="343.15161"
+       y="330.98639"
+       id="text8813"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8815"
+         x="343.15161"
+         y="330.98639"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '">it will steal your mass</tspan></text>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect10400"
+       width="189.90868"
+       height="87.88327"
+       x="101.01525"
+       y="262.42291">
+      <desc
+         id="desc10402">enemy
+image=monster</desc>
+    </rect>
   </g>
 </svg>

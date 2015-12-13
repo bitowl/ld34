@@ -12,6 +12,9 @@ public class Entity extends Image {
     private boolean toBeRemoved;
     private PhysicalObject physicalObject;
 
+    private String receiverGroup;
+    private boolean received;
+
     public Entity(Texture texture) {
         super(texture);
     }
@@ -45,7 +48,7 @@ public class Entity extends Image {
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-   /*     Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+
+        /*Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+
                 "\ndensity: " + physicalObject.getBody().getFixtureList().get(0).getDensity()
                 +"\nspeed: " + physicalObject.getBody().getLinearVelocity().y
                 ,getX(), getY());*/
@@ -53,5 +56,22 @@ public class Entity extends Image {
 
     public PhysicalObject getPhysicalObject() {
         return physicalObject;
+    }
+
+
+    public void setReceived() {
+        this.received = true;
+    }
+
+    public void setReceiverGroup(String receiverGroup) {
+        this.receiverGroup = receiverGroup;
+    }
+
+    public boolean hasReceived() {
+        return received;
+    }
+
+    public String getReceiverGroup() {
+        return receiverGroup;
     }
 }

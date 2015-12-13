@@ -16,10 +16,13 @@ import com.badlogic.gdx.utils.Array;
 public class Utils {
 
     public static Texture getDrawable(String name) {
-        return new Texture(name + ".png");
+        Texture texture = new Texture(name + ".png");
+        texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        return texture;
     }
 
     public static BitmapFont font = new BitmapFont(Gdx.files.internal("default.fnt"));
+    public static BitmapFont debugFont = new BitmapFont();
 
 
     public static Sound select = Gdx.audio.newSound(Gdx.files.internal("sounds/select.wav"));

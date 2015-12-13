@@ -32,7 +32,7 @@ public class Player extends Entity {
     private float BLINK_MIN = 5;
     private float BLINK_MAX = 10;
 
-    private Sound grow, hurtS, jump;
+    private Sound grow, hurtS, jump, win, lose;
 
 
     public Player() {
@@ -64,6 +64,8 @@ public class Player extends Entity {
         grow = Gdx.audio.newSound(Gdx.files.internal("sounds/grow.wav"));
         hurtS = Gdx.audio.newSound(Gdx.files.internal("sounds/hurt.wav"));
         jump = Gdx.audio.newSound(Gdx.files.internal("sounds/jump.wav"));
+        win = Gdx.audio.newSound(Gdx.files.internal("sounds/win.wav"));
+        lose = Gdx.audio.newSound(Gdx.files.internal("sounds/lose.wav"));
 
 
         setWidth(size * 2 * Utils.B2W);
@@ -83,6 +85,12 @@ public class Player extends Entity {
                 GameScreen.cutScene = false;
             }
         })));
+        GameScreen.physicRunnables.add(new Runnable() {
+            @Override
+            public void run() {
+                getPhysicalObject().changeMass(size);
+            }
+        });
     }
 
 
@@ -90,6 +98,8 @@ public class Player extends Entity {
     public void updateSize(final float newSize) {
         if (newSize <= .4f) {
 
+            /// LOOOOSE
+            lose.play();
             GameScreen.cutScene = true;
             getStage().getRoot().setOrigin(getX() + getOriginX(), getY() + getOriginY());
             getStage().addAction(Actions.rotateBy(-1200, 3f, Interpolation.pow2In));
@@ -164,6 +174,8 @@ public class Player extends Entity {
         hurtEffect.draw(batch);
         hurtEffect.setPosition(getX() + getOriginX(), getY() + getOriginY());
         collideEffect.draw(batch);
+
+        Utils.debugFont.draw(batch, "mass: " + getSize(), getX(), getY());
     }
 
     @Override
@@ -190,6 +202,7 @@ public class Player extends Entity {
             if (exit.isOpen()) {
                 // end the level
                 GameScreen.cutScene = true;
+                win.play();
 
                 getStage().getRoot().setOrigin(exit.getX() + exit.getOriginX(), exit.getY() + exit.getOriginY());
                 getStage().addAction(Actions.rotateBy(-1200, 3f, Interpolation.pow2In));
@@ -200,8 +213,9 @@ public class Player extends Entity {
                         GameScreen.get().switchLevel(exit.getNextLevel());
                     }
                 })));
-                addAction(Actions.moveTo(exit.getX(), exit.getY(), .5f));
+                addAction(Actions.moveTo(exit.getX() + exit.getOriginX(), exit.getY() + exit.getOriginY(), .5f));
                 addAction(Actions.rotateBy(900, 2f));
+                exit.addAction(Actions.rotateBy(-1900, 2f));
                 addAction(Actions.scaleTo(0, 0, 2f));
 
             }
@@ -216,6 +230,8 @@ public class Player extends Entity {
         grow.dispose();
         hurtS.dispose();
         jump.dispose();
+        win.dispose();
+        lose.dispose();
         return super.remove();
     }
 

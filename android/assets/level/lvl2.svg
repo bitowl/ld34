@@ -7,17 +7,18 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="210mm"
    height="297mm"
    viewBox="0 0 744.09448819 1052.3622047"
-   id="svg4420"
+   id="svg6744"
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="lvl2.svg">
   <defs
-     id="defs4422" />
+     id="defs6746" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -26,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="150.20196"
-     inkscape:cy="633.10235"
+     inkscape:cx="392.62213"
+     inkscape:cy="713.75587"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,10 +36,9 @@
      inkscape:window-height="1058"
      inkscape:window-x="0"
      inkscape:window-y="20"
-     inkscape:window-maximized="0"
-     showguides="false" />
+     inkscape:window-maximized="0" />
   <metadata
-     id="metadata4425">
+     id="metadata6749">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -53,60 +53,113 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="24.606281"
+       x="20.78241"
+       id="image7354"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
     <circle
-       r="50.625"
-       cy="191.94077"
-       cx="206.83827"
-       id="circle5826-8"
-       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
+       style="fill:#ff00ff;fill-opacity:1;stroke:none"
+       id="path7357"
+       cx="432.80936"
+       cy="552.9624"
+       r="37.375645">
       <desc
-         id="desc5828-9">drop
-</desc>
-    </circle>
-    <circle
-       style="display:inline;fill:#ff00ff;fill-opacity:1;stroke:none"
-       id="path8249"
-       cx="341.43155"
-       cy="163.42795"
-       r="40">
-      <desc
-         id="desc8347">player-spawn</desc>
+         id="desc7359">player-spawn</desc>
     </circle>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 56.568543,363.43817 477.80215,396.7732 658.61946,259.39246 525.27932,38.169049 137.38075,71.504083 58.588848,223.02696 51.51778,340.20466 -43.436559,196.763 66.670068,15.945693 683.87327,-11.328426 744.48243,183.63102 699.02556,477.58541 286.88332,541.22502 21.213203,456.3722 Z"
-       id="path5052"
+       d="m 330.77675,24.546857 61.35148,10.006654 71.27925,26.849047 58.29998,43.355392 38.74965,43.96555 32.24989,57.13087 20.57257,62.65461 2.91348,62.35177 -7.32051,63.92051 -22.84521,60.25029 -27.10247,45.19383 -36.67599,40.99964 -57.53721,42.23947 -64.43871,26.4509 -79.60471,13.71417 -83.38646,-12.72262 -76.7306,-36.32767 -60.742961,-49.77886 -42.482062,-61.1046 -31.917307,-86.76023 -1.594121,-97.74107 19.457226,-69.64435 53.143215,-83.17635 86.1699,-67.749172 78.08317,-27.632836 67.63134,-4.944583 2.0203,-56.568543 -357.593999,-3.030458 20.2030512,676.802202 755.5941078,4.04061 -43.43656,-698.015405 -373.50391,17.172594 z"
+       id="path7361"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccc" />
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect5054"
-       width="156.57364"
-       height="97.984795"
-       x="263.64981"
-       y="285.65643">
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc" />
+    <circle
+       style="fill:#ffff00;fill-opacity:1;stroke:none"
+       id="path7485"
+       cx="325.1712"
+       cy="67.474548"
+       r="41.42857">
       <desc
-         id="desc5056">image=crate</desc>
-    </rect>
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect5054-0"
-       width="156.57364"
-       height="97.984795"
-       x="451.03311"
-       y="184.13611">
+         id="desc7487">exit
+level=lvl3</desc>
+    </circle>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7371-5"
+       y="466.2908"
+       x="473.73886"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '"
+         y="466.2908"
+         x="473.73886"
+         id="tspan7373-9"
+         sodipodi:role="line">&lt;-- collect to grow</tspan></text>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path7507"
+       cx="410.42245"
+       cy="467.58627"
+       r="22.9438">
       <desc
-         id="desc5056-6">image=crate</desc>
-    </rect>
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:none"
-       id="rect5054-5"
-       width="156.57364"
-       height="97.984795"
-       x="377.29199"
-       y="37.663975">
+         id="desc7509">drop</desc>
+    </circle>
+    <circle
+       r="9.3723717"
+       cy="402.58627"
+       cx="186.85103"
+       id="circle7531"
+       style="fill:#00ff00;fill-opacity:1;stroke:none">
       <desc
-         id="desc5056-0">image=crate</desc>
-    </rect>
+         id="desc7533">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7535"
+       cx="133.58682"
+       cy="296.72412"
+       r="3.3508682"
+       inkscape:transform-center-x="-1.0215106"
+       inkscape:transform-center-y="4.8521297">
+      <desc
+         id="desc7537">drop</desc>
+    </circle>
+    <circle
+       inkscape:transform-center-y="7.9550289"
+       inkscape:transform-center-x="-1.6747552"
+       r="5.4937253"
+       cy="210.29555"
+       cx="142.87253"
+       id="circle7539"
+       style="fill:#00ff00;fill-opacity:1;stroke:none">
+      <desc
+         id="desc7541">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543"
+       cx="218.04774"
+       cy="263.09201"
+       r="6.2686763"
+       inkscape:transform-center-x="-1.9110064"
+       inkscape:transform-center-y="9.0771663">
+      <desc
+         id="desc7545">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543-7"
+       cx="249.75546"
+       cy="182.53506"
+       r="10.395083"
+       inkscape:transform-center-x="-3.168941"
+       inkscape:transform-center-y="15.052279">
+      <desc
+         id="desc7545-2">drop</desc>
+    </circle>
   </g>
 </svg>

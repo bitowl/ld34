@@ -4,10 +4,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
@@ -36,6 +38,7 @@ public class MenuScreen extends AbstractScreen {
 
 
         table = new Table();
+
 
         TextButton.TextButtonStyle style = new TextButton.TextButtonStyle(Utils.get9Patch("button_up",29), Utils.get9Patch("button_down",29), null, Utils.font);
 
@@ -85,6 +88,7 @@ public class MenuScreen extends AbstractScreen {
             public void clicked(InputEvent event, float x, float y) {
                 Utils.select.play();
                 dialogTable.add(exitDialog);
+               // exitDialog.addAction(Actions.scaleTo(1,1, 1.5f, Interpolation.bounceOut));
                 dialogImage.setVisible(true);
                 dialogImage.addListener(new ClickListener() {
                     @Override
@@ -100,6 +104,10 @@ public class MenuScreen extends AbstractScreen {
 
         Table t = new Table();
         t.setFillParent(true);
+        Image image = new Image(Utils.getDrawable("icon"));
+
+        t.add(image).width(665/2).height(499/2).padRight(100);
+
         t.add(table);
         stage.addActor(t);
 
@@ -143,7 +151,7 @@ public class MenuScreen extends AbstractScreen {
         levelDialog = new Table();
         levelDialog.setBackground(Utils.get9Patch("dialog", 29));
 
-        int LEVEL_COUNT = 4;
+        int LEVEL_COUNT = 9;
 
         for (int i = 1; i <= LEVEL_COUNT; i++) {
             TextButton lvl = new TextButton(""+i, style);
@@ -156,6 +164,9 @@ public class MenuScreen extends AbstractScreen {
                 }
             });
             levelDialog.add(lvl).pad(5);
+            if (i%5 == 0) {
+                levelDialog.row();
+            }
         }
 
         levelDialog.row();
@@ -170,6 +181,8 @@ public class MenuScreen extends AbstractScreen {
             }
         });
         levelDialog.add(cancel).padTop(25).colspan(100);
+
+
 
 
 

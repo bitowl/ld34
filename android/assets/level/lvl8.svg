@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1280"
+   height="720"
+   viewBox="0 0 1280 720.00001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="lvl8.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="2681.2742"
+     inkscape:cy="171.16157"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     inkscape:window-width="1916"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0"
+     units="px"
+     showguides="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="background">
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="1582.0503"
+       x="2901.4602"
+       id="image12140-6-7-6"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="181.94394"
+       width="411.12671"
+       transform="matrix(0.97861697,-0.20569107,0.26742852,0.9635777,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="1502.8513"
+       x="3261.3054"
+       id="image12140-6-7-60"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="181.94394"
+       width="411.12671"
+       transform="matrix(0.98689501,-0.16136368,0.22371636,0.97465429,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="3170.3906"
+       x="-49.982708"
+       id="image12140-3"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="163.23065"
+       width="287.28931"
+       transform="matrix(0.17748275,-0.98412391,0.98412391,0.17748275,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="2057.5562"
+       x="376.82758"
+       id="image12140-1"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="163.23065"
+       width="287.28931"
+       transform="matrix(0.50252244,-0.86456417,0.86456417,0.50252244,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="412.45386"
+       x="3331.3821"
+       id="image11438-73"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="999.45721"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="-381.99356"
+       x="2621.147"
+       id="image12140-6-7"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="181.94394"
+       width="411.12671"
+       transform="matrix(0.95014777,0.31179996,-0.25082588,0.96803222,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="189.11168"
+       x="1298.1743"
+       id="image11438-7"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="1219.1858"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="402.43823"
+       x="546.80481"
+       id="image12140"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="163.23065"
+       width="287.28931" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="569.27142"
+       x="350.75024"
+       id="image11438"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="843.00494"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="955.77136"
+       x="1007.7502"
+       id="image11438-9"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="456.45721"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="1127.8962"
+       x="1827.2208"
+       id="image11438-6"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="284.21292"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="643.24152"
+       x="2365.9575"
+       id="image11438-0"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="770.2312"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="1130.4048"
+       x="3068.3787"
+       id="image11438-73-9"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="281.45721"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/stick.png"
+       y="1105.7532"
+       x="3909.5862"
+       id="image11438-73-3"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/stick.png"
+       preserveAspectRatio="none"
+       height="306.77954"
+       width="24.499599" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="-25.317265"
+       x="60.784443"
+       id="image11293"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="1152.0626"
+       x="-536.57922"
+       id="image12140-6-4"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="163.17812"
+       width="363.73114"
+       transform="matrix(0.02969043,-0.99955914,0.99909208,-0.04260302,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="-180.88075"
+       x="1127.1016"
+       id="image11293-4"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="387.54794"
+       width="387.54794" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="1007.471"
+       x="1054.1888"
+       id="image12140-7"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="163.23065"
+       width="287.28931"
+       transform="matrix(0.97167329,-0.23632818,0.23632818,0.97167329,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="365.9686"
+       x="715.46484"
+       id="image11293-1"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="559.07886"
+       x="1540.5514"
+       id="image11293-6"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="77.574219"
+       x="2081.5742"
+       id="image11293-2"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="558.05951"
+       x="2789.03"
+       id="image11293-9"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="-155.74367"
+       x="3045.6978"
+       id="image11293-7"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="856.58344"
+       x="3787.823"
+       id="image11293-7-2"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="268.75403"
+       width="268.75403" />
+    <rect
+       style="fill:#bb0000;fill-opacity:1;stroke:none"
+       id="rect11522"
+       width="4700.8457"
+       height="390.32294"
+       x="-89.802551"
+       y="1412.2574" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/flask.png"
+       y="1128.0563"
+       x="545.02924"
+       id="image11669"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/flask.png"
+       preserveAspectRatio="none"
+       height="301.65012"
+       width="401.99866" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/flask.png"
+       y="1211.0847"
+       x="2087.9053"
+       id="image11669-7"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/flask.png"
+       preserveAspectRatio="none"
+       height="213.43454"
+       width="200.27626" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/flask.png"
+       y="1205.4766"
+       x="3995.03"
+       id="image11669-7-1"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/flask.png"
+       preserveAspectRatio="none"
+       height="213.43454"
+       width="280.27628" />
+    <circle
+       style="fill:#ff00ff;fill-opacity:1;stroke:none"
+       id="path12230"
+       cx="2344.2031"
+       cy="361.55719"
+       r="49.497475">
+      <desc
+         id="desc12232">player-spawn</desc>
+    </circle>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 554.19494,497.08459 -69.11969,44.7245 -81.31728,24.74874 L 299.81328,565.14361 212.13203,534.03092 138.59293,480.2908 78.488853,379.17453 64.346717,238.46028 106.06602,113.30238 189.50462,29.156675 303.34881,-18.21948 432.74935,-16.098159 550.83618,44.005917 622.25397,136.63691 651.5,215 654,323.5 625,412 l 171.90934,55.56288 98.34402,-82.8106 136.09074,-19.37933 113.6236,26.3284 61.6613,-220.1674 -60.9414,-79.47263 -16.536,-95.8423185 27.9293,-81.7639665 71.8992,-71.128665 L 173.94827,-145.4987 -41.012193,472.51263 541.64379,693.12994 616.95067,518.12101 Z"
+       id="path12234"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 732.56263,553.82991 -11.31371,53.033 -0.70711,91.21678 31.1127,121.62237 82.73149,84.1457 130.10765,53.74012 145.66395,-12.02082 100.4092,-59.39697 65.0538,-82.73149 132.9361,15.55635 -46.669,383.25185 L 459.61941,867.07821 615.1829,516.35325 Z"
+       id="path12236"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1227,-158.5 53,-17 64,-5.5 74.5,25 58.5,48 33.5,73.5 2.5,89.5 -34,69.5 -55,53 -71.5,25.5 -48.5,2.5 -80.5,245 56.5,74.5 27,78.5 3.5,70 -3,46.5 260,20 68.5,-96 94,-65 111.3061,-16.68481 85.5599,11.31371 79.903,41.7193 26.8701,21.2132 108.8944,-91.21677 -43.8406,-78.48886 -16.2634,-100.40916 19.799,-100.40916 53.7401,-85.55992 74.9533,-63.63961 105.3589,-34.648237 120.2082,4.242641 L 2450,-204 1238.8511,-228.9373 Z"
+       id="path12238"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1401,822 142,16 6,77 32,97 76,79 86,51 123,14 142,-50 97,-118 31,-122 L 2116.0614,752.25256 2093,704 l 110,-93 50,36 126,30 136,-32 77.8787,-66.89949 37.4142,1.4203 196.72,134.82233 -36.7695,77.78174 2.8284,135.7645 69.2964,141.42132 128.6935,77.7818 121.6223,9.8995 L 1412,1190 Z"
+       id="path12240"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2459.3174,86.432324 98.9949,46.669046 86.2671,103.23759 33.9411,127.27922 -12.7279,104.65181 236.4873,155.80613 74.642,-48.39538 142.8332,-16.90109 90.5097,-159.80613 -110.3087,-89.09545 -52.3259,-145.664 31.1127,-161.2203459 114.5513,-121.6223641 140.0072,-36.76955 149.9066,35.35533 117.3797,111.7228756 43.8406,142.8355744 -41.0121,159.80613 -103.2376,106.06601 -140.0072,41.0122 -57.9827,-4.24264 -86.2671,152.73506 86.2671,56.56854 66.468,103.23759 16.9706,114.5513 -7.0711,36.76956 427.0925,45.25483 16.9706,-49.49747 80.6101,-39.59798 93.3381,12.72792 41.0122,50.91169 18.3848,55.15432 -43.8406,-1224.70894 -1578.2624,38.18377 z"
+       id="path12242"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3112.684,1151.3351 120.2082,-39.5979 67.8823,-52.3259 49.4974,-48.0833 448.3057,35.3553 56.5686,59.397 78.9396,-0.3271 78.0381,-13.815 101.8234,118.7939 -39.598,84.8528 -79.3193,123.3262 z"
+       id="path12244"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 4248,1338 4056.577,856.58344 4420,985 4304,1419 3995.03,1418.9111 4033,1302 Z"
+       id="path12246"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
+    <circle
+       style="fill:#ff00ff;fill-opacity:1;stroke:none"
+       id="path12248"
+       cx="4138.3428"
+       cy="1227.3491"
+       r="21.566757">
+      <desc
+         id="desc12250">exit
+weight=1
+level=lvl8</desc>
+    </circle>
+    <ellipse
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12252"
+       cx="3977.6125"
+       cy="1006.0767"
+       rx="59.887619"
+       ry="58.689865">
+      <desc
+         id="desc12254">drop</desc>
+    </ellipse>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12256"
+       width="67"
+       height="100"
+       x="3108.6079"
+       y="-1088.2852"
+       transform="matrix(0.86693,0.4984299,-0.4984299,0.86693,0,0)">
+      <desc
+         id="desc12258">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12320"
+       width="101.65343"
+       height="101.65343"
+       x="2580.7717"
+       y="381.30304"
+       transform="matrix(0.99933624,0.03642913,-0.03642913,0.99933624,0,0)">
+      <desc
+         id="desc12322">image=crate
+dyn
+mass=7</desc>
+    </rect>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342"
+       cx="2502.4509"
+       cy="316.24203"
+       r="51.618793">
+      <desc
+         id="desc12344">drop</desc>
+    </circle>
+  </g>
+  <g
+     inkscape:label="objects"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-332.36216)"
+     style="display:inline" />
+</svg>

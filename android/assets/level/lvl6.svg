@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg6744"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="lvl6.svg">
+  <defs
+     id="defs6746" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="823.63737"
+     inkscape:cy="635.86045"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1916"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata6749">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="398.83588"
+       x="473.59177"
+       id="image10822"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="319.1235"
+       width="602.39044" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="24.606281"
+       x="20.78241"
+       id="image7354"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <circle
+       style="fill:#ff00ff;fill-opacity:1;stroke:none"
+       id="path7357"
+       cx="87.436577"
+       cy="277.00299"
+       r="37.375645">
+      <desc
+         id="desc7359">player-spawn</desc>
+    </circle>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M -27.273438,-33.552734 -7.0703125,643.25 746.75781,647.28125 499.03516,558.26562 l -34.32422,25.19922 -64.4375,26.45118 -79.60547,13.71289 -83.38672,-12.72266 -76.73047,-36.32617 -60.742186,-49.7793 -42.482422,-61.10547 -31.917969,-86.75976 -1.59375,-97.74024 19.457031,-69.64453 53.144532,-83.17773 86.169924,-67.74805 78.08203,-27.632812 68.87012,-5.695313 62.59082,9.255859 71.27929,26.84961 58.29883,43.355466 38.75,43.96485 32.25,57.13086 20.57227,62.65625 2.91406,62.35156 -6.73828,58.8457 125.85351,45.22266 -30.22265,-485.654299 z"
+       id="path10595"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccc" />
+    <circle
+       r="9.3723717"
+       cy="319.81537"
+       cx="329.21075"
+       id="circle7531"
+       style="fill:#00ff00;fill-opacity:1;stroke:none">
+      <desc
+         id="desc7533">drop</desc>
+    </circle>
+    <ellipse
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7535"
+       cx="124.49545"
+       cy="406.83075"
+       inkscape:transform-center-x="-1.0215106"
+       inkscape:transform-center-y="4.8521297"
+       r="3.3508682">
+      <desc
+         id="desc7537">drop</desc>
+    </ellipse>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543"
+       cx="222.08833"
+       cy="491.38647"
+       r="6.2686763"
+       inkscape:transform-center-x="-1.9110064"
+       inkscape:transform-center-y="9.0771663">
+      <desc
+         id="desc7545">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543-7"
+       cx="442.69458"
+       cy="459.31686"
+       r="10.395083"
+       inkscape:transform-center-x="-3.168941"
+       inkscape:transform-center-y="15.052279">
+      <desc
+         id="desc7545-2">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543-6"
+       cx="263.66934"
+       cy="97.456253"
+       r="16.370201"
+       inkscape:transform-center-x="-4.9904636"
+       inkscape:transform-center-y="23.70438">
+      <desc
+         id="desc7545-5">drop</desc>
+    </circle>
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
+       y="530.1972"
+       x="854.14978"
+       id="image7354-3"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
+       preserveAspectRatio="none"
+       height="596.85156"
+       width="596.85156" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1225.4961,540.14453 71.2793,26.84961 58.2988,43.35547 38.75,43.96484 32.25,57.13086 20.5723,62.6543 2.914,62.35156 -7.3203,63.92188 -22.8457,60.25 -27.1015,45.19335 -36.6758,41 -57.5391,42.2383 -64.4375,26.4512 -79.6054,13.7148 -83.3868,-12.7227 -76.73043,-36.3281 -60.74219,-49.7793 -42.48242,-61.10349 -31.91797,-86.75977 -1.59375,-97.74218 19.45703,-69.64454 12.8418,-20.0996 -162.97238,-54.64844 99.78879,508.44922 755.59372,4.041 -43.4375,-698.01561 -813.57495,-23.3599 326.10815,120.30912 43.0489,-15.23438 68.8711,-5.69336 z"
+       id="path7361-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccc" />
+    <circle
+       style="fill:#ffff00;fill-opacity:1;stroke:none"
+       id="path7485"
+       cx="1329.5092"
+       cy="958.34619"
+       r="41.42857">
+      <desc
+         id="desc7487">exit
+level=lvl7
+weight=1</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543-7-8"
+       cx="1033.3746"
+       cy="919.4632"
+       r="26.151264"
+       inkscape:transform-center-x="-7.9721637"
+       inkscape:transform-center-y="37.867526">
+      <desc
+         id="desc7545-2-8">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="circle7543-7-8-5"
+       cx="1218.4248"
+       cy="618.0943"
+       r="16.297901"
+       inkscape:transform-center-x="-4.9683795"
+       inkscape:transform-center-y="23.599643">
+      <desc
+         id="desc7545-2-8-8">drop</desc>
+    </circle>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect10603"
+       width="72.85714"
+       height="240"
+       x="677.67041"
+       y="158.88678"
+       transform="matrix(0.94915852,0.31479852,-0.31479852,0.94915852,0,0)">
+      <desc
+         id="desc10605">image=door
+receiver=1
+path=1
+speed=500</desc>
+    </rect>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 599.28571,500.21935 685,261.64791"
+       id="path10607"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc">
+      <desc
+         id="desc10609">path=1</desc>
+    </path>
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:none"
+       id="rect10825"
+       width="98.571426"
+       height="98.571426"
+       x="-505.76419"
+       y="276.97177"
+       transform="matrix(-0.56825138,-0.82285501,0.82285501,-0.56825138,0,0)">
+      <desc
+         id="desc10827">trigger=1
+image=switch
+image_down=switch_down</desc>
+    </rect>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7371-5"
+       y="190.50215"
+       x="588.68304"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '"
+         y="190.50215"
+         x="588.68304"
+         id="tspan7373-9"
+         sodipodi:role="line">&lt;-- activate the switch</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="684.64752"
+       y="230.90825"
+       id="text8813"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8815"
+         x="684.64752"
+         y="230.90825"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '">to open the door</tspan></text>
+  </g>
+</svg>

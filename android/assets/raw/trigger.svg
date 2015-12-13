@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg4620"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="trigger.svg"
+   inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs4622" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="278.95304"
+     inkscape:cy="907.13269"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer9"
+     showgrid="false"
+     inkscape:window-width="1916"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata4625">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="g6828"
+       inkscape:transform-center-x="-42.933059"
+       inkscape:transform-center-y="-66.968275"
+       transform="matrix(0.17641836,0.98431527,-0.98431527,0.17641836,295.30799,8.2415509)"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         inkscape:transform-center-y="-46.428572"
+         inkscape:transform-center-x="51.428572"
+         id="g6825">
+        <rect
+           style="fill:#552200;fill-opacity:1;stroke:none"
+           id="rect6794"
+           width="10.228468"
+           height="92.021614"
+           x="-49.717758"
+           y="112.9883"
+           transform="matrix(0.5774657,-0.81641494,0.80388696,0.59478211,0,0)"
+           inkscape:transform-center-x="49.234755"
+           inkscape:transform-center-y="-44.605756"
+           inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger_down.png"
+           inkscape:export-xdpi="300.04013"
+           inkscape:export-ydpi="300.04013" />
+      </g>
+      <circle
+         r="10"
+         cy="101.41629"
+         cx="63.819386"
+         id="path6823"
+         style="fill:#a02c2c;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger_downpng"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </g>
+    <path
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+       d="m 152.02867,137.66927 a 52.022858,52.022858 0 0 0 -50.6582,40.40625 l 101.30078,0 a 52.022858,52.022858 0 0 0 -50.64258,-40.40625 z"
+       id="path6789"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.44375801px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="112.25142"
+       y="173.78203"
+       id="text6796"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6798"
+         x="112.25142"
+         y="173.78203">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.94659615px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="181.57935"
+       y="174.73419"
+       id="text6800"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6802"
+         x="181.57935"
+         y="174.73419">0</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <g
+       id="g6828-0"
+       inkscape:transform-center-x="5.7873423"
+       inkscape:transform-center-y="-8.1007118"
+       transform="matrix(0.93829148,0.34584546,-0.34584546,0.93829148,71.601097,-29.232228)"
+       inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <g
+         inkscape:transform-center-y="-46.428572"
+         inkscape:transform-center-x="51.428572"
+         id="g6825-5">
+        <rect
+           style="fill:#552200;fill-opacity:1;stroke:none"
+           id="rect6794-4"
+           width="10.228468"
+           height="92.021614"
+           x="-49.717758"
+           y="112.9883"
+           transform="matrix(0.5774657,-0.81641494,0.80388696,0.59478211,0,0)"
+           inkscape:transform-center-x="49.234755"
+           inkscape:transform-center-y="-44.605756"
+           inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger_down.png"
+           inkscape:export-xdpi="300.04013"
+           inkscape:export-ydpi="300.04013" />
+      </g>
+      <circle
+         r="10"
+         cy="101.41629"
+         cx="63.819386"
+         id="path6823-1"
+         style="fill:#a02c2c;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/bitowl/git/ld34/android/assets/trigger_downpng"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </g>
+    <path
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+       d="m 152.02867,137.66927 a 52.022858,52.022858 0 0 0 -50.6582,40.40624 l 101.30078,0 a 52.022858,52.022858 0 0 0 -50.64258,-40.40624 z"
+       id="path6789-0"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.44375801px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="112.25142"
+       y="173.78203"
+       id="text6796-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6798-9"
+         x="112.25142"
+         y="173.78203">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.94659615px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="181.57935"
+       y="174.73418"
+       id="text6800-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6802-4"
+         x="181.57935"
+         y="174.73418">0</tspan></text>
+  </g>
+</svg>
