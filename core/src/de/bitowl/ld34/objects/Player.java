@@ -43,11 +43,9 @@ public class Player extends Entity {
         size = 20 * Utils.W2B;
 
 
-        bubblesEffect = new ParticleEffect();
-        bubblesEffect.load(Gdx.files.internal("particles/bubbles.p"), Gdx.files.internal("."));
+        bubblesEffect = Utils.getParticleEffect("bubbles");
 
-        hurtEffect = new ParticleEffect();
-        hurtEffect.load(Gdx.files.internal("particles/hurt.p"), Gdx.files.internal("."));
+        hurtEffect = Utils.getParticleEffect("hurt");
 
         collideEffect = Utils.getParticleEffect("collide");
 

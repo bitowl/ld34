@@ -17,7 +17,7 @@ import com.badlogic.gdx.utils.Array;
 public class Utils {
 
     public static Texture getDrawable(String name) {
-        Texture texture = new Texture(name + ".png");
+        Texture texture = new Texture(Gdx.files.internal(name + ".png"));
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         return texture;
     }
@@ -61,7 +61,7 @@ public class Utils {
 
     public static ParticleEffect getParticleEffect(String name) {
         ParticleEffect effect = new ParticleEffect();
-        effect.load(Gdx.files.internal("particles/"+name+".p"), Gdx.files.internal("."));
+        effect.load(Gdx.files.internal("particles/"+name+".p"), Gdx.files.internal("particles"));
         return effect;
 
     }
@@ -105,6 +105,7 @@ public class Utils {
             bg.stop();
             bg.dispose();
         }
+        music = name;
         bg = Gdx.audio.newMusic(Gdx.files.internal("music/"+name+".ogg"));
         bg.setLooping(true);
         bg.play();

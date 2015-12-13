@@ -132,4 +132,4 @@ additive: true
 behind: false
 premultipliedAlpha: false
 - Image Path -
-/home/bitowl/git/ld34/android/assets/bubble.png
+/home/bitowl/git/ld34/android/assets/particles/bubble.png

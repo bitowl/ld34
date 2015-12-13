@@ -125,7 +125,6 @@ public class GameScreen extends AbstractScreen {
 
     @Override
     public void show() {
-        Utils.startMusic("test2");
 
     }
 
@@ -288,6 +287,12 @@ public class GameScreen extends AbstractScreen {
             System.err.println("MENNNUU");
             MyGame.switchTo(new MenuScreen());
             return;
+        }
+
+        if (name.equals("credits")) {
+            Utils.startMusic("test2");
+        } else {
+            Utils.startMusic("test3");
         }
 
         cutScene = false; // we have to synchronize the objects with their physics first

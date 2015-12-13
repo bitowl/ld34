@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="2984.8082"
-     inkscape:cy="-128.27708"
+     inkscape:zoom="0.25"
+     inkscape:cx="2486.0359"
+     inkscape:cy="354.18022"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -335,8 +335,8 @@
     <circle
        style="fill:#ff00ff;fill-opacity:1;stroke:none"
        id="path12230"
-       cx="1935.3379"
-       cy="697.21112"
+       cx="251.33789"
+       cy="105.21112"
        r="49.497475">
       <desc
          id="desc12232">player-spawn</desc>
@@ -540,17 +540,6 @@ path=monster2</desc>
       <desc
          id="desc15146">path=monster2</desc>
     </path>
-    <rect
-       style="fill:#ff0000;fill-opacity:1;stroke:none"
-       id="rect15215"
-       width="19.943651"
-       height="49.928932"
-       x="940"
-       y="-67.5">
-      <desc
-         id="desc15217">enemy
-image=spike</desc>
-    </rect>
     <rect
        style="fill:#ff0000;fill-opacity:1;stroke:none"
        id="rect15215-2"
