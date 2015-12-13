@@ -1,6 +1,7 @@
 package de.bitowl.ld34;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -35,6 +36,9 @@ public class MenuScreen extends AbstractScreen {
 
     public MenuScreen() {
         stage = new Stage(new FillViewport(1280, 1000));
+
+
+        Utils.startMusic("test1");
 
 
         table = new Table();
@@ -151,7 +155,7 @@ public class MenuScreen extends AbstractScreen {
         levelDialog = new Table();
         levelDialog.setBackground(Utils.get9Patch("dialog", 29));
 
-        int LEVEL_COUNT = 9;
+        int LEVEL_COUNT = 10;
 
         for (int i = 1; i <= LEVEL_COUNT; i++) {
             TextButton lvl = new TextButton(""+i, style);

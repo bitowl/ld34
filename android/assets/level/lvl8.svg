@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="2681.2742"
-     inkscape:cy="171.16157"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="2984.8082"
+     inkscape:cy="-128.27708"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -55,6 +55,26 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="background">
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
+       y="1137.3953"
+       x="-457.56537"
+       id="image12140-2"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
+       preserveAspectRatio="none"
+       height="163.23065"
+       width="287.28931"
+       transform="matrix(-0.01303845,-0.999915,0.999915,-0.01303845,0,0)" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_ground.png"
+       y="1405.1801"
+       x="-105.38329"
+       id="image15111"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_ground.png"
+       style="image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="636.89642"
+       width="4741.4897" />
     <image
        sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
        y="1582.0503"
@@ -196,16 +216,6 @@
        height="596.85156"
        width="596.85156" />
     <image
-       sodipodi:absref="/home/bitowl/git/ld34/android/assets/bg_tube.png"
-       y="1152.0626"
-       x="-536.57922"
-       id="image12140-6-4"
-       xlink:href="file:///home/bitowl/git/ld34/android/assets/bg_tube.png"
-       preserveAspectRatio="none"
-       height="163.17812"
-       width="363.73114"
-       transform="matrix(0.02969043,-0.99955914,0.99909208,-0.04260302,0,0)" />
-    <image
        sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
        y="-180.88075"
        x="1127.1016"
@@ -278,6 +288,16 @@
        preserveAspectRatio="none"
        height="268.75403"
        width="268.75403" />
+    <image
+       sodipodi:absref="/home/bitowl/git/ld34/android/assets/crack.png"
+       y="962.23163"
+       x="3926.2156"
+       id="image15646"
+       xlink:href="file:///home/bitowl/git/ld34/android/assets/crack.png"
+       style="image-rendering:optimizeSpeed"
+       preserveAspectRatio="none"
+       height="108.38486"
+       width="108.8655" />
     <rect
        style="fill:#bb0000;fill-opacity:1;stroke:none"
        id="rect11522"
@@ -315,8 +335,8 @@
     <circle
        style="fill:#ff00ff;fill-opacity:1;stroke:none"
        id="path12230"
-       cx="2344.2031"
-       cy="361.55719"
+       cx="1935.3379"
+       cy="697.21112"
        r="49.497475">
       <desc
          id="desc12232">player-spawn</desc>
@@ -347,22 +367,22 @@
        sodipodi:nodetypes="cccccccccccccccccccccccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 2459.3174,86.432324 98.9949,46.669046 86.2671,103.23759 33.9411,127.27922 -12.7279,104.65181 236.4873,155.80613 74.642,-48.39538 142.8332,-16.90109 90.5097,-159.80613 -110.3087,-89.09545 -52.3259,-145.664 31.1127,-161.2203459 114.5513,-121.6223641 140.0072,-36.76955 149.9066,35.35533 117.3797,111.7228756 43.8406,142.8355744 -41.0121,159.80613 -103.2376,106.06601 -140.0072,41.0122 -57.9827,-4.24264 -86.2671,152.73506 86.2671,56.56854 66.468,103.23759 16.9706,114.5513 -7.0711,36.76956 427.0925,45.25483 16.9706,-49.49747 80.6101,-39.59798 93.3381,12.72792 41.0122,50.91169 18.3848,55.15432 -43.8406,-1224.70894 -1578.2624,38.18377 z"
+       d="m 2459.3174,86.432324 98.9949,46.669046 86.2671,103.23759 33.9411,127.27922 -12.7279,104.65181 236.4873,155.80613 74.642,-48.39538 142.8332,-16.90109 90.5097,-159.80613 -110.3087,-89.09545 -52.3259,-145.664 31.1127,-161.2203459 114.5513,-121.6223641 140.0072,-36.76955 149.9066,35.35533 117.3797,111.7228756 43.8406,142.8355744 -41.0121,159.80613 -103.2376,106.06601 -140.0072,41.0122 -57.9827,-4.24264 -86.2671,152.73506 86.2671,56.56854 66.468,103.23759 16.9706,114.5513 -7.0711,36.76956 427.0925,45.25483 16.9706,-49.49747 80.6101,-39.59798 93.3381,12.72792 41.0122,50.91169 31.8848,39.15432 -57.3406,-1208.70894 -1578.2624,38.18377 z"
        id="path12242"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 3112.684,1151.3351 120.2082,-39.5979 67.8823,-52.3259 49.4974,-48.0833 448.3057,35.3553 56.5686,59.397 78.9396,-0.3271 78.0381,-13.815 101.8234,118.7939 -39.598,84.8528 -79.3193,123.3262 z"
+       d="m 3112.684,1151.3351 120.2082,-39.5979 67.8823,-52.3259 49.4974,-48.0833 448.3057,35.3553 56.5686,59.397 78.9396,-0.3271 78.0381,-13.815 78.3234,152.7939 -16.098,50.8528 -79.3193,123.3262 z"
        id="path12244"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 4248,1338 4056.577,856.58344 4420,985 4304,1419 3995.03,1418.9111 4033,1302 Z"
+       d="M 4248,1338 4258.0744,1187.0669 4066.5472,959.86152 4056.577,856.58344 4420,985 4304,1419 3995.03,1418.9111 4033,1302 Z"
        id="path12246"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccc" />
+       sodipodi:nodetypes="ccccccccc" />
     <circle
        style="fill:#ff00ff;fill-opacity:1;stroke:none"
        id="path12248"
@@ -372,15 +392,15 @@
       <desc
          id="desc12250">exit
 weight=1
-level=lvl8</desc>
+level=lvl9</desc>
     </circle>
     <ellipse
        style="fill:#00ff00;fill-opacity:1;stroke:none"
        id="path12252"
-       cx="3977.6125"
-       cy="1006.0767"
-       rx="59.887619"
-       ry="58.689865">
+       cx="3876.6416"
+       cy="1060.3003"
+       rx="40.499863"
+       ry="39.689865">
       <desc
          id="desc12254">drop</desc>
     </ellipse>
@@ -397,7 +417,7 @@ level=lvl8</desc>
 image=spike</desc>
     </rect>
     <rect
-       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       style="fill:#803300;fill-opacity:1;stroke:none"
        id="rect12320"
        width="101.65343"
        height="101.65343"
@@ -417,6 +437,388 @@ mass=7</desc>
        r="51.618793">
       <desc
          id="desc12344">drop</desc>
+    </circle>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12256-7"
+       width="67"
+       height="100"
+       x="-3054.1948"
+       y="674.01288"
+       transform="matrix(-0.83704695,-0.54713106,0.54713106,-0.83704695,0,0)">
+      <desc
+         id="desc12258-6">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12256-7-3"
+       width="67"
+       height="100"
+       x="-2252.7754"
+       y="699.21814"
+       transform="matrix(-0.83502859,-0.55020655,0.55020655,-0.83502859,0,0)"
+       inkscape:transform-center-x="-739.44664"
+       inkscape:transform-center-y="52.217995">
+      <desc
+         id="desc12258-6-0">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12256-7-30"
+       width="76.993187"
+       height="46.681458"
+       x="2483.1682"
+       y="408.98566"
+       transform="matrix(0.99999998,1.8561866e-4,-0.00112483,0.99999937,0,0)">
+      <desc
+         id="desc12258-6-9">enemy
+image=monster
+path=monster1</desc>
+    </rect>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2516,424 -248,-2 -286,354 -401.8517,44.51045 97.109,9.79821 248.9016,186.67614 155.4153,-342.55902 282.9909,-237.26849 z"
+       id="path15045"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc">
+      <desc
+         id="desc15047">path=monster1</desc>
+    </path>
+    <rect
+       style="fill:#803300;fill-opacity:1;stroke:none"
+       id="rect15114"
+       width="89.095451"
+       height="267.28638"
+       x="1404.3141"
+       y="659.18884">
+      <desc
+         id="desc15116">image=door
+receiver=1
+path=1</desc>
+    </rect>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.87265468px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1428.3557,775.86144 0,338.70416"
+       id="path15118"
+       inkscape:connector-curvature="0">
+      <desc
+         id="desc15120">path=1</desc>
+    </path>
+    <rect
+       style="fill:#c8ab37;fill-opacity:1;stroke:none"
+       id="rect15122"
+       width="97"
+       height="68.811966"
+       x="-58"
+       y="1444.188"
+       transform="matrix(0,-1,1,0,0,0)">
+      <desc
+         id="desc15124">trigger=1
+image=switch
+image_down=switch_down</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12256-7-30-2"
+       width="98.427948"
+       height="59.677486"
+       x="943.9903"
+       y="396.47717"
+       transform="matrix(0.99999998,1.8561866e-4,-0.00112483,0.99999937,0,0)">
+      <desc
+         id="desc12258-6-9-6">enemy
+image=monster
+path=monster2</desc>
+    </rect>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 980,416 228,79 -24,346 38,-344 -271,-65 -172,239 z"
+       id="path15144"
+       inkscape:connector-curvature="0">
+      <desc
+         id="desc15146">path=monster2</desc>
+    </path>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215"
+       width="19.943651"
+       height="49.928932"
+       x="940"
+       y="-67.5">
+      <desc
+         id="desc15217">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-2"
+       width="31.5"
+       height="54"
+       x="-838.81464"
+       y="868.508"
+       transform="matrix(-0.59213218,-0.80584085,0.80584085,-0.59213218,0,0)">
+      <desc
+         id="desc15217-7">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-2-9"
+       width="31.5"
+       height="54"
+       x="-792.41882"
+       y="867.85333"
+       transform="matrix(-0.59213218,-0.80584085,0.80584085,-0.59213218,0,0)"
+       inkscape:transform-center-x="-43.500001"
+       inkscape:transform-center-y="44.000001">
+      <desc
+         id="desc15217-7-4">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-2-4"
+       width="31.5"
+       height="54"
+       x="-243.47096"
+       y="1108.2228"
+       transform="matrix(-0.16537678,-0.98623046,0.98623046,-0.16537678,0,0)"
+       inkscape:transform-center-x="-4.2511252"
+       inkscape:transform-center-y="-0.65419896">
+      <desc
+         id="desc15217-7-8">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-7-8"
+       width="15.943651"
+       height="65.428932"
+       x="-1145.6818"
+       y="-49.359276"
+       transform="matrix(-0.70822185,-0.70598995,0.70598995,-0.70822185,0,0)">
+      <desc
+         id="desc15217-9-5">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-7-5"
+       width="15.943651"
+       height="65.428932"
+       x="-1214.6653"
+       y="-99.138107"
+       transform="matrix(-0.73743952,-0.67541317,0.67541317,-0.73743952,0,0)"
+       inkscape:transform-center-x="2"
+       inkscape:transform-center-y="-2">
+      <desc
+         id="desc15217-9-6">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-7-57"
+       width="15.943651"
+       height="65.428932"
+       x="-1254.7975"
+       y="-472.33481"
+       transform="matrix(-0.9078045,-0.4193936,0.4193936,-0.9078045,0,0)">
+      <desc
+         id="desc15217-9-9">enemy
+image=spike</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect15215-7-4"
+       width="15.943651"
+       height="65.428932"
+       x="-937.75995"
+       y="-1117.137"
+       transform="matrix(-0.98664631,0.16287744,-0.16287744,-0.98664631,0,0)">
+      <desc
+         id="desc15217-9-1">enemy
+image=spike</desc>
+    </rect>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5"
+       cx="900.57208"
+       cy="892.44092"
+       r="17.868793">
+      <desc
+         id="desc12344-8">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6"
+       cx="1033.25"
+       cy="923.25"
+       r="24.118793">
+      <desc
+         id="desc12344-8-1">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-7"
+       cx="1851.9127"
+       cy="1041.7335"
+       r="106.25714">
+      <desc
+         id="desc12344-8-0">drop</desc>
+    </circle>
+    <rect
+       style="fill:#803300;fill-opacity:1;stroke:none"
+       id="rect15114-6"
+       width="89.095451"
+       height="267.28638"
+       x="3564.5254"
+       y="840.91528">
+      <desc
+         id="desc15116-3">image=door
+receiver=2
+path=2</desc>
+    </rect>
+    <rect
+       style="fill:#803300;fill-opacity:1;stroke:none"
+       id="rect15114-6-8"
+       width="89.095451"
+       height="267.28638"
+       x="1152.1896"
+       y="2908.2886"
+       transform="matrix(0.50472278,-0.86328148,0.86328148,0.50472278,0,0)">
+      <desc
+         id="desc15116-3-5">image=door
+receiver=3
+path=3</desc>
+    </rect>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.87265468px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3607.6588,921.17187 0,338.70413"
+       id="path15118-7"
+       inkscape:connector-curvature="0">
+      <desc
+         id="desc15120-5">path=2</desc>
+    </path>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.87265468px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3215.9216,478.52303 275.7716,217.08179"
+       id="path15118-71"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc">
+      <desc
+         id="desc15120-1">path=3</desc>
+    </path>
+    <rect
+       style="fill:#c8ab37;fill-opacity:1;stroke:none"
+       id="rect15122-7"
+       width="97"
+       height="68.811966"
+       x="-433.78253"
+       y="2212.5828"
+       transform="matrix(0.24208699,-0.97025455,0.97025455,0.24208699,0,0)">
+      <desc
+         id="desc15124-1">trigger=3
+image=switch
+image_down=switch_down</desc>
+    </rect>
+    <rect
+       style="fill:#c8ab37;fill-opacity:1;stroke:none"
+       id="rect15122-1"
+       width="97"
+       height="68.811966"
+       x="-3329.8689"
+       y="914.53821"
+       transform="matrix(-0.96841428,-0.24934671,0.24934671,-0.96841428,0,0)">
+      <desc
+         id="desc15124-5">trigger=2
+image=switch
+image_down=switch_down</desc>
+    </rect>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect12256-7-30-6"
+       width="195.60855"
+       height="118.5987"
+       x="3241.7256"
+       y="102.05048"
+       transform="matrix(0.99999998,1.8561866e-4,-0.00112483,0.99999937,0,0)">
+      <desc
+         id="desc12258-6-9-8">enemy
+image=monster</desc>
+    </rect>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-3"
+       cx="194"
+       cy="444"
+       r="24.118793">
+      <desc
+         id="desc12344-8-1-0">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-1"
+       cx="272.92892"
+       cy="492.92892"
+       r="17.047726">
+      <desc
+         id="desc12344-8-1-5">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-9"
+       cx="424.80762"
+       cy="502.80762"
+       r="14.926405">
+      <desc
+         id="desc12344-8-1-8">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-9-5"
+       cx="3067.4292"
+       cy="154.31458"
+       r="14.926405">
+      <desc
+         id="desc12344-8-1-8-0">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-9-4"
+       cx="3099.9561"
+       cy="12.893219"
+       r="14.926405">
+      <desc
+         id="desc12344-8-1-8-6">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-9-53"
+       cx="3606.2446"
+       cy="135.92981"
+       r="14.926405">
+      <desc
+         id="desc12344-8-1-8-5">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-9-6"
+       cx="3576.5461"
+       cy="284.42221"
+       r="14.926405">
+      <desc
+         id="desc12344-8-1-8-2">drop</desc>
+    </circle>
+    <circle
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       id="path12342-5-6-9-7"
+       cx="3166.4241"
+       cy="1107.4945"
+       r="14.926405">
+      <desc
+         id="desc12344-8-1-8-4">drop</desc>
     </circle>
   </g>
   <g

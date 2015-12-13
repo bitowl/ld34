@@ -125,6 +125,7 @@ public class GameScreen extends AbstractScreen {
 
     @Override
     public void show() {
+        Utils.startMusic("test2");
 
     }
 
@@ -242,7 +243,7 @@ public class GameScreen extends AbstractScreen {
 
         // System.out.println(Gdx.graphics.getFramesPerSecond());
         if (!cutScene) {
-            debugRenderer.render(level.world, debugViewport.getCamera().combined);
+         //   debugRenderer.render(level.world, debugViewport.getCamera().combined);
         }
     }
 

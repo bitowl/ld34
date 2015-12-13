@@ -40,7 +40,7 @@ public class PhysicalObject {
         }
 
 
-        fixtureDef.friction = 1;
+        fixtureDef.friction = .6f;
         fixtureDef.restitution = 0;
     }
 

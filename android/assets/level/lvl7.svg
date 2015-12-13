@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="516.98747"
-     inkscape:cy="668.84617"
+     inkscape:zoom="0.7"
+     inkscape:cx="523.43051"
+     inkscape:cy="380.48418"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -65,7 +65,7 @@
     <image
        sodipodi:absref="/home/bitowl/git/ld34/android/assets/lab_ball.png"
        y="24.606281"
-       x="20.78241"
+       x="23.639553"
        id="image7354"
        xlink:href="file:///home/bitowl/git/ld34/android/assets/lab_ball.png"
        preserveAspectRatio="none"
@@ -194,5 +194,29 @@ mass=3</desc>
       <desc
          id="desc12443-3-1">drop</desc>
     </circle>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7371-5-5"
+       y="552.00507"
+       x="46.540203"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '"
+         y="552.00507"
+         x="46.540203"
+         id="tspan7373-9-5"
+         sodipodi:role="line">press ESC and restart</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7371-5-5-1"
+       y="587.7193"
+       x="111.03794"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, '"
+         y="587.7193"
+         x="111.03794"
+         id="tspan7373-9-5-5"
+         sodipodi:role="line">(if you are stuck)</tspan></text>
   </g>
 </svg>
