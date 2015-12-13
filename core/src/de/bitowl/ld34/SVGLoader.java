@@ -6,11 +6,11 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.FloatArray;
 import com.badlogic.gdx.utils.ShortArray;
 import com.badlogic.gdx.utils.XmlReader;
-
 
 import java.util.HashMap;
 
@@ -125,7 +125,7 @@ public class SVGLoader extends MaSVG2 {
             stage.addActor(drop);
             circle.setUserData(drop);
         } else if (attrs.containsKey("exit")) {
-            Exit exit = new Exit(player, attrs.containsKey("weight")?Float.parseFloat(attrs.get("weight")):Exit.DEFAULT_WEIGHT);
+            Exit exit = new Exit(player, Float.parseFloat(attrs.getOrDefault("weight",""+Exit.DEFAULT_WEIGHT)), attrs.getOrDefault("level", "credits"));
             stage.addActor(exit);
             circle.setUserData(exit);
         }
@@ -135,8 +135,12 @@ public class SVGLoader extends MaSVG2 {
     }
 
     @Override
-    public void newText(String text, XmlReader.Element el, float xxx, float yyy, float width, float height, float rr, Color color) {
-
+    public void newText(String text, XmlReader.Element el, float x, float y, float width, float height, float rr, Color color) {
+        System.out.println(color);
+        Label label = new Label(text, new Label.LabelStyle(Utils.font, color));
+        label.setPosition(x,y);
+        label.setRotation(rr);
+        stage.addActor(label);
     }
 
     @Override

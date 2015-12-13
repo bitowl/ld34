@@ -45,10 +45,10 @@ public class Entity extends Image {
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-        Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+
+   /*     Utils.font.draw(batch, "mass: " + physicalObject.getBody().getMass()+
                 "\ndensity: " + physicalObject.getBody().getFixtureList().get(0).getDensity()
                 +"\nspeed: " + physicalObject.getBody().getLinearVelocity().y
-                ,getX(), getY());
+                ,getX(), getY());*/
     }
 
     public PhysicalObject getPhysicalObject() {

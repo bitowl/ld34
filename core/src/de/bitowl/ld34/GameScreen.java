@@ -40,51 +40,34 @@ public class GameScreen extends AbstractScreen {
     private final int POSITION_ITERATIONS = 2;
     private Box2DDebugRenderer debugRenderer;
     private Viewport debugViewport;
-    private ShapeRenderer shapeRenderer; // custom debug shapes
 
     private OrthographicCamera camera;
 
 
     public static boolean cutScene; // cut scene disables physics
 
-    private ParticleEffect bubblesEffect;
-
     private Level level; // current level
     private Array<Body> bodies;
 
 
+    private float angle = -90;
+    private final float ROTATE_SPEED = 180;
+
+
     public GameScreen() {
+        this("lvl1");
+    }
+
+    public GameScreen(String startLevel) {
+        instance = this;
+
         physicRunnables = new Array<Runnable>();
 
         debugRenderer = new Box2DDebugRenderer();
 
-        shapeRenderer = new ShapeRenderer();
-
-
-
-
-
-
-
-        level = new Level("lvl1");
-        level.init();
-
-        debugViewport = new FitViewport(level.WIDTH * Utils.W2B, level.HEIGHT * Utils.W2B);
-
-        // get a list of bodies
-        bodies = new Array<Body>();
-        level.world.getBodies(bodies);
-
-
-        camera = (OrthographicCamera) level.stage.getCamera();
-        // PARTICLES
-
+        switchLevel(startLevel);
     }
 
-
-    private float angle = -90;
-
-    private final float ROTATE_SPEED = 180;
 
     @Override
     public void render(float delta) {
@@ -112,9 +95,6 @@ public class GameScreen extends AbstractScreen {
             camera.rotate(-ROTATE_SPEED * delta, 0, 0, 1);
             debugViewport.getCamera().rotate(-ROTATE_SPEED * delta, 0, 0, 1);
         }
-
-
-        System.out.println("->" + body.getPosition());
 
         Vector2 pos = body.getPosition();
         if (cutScene) {
@@ -169,27 +149,8 @@ public class GameScreen extends AbstractScreen {
 
         level.actNdraw(delta);
 
-        debugRenderer.render(level.world, debugViewport.getCamera().combined);
-
-
-        shapeRenderer.setProjectionMatrix(debugViewport.getCamera().combined);
-        shapeRenderer.begin(ShapeRenderer.ShapeType.Line);
-        shapeRenderer.setColor(Color.RED);
-        // shapeRenderer.line(0, 100, 300, 100);
-        /*System.out.println(body.getPosition());
-        System.out.println(body.getPosition().add(newGravity.scl(50 / body.getMass())));
-        System.out.println(body.getPosition().add(newGravity.scl(50 / body.getMass())));*/
-
-       /* Vector2 cenVec = body.getPosition();
-        Vector2 aimVec = newGravity.scl(50 / body.getMass() / GRAVITY).add(cenVec);
-
-        shapeRenderer.line(cenVec, aimVec);*/
-        // shapeRenderer.line(new Vector2(100, 306), new Vector2(100, 356));
-        // shapeRenderer.line(400,400,500,500);
-
-        shapeRenderer.end();
-
-
+        System.out.println(Gdx.graphics.getFramesPerSecond());
+        // debugRenderer.render(level.world, debugViewport.getCamera().combined);
     }
 
 
@@ -214,5 +175,35 @@ public class GameScreen extends AbstractScreen {
     }
 
 
+    private String currentLevel;
+    public void restartLevel() {
+        switchLevel(currentLevel);
+    }
+    public void switchLevel(String name) {
+        currentLevel = name;
+        if (level != null) {
+            level.dispose();
+        }
 
+        cutScene = false; // we have to synchronize the objects with their physics first
+        level = new Level(name);
+        level.init();
+
+        debugViewport = new FitViewport(level.WIDTH * Utils.W2B, level.HEIGHT * Utils.W2B);
+
+        // get a list of bodies
+        bodies = new Array<Body>();
+        level.world.getBodies(bodies);
+
+
+        camera = (OrthographicCamera) level.stage.getCamera();
+
+        angle = -90;
+
+    }
+
+    private static GameScreen instance;
+    public static GameScreen get() {
+        return instance;
+    }
 }

@@ -4,10 +4,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable;
 import com.badlogic.gdx.utils.Array;
 
 public class Utils {
@@ -16,7 +18,7 @@ public class Utils {
         return new Texture(name + ".png");
     }
 
-    public static BitmapFont font = new BitmapFont();
+    public static BitmapFont font = new BitmapFont(Gdx.files.internal("default.fnt"));
 
 
     public static float B2W = 20f;
@@ -77,5 +79,9 @@ public class Utils {
             regions.add(new TextureRegion(getDrawable(name + "_" + frames[i])));
         }
         return new Animation(frameDuration, regions, playMode);
+   }
+
+    public static NinePatchDrawable get9Patch(String name, int corners) {
+        return new NinePatchDrawable(new NinePatch(getDrawable(name), corners, corners, corners, corners));
     }
 }

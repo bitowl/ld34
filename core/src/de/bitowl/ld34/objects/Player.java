@@ -62,14 +62,37 @@ public class Player extends Entity {
         setHeight(size * 2 * Utils.B2W);
         setOrigin(size * Utils.B2W, size * Utils.B2W);
         // bubblesEffect.setEmittersCleanUpBlendFunction(false);
+
+        setScale(0,0);
+        addAction(Actions.sequence(Actions.run(new Runnable() {
+            @Override
+            public void run() {
+                GameScreen.cutScene = true; // spawning sequence
+            }
+        }), Actions.scaleTo(1, 1, 1f, Interpolation.bounceOut), Actions.run(new Runnable() {
+            @Override
+            public void run() {
+                GameScreen.cutScene = false;
+            }
+        })));
     }
 
 
 
     public void updateSize(final float newSize) {
         if (newSize <= .4f) {
-            System.err.println("============== YOU LOST THE GAME ===============");
-            System.exit(1);
+
+            GameScreen.cutScene = true;
+            getStage().getRoot().setOrigin(getX() + getOriginX(), getY() + getOriginY());
+            getStage().addAction(Actions.rotateBy(-1200, 3f, Interpolation.pow2In));
+            getStage().addAction(Actions.scaleTo(0f, 0f, 3f));
+            addAction(Actions.delay(3f, Actions.run(new Runnable() {
+                @Override
+                public void run() {
+                    GameScreen.get().restartLevel();
+                }
+            })));
+            return;
         }
 
         addAction(Actions.sequence(
@@ -110,7 +133,6 @@ public class Player extends Entity {
         drawable.update(delta);
 
         int num = (int) (getPhysicalObject().getBody().getLinearVelocity().len2());
-        System.out.println("  ->" + num);
         bubblesEffect.findEmitter("bubbles").getEmission().setHigh(2, Math.min(Math.max(num / 5, 2),30));
         bubblesEffect.update(delta);
         hurtEffect.update(delta);
@@ -156,8 +178,8 @@ public class Player extends Entity {
         } else if (userData instanceof Exit) {
             final Exit exit = (Exit) userData;
             if (exit.isOpen()) {
+                // end the level
                 GameScreen.cutScene = true;
-                // TODO end level, start next one
 
                 getStage().getRoot().setOrigin(exit.getX() + exit.getOriginX(), exit.getY() + exit.getOriginY());
                 getStage().addAction(Actions.rotateBy(-1200, 3f, Interpolation.pow2In));

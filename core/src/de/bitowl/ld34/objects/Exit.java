@@ -40,7 +40,7 @@ public class Exit extends Entity {
     public void collide(Entity userData) {
     }
 
-    public Object getNextLevel() {
+    public String getNextLevel() {
         return nextLevel;
     }
 }

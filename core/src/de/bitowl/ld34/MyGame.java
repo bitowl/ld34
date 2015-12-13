@@ -11,6 +11,12 @@ public class MyGame extends Game {
 
 	@Override
 	public void create () {
-        setScreen(new GameScreen());
+		inst = this;
+        setScreen(new MenuScreen());
+	}
+
+	private static MyGame inst;
+	public static void switchTo(AbstractScreen screen) {
+		inst.setScreen(screen);
 	}
 }

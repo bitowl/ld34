@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25"
-     inkscape:cx="3569.6899"
-     inkscape:cy="-1416.4078"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="3259.6533"
+     inkscape:cy="-7.1095395"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,8 +57,8 @@
      inkscape:label="background">
     <image
        sodipodi:absref="/home/bitowl/git/ld34/android/assets/lvl1bg.png"
-       y="13.658879"
-       x="17.429371"
+       y="-4.8411207"
+       x="46.429371"
        id="image8011"
        xlink:href="file:///home/bitowl/git/ld34/android/assets/lvl1bg.png"
        preserveAspectRatio="none"
@@ -415,5 +415,17 @@ enemy</desc>
 weight=2
 level=lvl2</desc>
     </circle>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'KenVector Future Thin';-inkscape-font-specification:'KenVector Future Thin, ';letter-spacing:0px;word-spacing:0px;fill:#bb0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="3274.3333"
+       y="1060.8231"
+       id="text5084"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5086"
+         x="3274.3333"
+         y="1060.8231"
+         style="fill:#bb0000;fill-opacity:1;">get to the choppa</tspan></text>
   </g>
 </svg>

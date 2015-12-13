@@ -93,7 +93,6 @@ public class Level {
         body.setGravityScale(0);
         body.setAngularDamping(2);
         body.setLinearDamping(.5f);
-        player.updateSize(player.getSize());
         player.toFront();
 
 
@@ -117,5 +116,10 @@ public class Level {
     }
 
 
+
+    public void dispose() {
+        stage.dispose();
+        world.dispose();
+    }
 
 }

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg4420"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="lvl2.svg">
+  <defs
+     id="defs4422" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="150.20196"
+     inkscape:cy="633.10235"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1916"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0"
+     showguides="false" />
+  <metadata
+     id="metadata4425">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       r="50.625"
+       cy="191.94077"
+       cx="206.83827"
+       id="circle5826-8"
+       style="display:inline;fill:#00ff00;fill-opacity:1;stroke:none">
+      <desc
+         id="desc5828-9">drop
+</desc>
+    </circle>
+    <circle
+       style="display:inline;fill:#ff00ff;fill-opacity:1;stroke:none"
+       id="path8249"
+       cx="341.43155"
+       cy="163.42795"
+       r="40">
+      <desc
+         id="desc8347">player-spawn</desc>
+    </circle>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 56.568543,363.43817 477.80215,396.7732 658.61946,259.39246 525.27932,38.169049 137.38075,71.504083 58.588848,223.02696 51.51778,340.20466 -43.436559,196.763 66.670068,15.945693 683.87327,-11.328426 744.48243,183.63102 699.02556,477.58541 286.88332,541.22502 21.213203,456.3722 Z"
+       id="path5052"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccc" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect5054"
+       width="156.57364"
+       height="97.984795"
+       x="263.64981"
+       y="285.65643">
+      <desc
+         id="desc5056">image=crate</desc>
+    </rect>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect5054-0"
+       width="156.57364"
+       height="97.984795"
+       x="451.03311"
+       y="184.13611">
+      <desc
+         id="desc5056-6">image=crate</desc>
+    </rect>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect5054-5"
+       width="156.57364"
+       height="97.984795"
+       x="377.29199"
+       y="37.663975">
+      <desc
+         id="desc5056-0">image=crate</desc>
+    </rect>
+  </g>
+</svg>
