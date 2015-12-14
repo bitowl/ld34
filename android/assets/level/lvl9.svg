@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.061871843"
-     inkscape:cx="582.39624"
-     inkscape:cy="-1778.8336"
+     inkscape:zoom="0.175"
+     inkscape:cx="1320.4394"
+     inkscape:cy="774.29449"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -110,8 +110,8 @@ image=crate</desc>
     <circle
        style="fill:#00ff00;fill-opacity:1;stroke:none"
        id="path13155-9"
-       cx="1803.9293"
-       cy="216.99579"
+       cx="2041.0721"
+       cy="-77.289925"
        r="36.841892">
       <desc
          id="desc13157-4">drop</desc>
@@ -137,8 +137,8 @@ image=crate</desc>
     <circle
        style="fill:#00ff00;fill-opacity:1;stroke:none"
        id="path13155-8"
-       cx="1509.8491"
-       cy="219.09357"
+       cx="1904.1349"
+       cy="-269.47787"
        r="65.126167">
       <desc
          id="desc13157-0">drop</desc>
@@ -146,8 +146,8 @@ image=crate</desc>
     <circle
        style="fill:#00ff00;fill-opacity:1;stroke:none"
        id="path13155-2"
-       cx="3304.5696"
-       cy="-1277.4215"
+       cx="3298.8552"
+       cy="-837.42151"
        r="57.044937">
       <desc
          id="desc13157-1">drop</desc>
@@ -211,8 +211,8 @@ weight=7.5</desc>
        id="rect13313-1"
        width="5061.6025"
        height="46.792343"
-       x="-1678.2327"
-       y="-1429.7452" />
+       x="-1661.0898"
+       y="-1041.1738" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.52902263;stroke-opacity:1"
        id="rect13313-1-0"
@@ -326,10 +326,10 @@ mass=8</desc>
     <rect
        style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-opacity:1"
        id="rect14562"
-       width="657.14288"
-       height="680"
-       x="811.42859"
-       y="-1039.0663">
+       width="403.12128"
+       height="417.14285"
+       x="1417.1429"
+       y="-93.352013">
       <desc
          id="desc14564">dyn
 image=hazard

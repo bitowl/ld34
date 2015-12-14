@@ -1,4 +1,4 @@
-package magory.lib;
+package de.bitowl.ld34;
 
 import java.io.IOException;
 import java.util.zip.ZipException;

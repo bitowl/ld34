@@ -3,7 +3,6 @@ package de.bitowl.ld34;
 // Taken from BayazitDecomposer.cs (FarseerPhysics.Common.Decomposition.BayazitDecomposer)
 // at http://farseerphysics.codeplex.com
 
-import java.security.InvalidParameterException;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -517,7 +516,7 @@ class SimplifyTools {
         if (vertices.size <= 3)
             return vertices;
         if (areaTolerance < 0) {
-            throw new InvalidParameterException(
+            throw new IllegalStateException(
                     "areaTolerance: must be equal to or greater then zero.");
         }
         Array<Vector2> result = new Array<Vector2>();
@@ -529,7 +528,7 @@ class SimplifyTools {
         for (int index = 0; index < vertices.size; ++index, v2 = v3) {
             if (index == vertices.size - 1) {
                 if (result.size == 0) {
-                    throw new InvalidParameterException(
+                    throw new IllegalStateException(
                             "areaTolerance: The tolerance is too high!");
                 }
                 v3 = result.get(0);

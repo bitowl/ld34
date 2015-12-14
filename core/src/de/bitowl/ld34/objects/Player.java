@@ -173,7 +173,7 @@ public class Player extends Entity {
         hurtEffect.setPosition(getX() + getOriginX(), getY() + getOriginY());
         collideEffect.draw(batch);
 
-        Utils.debugFont.draw(batch, "mass: " + getSize(), getX(), getY());
+        //Utils.debugFont.draw(batch, "mass: " + getSize(), getX(), getY());
     }
 
     @Override
@@ -208,7 +208,7 @@ public class Player extends Entity {
                 addAction(Actions.delay(3f, Actions.run(new Runnable() {
                     @Override
                     public void run() {
-                        GameScreen.get().switchLevel(exit.getNextLevel());
+                        GameScreen.get().setUpLevelSwitch(exit.getNextLevel());
                     }
                 })));
                 addAction(Actions.moveTo(exit.getX() + exit.getOriginX(), exit.getY() + exit.getOriginY(), .5f));
@@ -242,7 +242,7 @@ public class Player extends Entity {
      * @param contact
      */
     public void simpleContact(Contact contact) {
-        System.out.println(getPhysicalObject().getBody().getLinearVelocity().dot(contact.getWorldManifold().getNormal()));
+        // System.out.println(getPhysicalObject().getBody().getLinearVelocity().dot(contact.getWorldManifold().getNormal()));
         //if (> 6) {
         if (Math.abs(getPhysicalObject().getBody().getLinearVelocity().dot(contact.getWorldManifold().getNormal())) > 4) {
             jump.play();

@@ -1,6 +1,8 @@
 package de.bitowl.ld34;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -197,6 +199,20 @@ public class MenuScreen extends AbstractScreen {
         Gdx.gl.glClearColor(0.7f, 0.85f, 0.97f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
+
+        if (Gdx.input.isKeyJustPressed(Input.Keys.F11)) {
+
+            if ( Gdx.app.getType() == Application.ApplicationType.WebGL) {
+                if (!Gdx.graphics.isFullscreen()) Gdx.graphics.setDisplayMode(Gdx.graphics.getDisplayModes()[0]);
+            } else {
+                if (!Gdx.graphics.isFullscreen()) {
+                    Gdx.graphics.setDisplayMode(Gdx.graphics.getDesktopDisplayMode().width, Gdx.graphics.getDesktopDisplayMode().height, true);
+                } else {
+                    Gdx.graphics.setDisplayMode(Gdx.graphics.getDesktopDisplayMode().width, Gdx.graphics.getDesktopDisplayMode().height, false);
+                }
+
+            }
+        }
 
         stage.act(delta);
         stage.draw();

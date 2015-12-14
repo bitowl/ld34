@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1181985"
-     inkscape:cx="167.00756"
-     inkscape:cy="664.40619"
+     inkscape:zoom="0.79068574"
+     inkscape:cx="-81.225798"
+     inkscape:cy="661.00278"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -350,15 +350,6 @@ level=menu</desc>
          x="515.05505"
          y="429.68872"
          style="fill:#000000;fill-opacity:1">as3sfxr</tspan></text>
-    <circle
-       style="fill:#00ff00;fill-opacity:1;stroke:none"
-       id="path12507"
-       cx="562.80261"
-       cy="421.26443"
-       r="20.2356">
-      <desc
-         id="desc12509">drop</desc>
-    </circle>
     <rect
        style="fill:#00ff00;fill-opacity:1;stroke:none"
        id="rect14983"

@@ -7,6 +7,9 @@ import de.bitowl.ld34.MyGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.width = 800;
+		config.height = 600;
+        config.title = "rising bubble";
 		new LwjglApplication(new MyGame(), config);
 	}
 }

@@ -137,6 +137,11 @@ public class GameScreen extends AbstractScreen {
     public void render(float delta) {
         //// MOVE & INPUT ////
 
+        if (goLevel != null) {
+            switchLevel(goLevel);
+            goLevel = null;
+        }
+
 
 
         if (pause) {
@@ -174,12 +179,12 @@ public class GameScreen extends AbstractScreen {
             doPhysicsStep(delta);
         }
 
-        if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+        if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) || Gdx.input.isKeyPressed(Input.Keys.D)) {
             angle += ROTATE_SPEED*delta;
             camera.rotate(ROTATE_SPEED*delta, 0, 0, 1);
             debugViewport.getCamera().rotate(ROTATE_SPEED * delta, 0, 0, 1);
         }
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT) || Gdx.input.isKeyPressed(Input.Keys.A)) {
             angle -= ROTATE_SPEED*delta;
             camera.rotate(-ROTATE_SPEED * delta, 0, 0, 1);
             debugViewport.getCamera().rotate(-ROTATE_SPEED * delta, 0, 0, 1);
@@ -274,9 +279,10 @@ public class GameScreen extends AbstractScreen {
 
     private String currentLevel;
     public void restartLevel() {
-        switchLevel(currentLevel);
+        setUpLevelSwitch(currentLevel);
     }
     public void switchLevel(String name) {
+
 
         currentLevel = name;
         if (level != null) {
@@ -284,7 +290,7 @@ public class GameScreen extends AbstractScreen {
         }
 
         if (name.equals("menu")) {
-            System.err.println("MENNNUU");
+            // System.err.println("MENNNUU");
             MyGame.switchTo(new MenuScreen());
             return;
         }
@@ -296,10 +302,12 @@ public class GameScreen extends AbstractScreen {
         }
 
         cutScene = false; // we have to synchronize the objects with their physics first
+
         level = new Level(name);
         level.init();
 
         debugViewport = new FillViewport(level.WIDTH * Utils.W2B, level.HEIGHT * Utils.W2B);
+
 
         // get a list of bodies
         bodies = new Array<Body>();
@@ -307,11 +315,15 @@ public class GameScreen extends AbstractScreen {
         camera = (OrthographicCamera) level.stage.getCamera();
 
         angle = -90;
-
     }
 
     private static GameScreen instance;
     public static GameScreen get() {
         return instance;
+    }
+
+    private String goLevel;
+    public void setUpLevelSwitch(String goLevel) {
+        this.goLevel = goLevel;
     }
 }

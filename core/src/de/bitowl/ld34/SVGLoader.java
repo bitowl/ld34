@@ -1,15 +1,12 @@
 package de.bitowl.ld34;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.EarClippingTriangulator;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.utils.Array;
-import com.badlogic.gdx.utils.FloatArray;
-import com.badlogic.gdx.utils.ShortArray;
 import com.badlogic.gdx.utils.XmlReader;
 
 import java.util.HashMap;
@@ -24,7 +21,6 @@ import de.bitowl.ld34.objects.Trigger;
 import de.bitowl.ld34.physics.Box;
 import de.bitowl.ld34.physics.Circle;
 import de.bitowl.ld34.physics.Polygon;
-import magory.lib.MaSVG2;
 
 public class SVGLoader extends MaSVG2 {
     World world;
@@ -50,17 +46,17 @@ public class SVGLoader extends MaSVG2 {
         Image image = new Image(Utils.getDrawable(name));
         image.setWidth(width);
         image.setHeight(height);
-        image.setOrigin(width/2, height/2);
+        image.setOrigin(width / 2, height / 2);
         image.setPosition(xxx, yyy);
         image.setRotation(rr);
         stage.addActor(image);
-        System.out.println("image: " + name);
+        // System.out.println("image: " + name);
     }
 
     @Override
     public void newRect(String name, XmlReader.Element el, float x, float y, float width, float height, float rr, String desc) {
-        System.out.println("NEW RECT" + name + " " + x + "," + y + " " + width + "x" + height);
-        System.out.println(desc);
+        // System.out.println("NEW RECT" + name + " " + x + "," + y + " " + width + "x" + height);
+        // System.out.println(desc);
 
         x *= Utils.W2B;
         y *= Utils.W2B;
@@ -88,7 +84,7 @@ public class SVGLoader extends MaSVG2 {
             }
 
         } else if (attrs.containsKey("trigger")) {
-            Trigger trigger = new Trigger(attrs.getOrDefault("trigger", "0"), attrs.getOrDefault("image", "switch"), attrs.getOrDefault("image_down", "switch_down"), triggerableObjects);
+            Trigger trigger = new Trigger(getOrDefault(attrs, "trigger", "0"), getOrDefault(attrs, "image", "switch"), getOrDefault(attrs, "image_down", "switch_down"), triggerableObjects);
             stage.addActor(trigger);
             box.setUserData(trigger);
         } else if (attrs.containsKey("path")) {
@@ -138,7 +134,7 @@ public class SVGLoader extends MaSVG2 {
         // points
         if (attrs.containsKey("player-spawn")) {
             player.getPhysicalObject().setPosition(new Vector2(x, y));
-            System.out.println("player: " + x +", "+ y);
+            // System.out.println("player: " + x +", "+ y);
          //   System.exit(1);;
 
         }
@@ -149,18 +145,26 @@ public class SVGLoader extends MaSVG2 {
         circle.getFixtureDef().isSensor = true;
 
         if (attrs.containsKey("drop")) {
-            System.err.println("DRRRROPP");
+            // System.err.println("DRRRROPP");
             Drop drop = new Drop(r);
             stage.addActor(drop);
             circle.setUserData(drop);
         } else if (attrs.containsKey("exit")) {
-            Exit exit = new Exit(player, Float.parseFloat(attrs.getOrDefault("weight",""+Exit.DEFAULT_WEIGHT)), attrs.getOrDefault("level", "credits"));
+            Exit exit = new Exit(player, Float.parseFloat(getOrDefault(attrs, "weight",""+Exit.DEFAULT_WEIGHT)), getOrDefault(attrs, "level", "credits"));
             stage.addActor(exit);
             circle.setUserData(exit);
         }
         circle.attachTo(world);
 
 
+    }
+
+    public String getOrDefault(HashMap<String, String> attrs, String key, String defaultValue) {
+        if (attrs.containsKey(key)) {
+            return attrs.get(key);
+        } else {
+            return defaultValue;
+        }
     }
 
     @Override
@@ -183,9 +187,9 @@ public class SVGLoader extends MaSVG2 {
             return;
         }
 
-        System.out.println("PAAATH");
+        // System.out.println("PAAATH");
 
-        System.out.println(path);
+        // System.out.println(path);
 
         Vector2[] vertices = new Vector2[path.size];
 
@@ -219,7 +223,7 @@ public class SVGLoader extends MaSVG2 {
         path.removeIndex(path.size - 1);
         Array<Array<Vector2>> polygons = Utils.convertShapeOutlineToBox2DFixturesPolygons(path);
 
-        System.out.println("generated " + polygons.size + " polygons");
+        // System.out.println("generated " + polygons.size + " polygons");
         for (int i = 0; i < polygons.size; i++) {
             Array<Vector2> polygon = polygons.get(i);
             if (i == polygons.size - 1) {
@@ -233,7 +237,7 @@ public class SVGLoader extends MaSVG2 {
 
             for (int j = 0; j < polygon.size; j++) {
                 verti[j] = polygon.get(j);
-                System.out.println(j+": "+verti[j]);
+                // System.out.println(j+": "+verti[j]);
             }
             Polygon box = new Polygon(verti, attrs);
             box.attachTo(world);

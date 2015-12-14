@@ -45,10 +45,10 @@ public class Pathable extends Entity {
         }
 
         if ((getReceiverGroup() != null && !hasReceived()) || segment == -1) {
-            System.out.println(getReceiverGroup() + " not yet: " + segment + " | " + hasReceived());
+            // System.out.println(getReceiverGroup() + " not yet: " + segment + " | " + hasReceived());
             if (segment == 0) { // stay at first point
                 Vector2 pos = path.get(0).cpy();
-                System.out.println(pos);
+                // System.out.println(pos);
                 setPosition(pos.x - getOriginX(), pos.y - getOriginY());
                 getPhysicalObject().getBody().setTransform(pos.scl(Utils.W2B), getPhysicalObject().getBody().getAngle());
             }

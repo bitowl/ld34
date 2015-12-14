@@ -21,7 +21,7 @@ public class Trigger extends Entity {
         this.image = image;
         this.image_down = image_down;
         this.triggerableObjects = triggerableObjects;
-        System.out.println("CREATED TRIGGER");
+        // System.out.println("CREATED TRIGGER");
 
     }
 
@@ -35,7 +35,7 @@ public class Trigger extends Entity {
     @Override
     public void collide(Entity userData) {
 
-        System.err.println("==================");
+        // System.err.println("==================");
 
         if (triggered) {
             return;
